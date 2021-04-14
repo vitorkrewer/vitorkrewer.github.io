@@ -1,7 +1,10 @@
 title: Vitor Krewer
+layout: pages
 description: Repositório de Notas de Aula
+bio: This is a sample Jekyll academic website.
 logo: https://pages-themes.github.io/minimal/assets/img/logo.png
 show_downloads: false
-link: https://www.focusconcursos.com.br/professores/vitor-krewer
+linkedin: vitorkrewer
+email: vitormkrewer@gmail.com
 google_analytics: [Your Google Analytics tracking ID]
 theme: jekyll-theme-minimal

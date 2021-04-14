@@ -1,8 +1,11 @@
+layout: home
 title: Vitor Krewer
 locale: pt_BR
-description: Repositório de Notas de Aula
-bio: This is a sample Jekyll academic website.
-logo: https://pages-themes.github.io/minimal/assets/img/logo.png
 show_downloads: false
-linkedin: #vitorkrewer
-email: vitormkrewer@gmail.com
+
+owner:
+  logo: https://pages-themes.github.io/minimal/assets/img/logo.png
+  description: Repositório de Notas de Aula
+  bio: This is a sample Jekyll academic website.
+  linkedin: #vitorkrewer
+  email: vitormkrewer@gmail.com

@@ -1,3 +1,4 @@
+layout: page
 title: Vitor Krewer
 locale: pt_BR
 description: Repositório de Notas de Aula
@@ -6,5 +7,4 @@ logo: https://pages-themes.github.io/minimal/assets/img/logo.png
 show_downloads: false
 linkedin: #vitorkrewer
 email: vitormkrewer@gmail.com
-google_analytics: [Your Google Analytics tracking ID]
 theme: jekyll-theme-minimal

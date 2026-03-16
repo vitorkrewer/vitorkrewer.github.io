@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": { "pt-br": "FocusConnecta", "en": "FocusConnecta", "es": "FocusConnecta" },
+    "description": {
+        "pt-br": "Plataforma de gestão acadêmica para EAD. Sistema completo com matrículas, controle de alunos, trilhas de aprendizagem, certificados e integração com Moodle. Desenvolvido do zero com Google Apps Script e HTML/CSS/JS.",
+        "en": "Academic management platform for Distance Learning. Complete system with enrollments, student tracking, learning paths, certificates, and Moodle integration. Built from scratch with Google Apps Script and HTML/CSS/JS.",
+        "es": "Plataforma de gestión académica para E-learning. Sistema completo con inscripciones, seguimiento de alumnos, rutas de aprendizaje, certificados e integración con Moodle. Desarrollado desde cero con Google Apps Script y HTML/CSS/JS."
+    },
+    "tags": ["Google Apps Script", "JavaScript", "Moodle", "EAD"],
+    "category": "sistema",
+    "year": "2023–2025",
+    "github": null,
+    "blog": "blog/post.html",
+    "featured": true,
+    "status": "production"
+  },
+  {
+    "id": 2,
+    "title": { "pt-br": "SEO Analyzer Auto-Fixer", "en": "SEO Analyzer Auto-Fixer", "es": "SEO Analyzer Auto-Fixer" },
+    "description": {
+        "pt-br": "Ferramenta de linha de comando em Python que analisa páginas HTML para problemas de SEO e usa a API Gemini para gerar e aplicar patches automáticos, com re-análise para comparar scores.",
+        "en": "A Python command-line tool that analyzes HTML pages for SEO issues and uses the Gemini API to generate and apply automatic patches, with re-analysis to compare scores.",
+        "es": "Herramienta de línea de comandos en Python que analiza páginas HTML en busca de problemas de SEO y utiliza la API Gemini para generar y aplicar parches automáticos, con un nuevo análisis para comparar puntuaciones."
+    },
+    "tags": ["Python", "Gemini API", "SEO", "CLI"],
+    "category": "ferramenta",
+    "year": "2025",
+    "github": "https://github.com/vitorkrewer",
+    "blog": null,
+    "featured": true,
+    "status": "open-source"
+  },
+  {
+    "id": 3,
+    "title": { "pt-br": "Matriz Arquitetura Interativa", "en": "Interactive Architecture Matrix", "es": "Matriz de Arquitectura Interactiva" },
+    "description": {
+        "pt-br": "Visualizador interativo do fluxo de arquitetura de sistemas. Renderiza todos os módulos como nós em um canvas SVG com conexões animadas, pan/zoom, minimap e modal com detalhes de cada módulo.",
+        "en": "Interactive visualizer of system architecture flow. Renders all modules as nodes on an SVG canvas with animated connections, pan/zoom, minimap, and a modal with details for each module.",
+        "es": "Visualizador interactivo del flujo de arquitectura de sistemas. Muestra todos los módulos como nodos en un lienzo SVG con conexiones animadas, desplazamiento/zoom, minimapa y un modal con detalles de cada módulo."
+    },
+    "tags": ["JavaScript", "SVG", "animate.js", "UX"],
+    "category": "ferramenta",
+    "year": "2024",
+    "github": null,
+    "blog": "blog/post.html",
+    "featured": false,
+    "status": "production"
+  },
+  {
+    "id": 4,
+    "title": { "pt-br": "Implantação e Gestão NEAD", "en": "DE Center Deployment & Management", "es": "Implementación y Gestión NEAD" },
+    "description": {
+        "pt-br": "Coordenação completa do Núcleo de Educação a Distância do Grupo Focus. Modelagem de +200 cursos em Moodle, automação de processos acadêmicos com GAS e liderança de equipe multidisciplinar.",
+        "en": "Complete coordination of the Distance Education Center at Focus Group. Modeling of +200 courses in Moodle, academic process automation with GAS, and multidisciplinary team leadership.",
+        "es": "Coordinación completa del Centro de Educación a Distancia del Grupo Focus. Modelado de +200 cursos en Moodle, automatización de procesos académicos con GAS y liderazgo de equipos multidisciplinares."
+    },
+    "tags": ["Moodle", "Google Apps Script", "Gestão", "EAD"],
+    "category": "educacao",
+    "year": "2019–2025",
+    "github": null,
+    "blog": null,
+    "featured": true,
+    "status": "production"
+  },
+  {
+    "id": 5,
+    "title": { "pt-br": "Gerador de Trilhas de Aprendizagem", "en": "Learning Path Generator", "es": "Generador de Rutas de Aprendizaje" },
+    "description": {
+        "pt-br": "Módulo que gera trilhas de aprendizagem personalizadas com interface moderna, sidebar colapsável e reprodução de vídeo integrada. Utilizado na plataforma FocusConnecta.",
+        "en": "Module that generates personalized learning paths with a modern interface, collapsible sidebar, and integrated video playback. Used in the FocusConnecta platform.",
+        "es": "Módulo que genera rutas de aprendizaje personalizadas con una interfaz moderna, barra lateral plegable y reproducción de video integrada. Utilizado en la plataforma FocusConnecta."
+    },
+    "tags": ["JavaScript", "UX", "EAD", "HTML/CSS"],
+    "category": "educacao",
+    "year": "2025",
+    "github": null,
+    "blog": "blog/post.html",
+    "featured": false,
+    "status": "production"
+  },
+  {
+    "id": 6,
+    "title": { "pt-br": "Conversor XML → Moodle XML", "en": "XML → Moodle XML Converter", "es": "Conversor XML → Moodle XML" },
+    "description": {
+        "pt-br": "Script para converter questões de exames em formato XML proprietário para o formato Moodle XML, com marcação automática de alternativas corretas e fração de pontuação.",
+        "en": "Script to convert exam questions from a proprietary XML format to Moodle XML format, with automatic marking of correct alternatives and fractional scoring.",
+        "es": "Script para convertir preguntas de exámenes de formato XML propietario al formato XML de Moodle, con marcado automático de alternativas correctas y puntuación fraccionada."
+    },
+    "tags": ["Python", "XML", "Moodle", "Automação"],
+    "category": "ferramenta",
+    "year": "2025",
+    "github": null,
+    "blog": null,
+    "featured": false,
+    "status": "utility"
+  }
+]

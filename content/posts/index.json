@@ -1,0 +1,38 @@
+[
+    {
+        "slug": "automacao-educacional-gas",
+        "title": "Automatizando o Ensino Superior com Google Apps Script",
+        "excerpt": "Como substituí planilhas manuais, e-mails avulsos e processos lentos por um sistema automatizado que roda direto no Google Workspace — sem servidores, sem frameworks complexos.",
+        "date": "2025-02-10",
+        "tags": [
+            "Google Apps Script",
+            "Automação",
+            "EAD"
+        ],
+        "readTime": "8 min"
+    },
+    {
+        "slug": "design-instrucional-ia",
+        "title": "IA no Design Instrucional: ferramenta ou substituto?",
+        "excerpt": "Depois de usar LLMs para criar, revisar e adaptar conteúdo educacional, aprendi que a questão não é se vou usar IA — mas como usar sem perder a autoria.",
+        "date": "2025-01-22",
+        "tags": [
+            "Inteligência Artificial",
+            "Educação",
+            "Design Instrucional"
+        ],
+        "readTime": "6 min"
+    },
+    {
+        "slug": "engenharia-dados-ensino",
+        "title": "O que Engenharia de Dados tem a ensinar sobre Gestão Acadêmica",
+        "excerpt": "Pipelines, schemas e data quality são conceitos de engenharia de dados — mas funcionam perfeitamente como metáforas para pensar a estrutura de um curso bem construído.",
+        "date": "2024-12-05",
+        "tags": [
+            "Engenharia de Dados",
+            "Educação",
+            "Reflexão"
+        ],
+        "readTime": "7 min"
+    }
+]

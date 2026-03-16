@@ -1,0 +1,396 @@
+[
+    {
+        "id": 1,
+        "slug": "engenharia-de-dados",
+        "title": {
+            "pt-br": "Engenharia de Dados",
+            "en": "Data Engineering",
+            "es": "Ingeniería de Datos"
+        },
+        "subtitle": {
+            "pt-br": "A arte de construir sistemas de dados modernos",
+            "en": "The art of building modern data systems",
+            "es": "El arte de construir sistemas de datos modernos"
+        },
+        "authors": [
+            "Vitor M. Krewer"
+        ],
+        "role": {
+            "pt-br": "Autor",
+            "en": "Author",
+            "es": "Autor"
+        },
+        "year": 2025,
+        "area": {
+            "pt-br": "Tecnologia / Engenharia de Dados",
+            "en": "Technology / Data Engineering",
+            "es": "Tecnología / Ingeniería de Datos"
+        },
+        "publisher": "Faculdade Focus",
+        "pages": 220,
+        "type": "livro-didático",
+        "tags": [
+            "Data Engineering",
+            "Big Data",
+            "Python",
+            "Ensino Superior"
+        ],
+        "description": {
+            "pt-br": "Cobertura completa dos pilares da engenharia de dados moderna, incluindo pipelines ETL, armazenamento em data lakes e warehouses, orquestração de workflows e monitoramento de qualidade de dados. Escrito para cursos de pós-graduação em Computação e gestão de dados.",
+            "en": "Comprehensive coverage of modern data engineering pillars, including ETL pipelines, storage in data lakes and warehouses, workflow orchestration, and data quality monitoring. Written for postgraduate courses in Computing and data management.",
+            "es": "Cobertura completa de los pilares de la ingeniería de datos moderna, que incluye tuberías ETL, almacenamiento en lagos de datos y almacenes, orquestación de flujos de trabajo y monitoreo de la calidad de los datos. Escrito para cursos de posgrado en Computación y gestión de datos."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 2,
+        "slug": "big-data-ciencia-de-dados",
+        "title": {
+            "pt-br": "Big Data e Ciência de Dados",
+            "en": "Big Data and Data Science",
+            "es": "Big Data y Ciencia de Datos"
+        },
+        "subtitle": {
+            "pt-br": "Fundamentos e arquiteturas",
+            "en": "Foundations and architectures",
+            "es": "Fundamentos y arquitecturas"
+        },
+        "authors": [
+            "Grupo Focus Educação",
+            "Vitor M. Krewer"
+        ],
+        "role": {
+            "pt-br": "Autor/Coordenador",
+            "en": "Author/Coordinator",
+            "es": "Autor/Coordinador"
+        },
+        "year": 2025,
+        "area": {
+            "pt-br": "Tecnologia / Ciência de Dados",
+            "en": "Technology / Data Science",
+            "es": "Tecnología / Ciencia de Datos"
+        },
+        "publisher": "Faculdade Focus",
+        "pages": 180,
+        "type": "livro-didático",
+        "tags": [
+            "Ciência de Dados",
+            "Machine Learning",
+            "SQL",
+            "Análise de Dados"
+        ],
+        "description": {
+            "pt-br": "Introdução às arquiteturas de Big Data, ferramentas de análise e fundamentos de aprendizado de máquina para o contexto do ensino superior. Inclui estudos de caso aplicados à área educacional.",
+            "en": "Introduction to Big Data architectures, analytical tools, and machine learning fundamentals for the higher education context. Includes case studies applied to the educational area.",
+            "es": "Introducción a arquitecturas de Big Data, herramientas de análisis y fundamentos de aprendizaje automático para el contexto de la educación superior. Incluye estudios de caso aplicados al área educativa."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 3,
+        "slug": "a-linguagem-escrita",
+        "title": {
+            "pt-br": "A Linguagem Escrita",
+            "en": "The Written Language",
+            "es": "El Lenguaje Escrito"
+        },
+        "subtitle": {
+            "pt-br": "Caminhos teóricos e práticos",
+            "en": "Theoretical and practical paths",
+            "es": "Caminos teóricos y prácticos"
+        },
+        "authors": [
+            "Krewer, V. M. (org.)"
+        ],
+        "role": {
+            "pt-br": "Organizador",
+            "en": "Organizer",
+            "es": "Organizador"
+        },
+        "year": 2025,
+        "area": {
+            "pt-br": "Linguística / Produção Textual",
+            "en": "Linguistics / Textual Production",
+            "es": "Lingüística / Producción Textual"
+        },
+        "publisher": "Faculdade Focus",
+        "pages": 160,
+        "type": "livro-didático",
+        "tags": [
+            "Linguística",
+            "Produção Textual",
+            "Ensino Superior",
+            "EAD"
+        ],
+        "description": {
+            "pt-br": "Obra coletiva que reúne perspectivas teóricas e estratégias práticas para o ensino da escrita acadêmica. Destinada a professores e alunos de cursos de pós-graduação, com ênfase em argumentação e coerência textual.",
+            "en": "A collective work that brings together theoretical perspectives and practical strategies for teaching academic writing. Aimed at professors and students of postgraduate courses, with an emphasis on argumentation and textual coherence.",
+            "es": "Obra colectiva que reúne perspectivas teóricas y estrategias prácticas para la enseñanza de la escritura académica. Dirigida a profesores y alumnos de cursos de posgrado, con énfasis en argumentación y coherencia textual."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 4,
+        "slug": "gestao-estrategica-de-pessoas",
+        "title": {
+            "pt-br": "Gestão Estratégica de Pessoas",
+            "en": "Strategic People Management",
+            "es": "Gestión Estratégica de Personas"
+        },
+        "subtitle": {
+            "pt-br": "Processos essenciais",
+            "en": "Essential processes",
+            "es": "Procesos esenciales"
+        },
+        "authors": [
+            "Krewer, V. M. (org.)"
+        ],
+        "role": {
+            "pt-br": "Organizador",
+            "en": "Organizer",
+            "es": "Organizador"
+        },
+        "year": 2024,
+        "area": {
+            "pt-br": "Gestão / RH",
+            "en": "Management / HR",
+            "es": "Gestión / Recursos Humanos"
+        },
+        "publisher": "Faculdade Focus",
+        "pages": 190,
+        "type": "livro-didático",
+        "tags": [
+            "RH",
+            "Gestão de Pessoas",
+            "Liderança",
+            "Pós-graduação"
+        ],
+        "description": {
+            "pt-br": "Cobertura dos principais processos de gestão estratégica de pessoas: recrutamento, avaliação de desempenho, desenvolvimento e retenção de talentos. Material didático para pós-graduação em Gestão.",
+            "en": "Coverage of the main processes of strategic people management: recruitment, performance evaluation, development, and talent retention. Courseware for postgraduate studies in Management.",
+            "es": "Cobertura de los principales procesos de gestión estratégica de personas: reclutamiento, evaluación del desempeño, desarrollo y retención de talento. Material didáctico para posgrados en Gestión."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 5,
+        "slug": "metodo-focus-de-aprovacao",
+        "title": {
+            "pt-br": "Método Focus de Aprovação",
+            "en": "Focus Approval Method",
+            "es": "Método Focus de Aprobación"
+        },
+        "subtitle": {
+            "pt-br": "Guia prático para concursos públicos",
+            "en": "Practical guide for public exams",
+            "es": "Guía práctica para exámenes públicos"
+        },
+        "authors": [
+            "Raizer, J.",
+            "Krewer, V. M."
+        ],
+        "role": {
+            "pt-br": "Co-autor",
+            "en": "Co-author",
+            "es": "Coautor"
+        },
+        "year": 2020,
+        "area": {
+            "pt-br": "Concursos Públicos / Estudo",
+            "en": "Public Exams / Study",
+            "es": "Oposiciones / Estudio"
+        },
+        "publisher": "Focus Concursos",
+        "pages": 140,
+        "type": "livro-preparatório",
+        "tags": [
+            "Concursos",
+            "Técnicas de Estudo",
+            "ENEM",
+            "Aprovação"
+        ],
+        "description": {
+            "pt-br": "Metodologia estruturada para candidatos a concursos públicos, com técnicas de memorização, planejamento de estudos e gestão de tempo. Baseado na experiência de centenas de aprovados em concursos federais e estaduais.",
+            "en": "Structured methodology for public exam candidates, with memorization techniques, study planning, and time management. Based on the experience of hundreds of successful candidates in federal and state exams.",
+            "es": "Metodología estructurada para candidatos a exámenes públicos, con técnicas de memorización, planificación de estudios y gestión del tiempo. Basado en la experiencia de cientos de aprobados en exámenes federales y estatales."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 6,
+        "slug": "topicos-essenciais-informatica",
+        "title": {
+            "pt-br": "Tópicos Essenciais de Informática",
+            "en": "Essential Topics in Informatics",
+            "es": "Temas Esenciales de Informática"
+        },
+        "subtitle": {
+            "pt-br": "Foco na banca CESPE",
+            "en": "CESPE focused",
+            "es": "Enfoque en CESPE"
+        },
+        "authors": [
+            "Araujo, E.",
+            "Krewer, V. M."
+        ],
+        "role": {
+            "pt-br": "Co-autor",
+            "en": "Co-author",
+            "es": "Coautor"
+        },
+        "year": 2019,
+        "area": {
+            "pt-br": "Concursos / Tecnologia da Informação",
+            "en": "Exams / Information Technology",
+            "es": "Oposiciones / Tecnologías de la Información"
+        },
+        "publisher": "Focus Concursos",
+        "pages": 230,
+        "type": "livro-preparatório",
+        "tags": [
+            "TI",
+            "CESPE",
+            "Redes",
+            "Segurança da Informação",
+            "Concursos"
+        ],
+        "description": {
+            "pt-br": "Compilação dos principais tópicos de Informática cobrados pela banca CESPE/CEBRASPE, com questões comentadas, mapas mentais e resumos por assunto. Cobertura de redes, sistemas operacionais, segurança e pacote Office.",
+            "en": "Compilation of the main IT topics tested by the CESPE/CEBRASPE board, with commented questions, mind maps, and summaries by subject. Coverage of networks, operating systems, security, and the Office suite.",
+            "es": "Recopilación de los principales temas de Informática evaluados por la banca CESPE/CEBRASPE, con preguntas comentadas, mapas mentales y resúmenes por tema. Cobertura de redes, sistemas operativos, seguridad y el paquete Office."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 7,
+        "slug": "codigo-carreiras-policiais",
+        "title": {
+            "pt-br": "Código de Carreiras Policiais",
+            "en": "Police Careers Code",
+            "es": "Código de Carreras Policiales"
+        },
+        "subtitle": {
+            "pt-br": "Legislação compilada (4ª edição)",
+            "en": "Compiled legislation (4th edition)",
+            "es": "Legislación compilada (4ª edición)"
+        },
+        "authors": [
+            "Krewer, V. M."
+        ],
+        "role": {
+            "pt-br": "Autor",
+            "en": "Author",
+            "es": "Autor"
+        },
+        "year": 2020,
+        "area": {
+            "pt-br": "Direito / Segurança Pública",
+            "en": "Law / Public Security",
+            "es": "Derecho / Seguridad Pública"
+        },
+        "publisher": "Focus Concursos",
+        "pages": 380,
+        "type": "livro-legislação",
+        "tags": [
+            "Direito",
+            "Concursos",
+            "Legislação Policial",
+            "Segurança Pública"
+        ],
+        "description": {
+            "pt-br": "Compilação organizada das principais leis e estatutos das carreiras policiais brasileiras, com anotações e remissões legislativas. Referência para candidatos a delegado, escrivão, investigador e agente de polícia.",
+            "en": "Organized compilation of the main laws and statutes of Brazilian police careers, with annotations and legislative cross-references. A reference for candidates for police chief, clerk, investigator, and police agent.",
+            "es": "Compilación organizada de las principales leyes y estatutos de las carreras policiales brasileñas, con anotaciones y remisiones legislativas. Referencia para candidatos a delegado, escribano, investigador y agente de policía."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 8,
+        "slug": "1000-questoes-inss",
+        "title": {
+            "pt-br": "1000 Questões Gabaritadas — INSS",
+            "en": "1000 Answered Questions — INSS",
+            "es": "1000 Preguntas Resueltas — INSS"
+        },
+        "subtitle": {
+            "pt-br": "Preparatório prático para Técnico do Seguro Social",
+            "en": "Practical preparation for Social Security Technician",
+            "es": "Preparación práctica para Técnico del Seguro Social"
+        },
+        "authors": [
+            "Krewer, V. M.",
+            "Pedrotti, W. R."
+        ],
+        "role": {
+            "pt-br": "Co-autor",
+            "en": "Co-author",
+            "es": "Coautor"
+        },
+        "year": 2018,
+        "area": {
+            "pt-br": "Concursos / Previdência Social",
+            "en": "Exams / Social Security",
+            "es": "Oposiciones / Seguridad Social"
+        },
+        "publisher": "Focus Concursos",
+        "pages": 310,
+        "type": "livro-preparatório",
+        "tags": [
+            "INSS",
+            "Concursos",
+            "Previdência",
+            "Questões Comentadas"
+        ],
+        "description": {
+            "pt-br": "Banco de 1000 questões gabaritadas e comentadas para o concurso do INSS, cobrindo Previdência Social, Direito Administrativo, Português e Informática. Organizado por assunto e nível de dificuldade.",
+            "en": "Bank of 1000 answered and commented questions for the INSS exam, covering Social Security, Administrative Law, Portuguese, and IT. Organized by subject and difficulty level.",
+            "es": "Banco de 1000 preguntas contestadas y comentadas para el examen del INSS, cubriendo Seguridad Social, Derecho Administrativo, Portugués e Informática. Organizado por tema y nivel de dificultad."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    },
+    {
+        "id": 9,
+        "slug": "manual-policia-civil-parana",
+        "title": {
+            "pt-br": "Manual Polícia Civil do Paraná",
+            "en": "Paraná Civil Police Manual",
+            "es": "Manual Policía Civil de Paraná"
+        },
+        "subtitle": {
+            "pt-br": "Escrivão de Polícia — Preparatório Completo",
+            "en": "Police Clerk — Complete Preparation",
+            "es": "Escribano de Policía — Preparación Completa"
+        },
+        "authors": [
+            "Coordenação Multidisciplinar",
+            "Krewer, V. M."
+        ],
+        "role": {
+            "pt-br": "Coordenador Editorial",
+            "en": "Editorial Coordinator",
+            "es": "Coordinador Editorial"
+        },
+        "year": 2018,
+        "area": {
+            "pt-br": "Segurança Pública / Concursos",
+            "en": "Public Security / Exams",
+            "es": "Seguridad Pública / Oposiciones"
+        },
+        "publisher": "Focus Concursos",
+        "pages": 420,
+        "type": "livro-preparatório",
+        "tags": [
+            "Polícia Civil",
+            "Escrivão",
+            "Paraná",
+            "Concursos",
+            "Direito"
+        ],
+        "description": {
+            "pt-br": "Manual completo para o cargo de Escrivão de Polícia Civil do Paraná, com teoria, legislação estadual, questões comentadas e preparação psicológica para entrevista e teste físico.",
+            "en": "Complete manual for the position of Paraná Civil Police Clerk, with theory, state legislation, commented questions, and psychological preparation for interview and physical test.",
+            "es": "Manual completo para el cargo de Escribano de la Policía Civil de Paraná, con teoría, legislación estatal, preguntas comentadas y preparación psicológica para entrevista y prueba física."
+        },
+        "lattes": "http://lattes.cnpq.br/4432603310392389"
+    }
+]

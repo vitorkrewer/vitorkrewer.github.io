@@ -1,5 +1,22 @@
 [
   {
+    "id": 7,
+    "title": { "pt-br": "Crawler Semantic Auditor", "en": "Crawler Semantic Auditor", "es": "Crawler Semantic Auditor" },
+    "description": {
+        "pt-br": "Motor de inteligência competitiva para sites de concursos públicos. Pipeline completa: crawling híbrido (httpx + Playwright), extração semântica, reclassificação com Gemini Flash, grafo de conhecimento em FalkorDB e TUI interativa. Repositório privado.",
+        "en": "Competitive intelligence engine for public service exam websites. Full pipeline: hybrid crawling (httpx + Playwright), semantic extraction, reclassification with Gemini Flash, knowledge graph in FalkorDB, and interactive TUI. Private repository.",
+        "es": "Motor de inteligencia competitiva para sitios de oposiciones. Pipeline completo: crawling híbrido (httpx + Playwright), extracción semántica, reclasificación con Gemini Flash, grafo de conocimiento en FalkorDB y TUI interactiva. Repositorio privado."
+    },
+    "tags": ["Python", "FalkorDB", "Playwright", "Gemini API", "Textual", "Análise Competitiva"],
+    "category": "ferramenta",
+    "year": "2026",
+    "github": null,
+    "privateRepo": true,
+    "blog": "blog/post.html?slug=siteaudit-pro-inteligencia-competitiva",
+    "featured": true,
+    "status": "production"
+  },
+  {
     "id": 1,
     "title": { "pt-br": "FocusConnecta", "en": "FocusConnecta", "es": "FocusConnecta" },
     "description": {

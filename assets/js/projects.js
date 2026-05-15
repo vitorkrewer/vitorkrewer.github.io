@@ -191,6 +191,8 @@ function typeProjectLines(p) {
 
     if (p.github) {
         lines.push({ label: l.repo, value: p.github, color: '#58a6ff', link: p.github });
+    } else if (p.privateRepo) {
+        lines.push({ label: l.repo, value: '🔒 privado · existe, mas não é público', color: '#f78166' });
     }
     
     if (p.blog) {
@@ -220,11 +222,15 @@ function typeProjectLines(p) {
 // ── Card HTML ───────────────────────────────────────────────
 function projectCardHTML(p) {
     const lang = localStorage.getItem('vk-lang') || 'pt-br';
+    const tFn2 = (window.i18n && window.i18n.t) || ((k) => k);
     const l = {
         'pt-br': { btn_details: 'Detalhes', btn_repo: 'Ver repo' },
-        'en': { btn_details: 'Details', btn_repo: 'View repo' },
-        'es': { btn_details: 'Detalles', btn_repo: 'Ver repo' }
+        'en':    { btn_details: 'Details',  btn_repo: 'View repo' },
+        'es':    { btn_details: 'Detalles', btn_repo: 'Ver repo' }
     }[lang];
+    // Usa i18n global para chaves novas (suporte a troca dinâmica de idioma)
+    l.btn_article   = tFn2('btn_article');
+    l.private_badge = tFn2('private_badge');
 
     const pTitle = p.title?.[lang] || p.title || '';
     const pDesc = p.description?.[lang] || p.description || '';
@@ -239,6 +245,14 @@ function projectCardHTML(p) {
 
     const githubSVG = `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>`;
 
+    const lockSVG = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
+    const articleSVG = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>`;
+
+    // Badge de repositório privado (aparece ao lado do status)
+    const privateBadge = p.privateRepo
+        ? `<span style="display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);background:rgba(247,129,102,0.1);border:1px solid rgba(247,129,102,0.25);padding:2px 7px;border-radius:4px;">${lockSVG} ${l.private_badge}</span>`
+        : '';
+
     return `
     <article class="project-card observe">
       <div class="project-card-header">
@@ -246,6 +260,7 @@ function projectCardHTML(p) {
         ${statusDot}
       </div>
       <h3 class="project-name">${pTitle}</h3>
+      ${p.privateRepo ? `<div style="margin-bottom:.75rem">${privateBadge}</div>` : ''}
       <p class="project-desc">${pDesc}</p>
       <div class="project-tags">
         ${p.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
@@ -258,6 +273,9 @@ function projectCardHTML(p) {
             </button>
             ${p.github
                 ? `<a href="${p.github}" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.75rem;padding:0.35rem 0.75rem">${githubSVG} ${l.btn_repo}</a>`
+                : ''}
+            ${(!p.github && p.blog)
+                ? `<a href="${p.blog}" class="btn btn-secondary" style="font-size:0.75rem;padding:0.35rem 0.75rem;color:var(--accent-blue)">${articleSVG} ${l.btn_article}</a>`
                 : ''}
         </div>
       </div>

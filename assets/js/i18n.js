@@ -66,6 +66,8 @@ const translations = {
         'loading_projects': 'Carregando projetos...',
         'github_cta_text': 'Mais projetos e experimentos no meu GitHub',
         'btn_view_github': 'Ver GitHub',
+        'btn_article': 'Ler artigo',
+        'private_badge': 'Repositório Privado',
 
         // Publications Page
         'pub_page_title': 'Produção Intelectual',
@@ -198,6 +200,8 @@ const translations = {
         'loading_projects': 'Loading projects...',
         'github_cta_text': 'More projects and experiments on my GitHub',
         'btn_view_github': 'View GitHub',
+        'btn_article': 'Read article',
+        'private_badge': 'Private Repository',
 
         // Publications Page
         'pub_page_title': 'Intellectual Production',
@@ -330,6 +334,8 @@ const translations = {
         'loading_projects': 'Cargando proyectos...',
         'github_cta_text': 'Más proyectos y experimentos en mi GitHub',
         'btn_view_github': 'Ver GitHub',
+        'btn_article': 'Leer artículo',
+        'private_badge': 'Repositorio Privado',
 
         // Publications Page
         'pub_page_title': 'Producción Intelectual',

@@ -1,5 +1,19 @@
 [
     {
+        "slug": "siteaudit-pro-inteligencia-competitiva",
+        "title": "Crawler Semantic Auditor: como construí um motor de inteligência competitiva para sites de concursos",
+        "excerpt": "Como transformei a pergunta 'o que o concorrente tem?' em uma pipeline completa de crawling, extração semântica com IA e grafo de conhecimento — do terminal ao FalkorDB.",
+        "date": "2026-05-13",
+        "tags": [
+            "Python",
+            "FalkorDB",
+            "Playwright",
+            "Gemini API",
+            "Análise Competitiva"
+        ],
+        "readTime": "14 min"
+    },
+    {
         "slug": "automacao-educacional-gas",
         "title": "Automatizando o Ensino Superior com Google Apps Script",
         "excerpt": "Como substituí planilhas manuais, e-mails avulsos e processos lentos por um sistema automatizado que roda direto no Google Workspace — sem servidores, sem frameworks complexos.",

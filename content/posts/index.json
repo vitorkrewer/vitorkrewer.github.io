@@ -1,5 +1,19 @@
 [
     {
+        "slug": "youtube-crawler-cloud-native-ia",
+        "title": "YouTube Crawler & IA: arquitetura Cloud-Native e análise de sentimentos em tempo real",
+        "excerpt": "Como reconstruí uma ferramenta frágil de extração de dados do YouTube em um motor de inteligência competitivo escalável, combinando FastAPI, LibSQL, web crawling cirúrgico (Chrome CDP) e IA (Gemini Flash).",
+        "date": "2026-05-25",
+        "tags": [
+            "Python",
+            "FastAPI",
+            "LibSQL",
+            "Chrome CDP",
+            "Gemini API"
+        ],
+        "readTime": "12 min"
+    },
+    {
         "slug": "siteaudit-pro-inteligencia-competitiva",
         "title": "Crawler Semantic Auditor: como construí um motor de inteligência competitiva para sites de concursos",
         "excerpt": "Como transformei a pergunta 'o que o concorrente tem?' em uma pipeline completa de crawling, extração semântica com IA e grafo de conhecimento — do terminal ao FalkorDB.",

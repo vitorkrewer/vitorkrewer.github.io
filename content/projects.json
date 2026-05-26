@@ -1,5 +1,22 @@
 [
   {
+    "id": 8,
+    "title": { "pt-br": "YouTube Crawler & IA", "en": "YouTube Crawler & AI", "es": "YouTube Crawler & IA" },
+    "description": {
+        "pt-br": "Crawler Cloud-Native para extração de métricas e análise de sentimentos em tempo real com Gemini Flash 2.5. Arquitetura Database-First com BunnyDB e bypass avançado via Chrome CDP.",
+        "en": "Cloud-Native crawler for real-time metric extraction and sentiment analysis using Gemini Flash 2.5. Database-First architecture with BunnyDB and advanced bypass via Chrome CDP.",
+        "es": "Crawler Cloud-Native para la extracción de métricas y análisis de sentimientos en tiempo real con Gemini Flash 2.5. Arquitectura Database-First con BunnyDB y derivación avanzada a través de Chrome CDP."
+    },
+    "tags": ["Python", "FastAPI", "LibSQL", "Chrome CDP", "Gemini API"],
+    "category": "ferramenta",
+    "year": "2026",
+    "github": null,
+    "privateRepo": true,
+    "blog": "blog/post.html?slug=youtube-crawler-cloud-native-ia",
+    "featured": true,
+    "status": "production"
+  },
+  {
     "id": 7,
     "title": { "pt-br": "Crawler Semantic Auditor", "en": "Crawler Semantic Auditor", "es": "Crawler Semantic Auditor" },
     "description": {

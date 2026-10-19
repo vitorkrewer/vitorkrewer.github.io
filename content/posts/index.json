@@ -290,6 +290,22 @@
         "readTime": "7 min"
     },
     {
+        "slug": "revolucao-do-hipertexto",
+        "title": "A Revolução do Hipertexto: De Tim Berners-Lee à Web Quântica",
+        "excerpt": "Uma análise histórica e sociológica sobre a gênese da World Wide Web: da modesta proposta de Tim Berners-Lee no CERN às fronteiras da Web Semântica, inteligência artificial e internet quântica.",
+        "date": "2023-03-03",
+        "status": "Publicado",
+        "tags": [
+            "Hipertexto",
+            "Web",
+            "Comunicação",
+            "Web Semântica",
+            "Tecnologia",
+            "História"
+        ],
+        "readTime": "8 min"
+    },
+    {
         "slug": "estrategias-marketing-real-linguagem",
         "title": "Estratégias e Marketing: o real e o verdadeiro, proposta e linguagem",
         "excerpt": "Uma reflexão crítica sobre a Estratégia do Oceano Azul, a manipulação da linguagem no marketing e o que realmente constitui inovação de valor versus retórica publicitária.",

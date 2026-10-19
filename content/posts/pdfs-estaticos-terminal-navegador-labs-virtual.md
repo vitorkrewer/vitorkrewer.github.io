@@ -3,6 +3,7 @@ title: "De PDFs Estáticos a um Terminal no Navegador: A Criação de um Laborat
 date: "2026-02-24"
 readTime: "8 min"
 status: "Publicado"
+project: 10
 tags:
   - Cibersegurança
   - Educação

@@ -256,6 +256,7 @@
         "excerpt": "Como transformei a frustração de alunos iniciantes em uma experiência imersiva de segurança defensiva e ofensiva direto no navegador — arquitetura Zero-Build, engine VirtualOS, emulação com Xterm.js e aceleração de desenvolvimento com IA.",
         "date": "2026-02-24",
         "status": "Publicado",
+        "project": 10,
         "tags": [
             "Cibersegurança",
             "Educação",

@@ -1,5 +1,32 @@
 [
     {
+        "id": 10,
+        "title": {
+            "pt-br": "Kali Linux Labs Beginner",
+            "en": "Kali Linux Labs Beginner",
+            "es": "Kali Linux Labs Beginner"
+        },
+        "description": {
+            "pt-br": "Laboratório virtual de cibersegurança rodando 100% no navegador (Zero-Build). Emulação de terminal interativo com Xterm.js e engine VirtualOS simulando ferramentas essenciais de segurança defensiva e ofensiva (Nmap, SQLMap, Metasploit, Hydra, Nikto e Nuclei) com missões guiadas.",
+            "en": "Virtual cybersecurity lab running 100% in the browser (Zero-Build). Interactive terminal emulation with Xterm.js and VirtualOS engine simulating essential defensive and offensive security tools (Nmap, SQLMap, Metasploit, Hydra, Nikto, and Nuclei) with guided missions.",
+            "es": "Laboratorio virtual de ciberseguridad que se ejecuta 100% en el navegador (Zero-Build). Emulación de terminal interactivo con Xterm.js y motor VirtualOS que simula herramientas esenciales de seguridad defensiva y ofensiva (Nmap, SQLMap, Metasploit, Hydra, Nikto y Nuclei) con misiones guiadas."
+        },
+        "tags": [
+            "JavaScript",
+            "Tailwind CSS",
+            "Xterm.js",
+            "Cibersegurança",
+            "Linux",
+            "Educação"
+        ],
+        "category": "educacao",
+        "year": "2026",
+        "github": "https://github.com/vitorkrewer/kali-linux-labs-beginner",
+        "blog": "blog/post.html?slug=pdfs-estaticos-terminal-navegador-labs-virtual",
+        "featured": true,
+        "status": "open-source"
+    },
+    {
         "id": 9,
         "title": {
             "pt-br": "Magnetares Notes",

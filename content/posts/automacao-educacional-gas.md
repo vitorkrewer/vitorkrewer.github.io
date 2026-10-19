@@ -1,6 +1,7 @@
 ---
 title: Automatizando o Ensino Superior com Google Apps Script
 date: 2025-02-10
+status: Publicado
 tags: [Google Apps Script, Automação, EAD]
 readTime: 8 min
 ---

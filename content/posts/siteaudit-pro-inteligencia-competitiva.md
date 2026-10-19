@@ -1,6 +1,7 @@
 ---
 title: "Crawler Semantic Auditor: como construí um motor de inteligência competitiva para sites de concursos"
 date: 2026-05-13
+status: Publicado
 tags: [Python, FalkorDB, Playwright, Gemini API, Web Crawling, Análise Competitiva]
 readTime: 14 min
 ---

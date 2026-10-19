@@ -116,7 +116,9 @@ async function loadPostList() {
             fetch(projectsJsonPath).catch(() => null)
         ]);
 
-        allPosts = await postsRes.json();
+        const rawPosts = await postsRes.json();
+        // Apenas postagens com status 'Publicado' aparecem no site
+        allPosts = rawPosts.filter(p => p.status && p.status.toLowerCase() === 'publicado');
 
         if (projRes && projRes.ok) {
             const projects = await projRes.json();
@@ -287,6 +289,16 @@ async function loadPost() {
     } catch { /* sem meta */ }
 
     if (postMeta) {
+        // Bloqueia exibição de post rascunho
+        if (postMeta.status && postMeta.status.toLowerCase() !== 'publicado') {
+            container.innerHTML = `
+              <div class="empty-state">
+                Este artigo ainda é um rascunho em desenvolvimento.<br>
+                <a href="../index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
+              </div>`;
+            return;
+        }
+
         document.title = `${postMeta.title} · Vitor Krewer`;
         if (metaContainer) {
             metaContainer.innerHTML = `
@@ -305,8 +317,20 @@ async function loadPost() {
     try {
         const res = await fetch(`../content/posts/${slug}.md`);
         if (!res.ok) throw new Error('not found');
-        let md = await res.text();
-        md = md.replace(/^---[\s\S]*?---\n?/, '').trim();
+        let rawMd = await res.text();
+        
+        // Bloqueia caso o frontmatter do markdown defina como rascunho
+        const statusMatch = rawMd.match(/^---[\s\S]*?status:\s*([^\n\r]+)[\s\S]*?---/i);
+        if (statusMatch && statusMatch[1].trim().toLowerCase() === 'rascunho') {
+            container.innerHTML = `
+              <div class="empty-state">
+                Este artigo ainda é um rascunho em desenvolvimento.<br>
+                <a href="../index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
+              </div>`;
+            return;
+        }
+
+        let md = rawMd.replace(/^---[\s\S]*?---\n?/, '').trim();
 
         if (typeof marked !== 'undefined') {
             marked.setOptions({ breaks: true, gfm: true });

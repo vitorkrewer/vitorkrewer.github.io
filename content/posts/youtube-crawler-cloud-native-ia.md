@@ -1,6 +1,7 @@
 ---
 title: "YouTube Crawler & IA: arquitetura Cloud-Native e análise de sentimentos em tempo real"
 date: 2026-05-25
+status: Publicado
 tags: [Python, FastAPI, LibSQL, Chrome CDP, Gemini API, Cloud-Native]
 readTime: 12 min
 ---

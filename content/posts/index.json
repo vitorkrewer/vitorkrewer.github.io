@@ -4,6 +4,7 @@
         "title": "YouTube Crawler & IA: arquitetura Cloud-Native e análise de sentimentos em tempo real",
         "excerpt": "Como reconstruí uma ferramenta frágil de extração de dados do YouTube em um motor de inteligência competitivo escalável, combinando FastAPI, LibSQL, web crawling cirúrgico (Chrome CDP) e IA (Gemini Flash).",
         "date": "2026-05-25",
+        "status": "Publicado",
         "tags": [
             "Python",
             "FastAPI",
@@ -18,6 +19,7 @@
         "title": "Crawler Semantic Auditor: como construí um motor de inteligência competitiva para sites de concursos",
         "excerpt": "Como transformei a pergunta 'o que o concorrente tem?' em uma pipeline completa de crawling, extração semântica com IA e grafo de conhecimento — do terminal ao FalkorDB.",
         "date": "2026-05-13",
+        "status": "Publicado",
         "tags": [
             "Python",
             "FalkorDB",
@@ -32,6 +34,7 @@
         "title": "Automatizando o Ensino Superior com Google Apps Script",
         "excerpt": "Como substituí planilhas manuais, e-mails avulsos e processos lentos por um sistema automatizado que roda direto no Google Workspace — sem servidores, sem frameworks complexos.",
         "date": "2025-02-10",
+        "status": "Publicado",
         "tags": [
             "Google Apps Script",
             "Automação",
@@ -44,6 +47,7 @@
         "title": "IA no Design Instrucional: ferramenta ou substituto?",
         "excerpt": "Depois de usar LLMs para criar, revisar e adaptar conteúdo educacional, aprendi que a questão não é se vou usar IA — mas como usar sem perder a autoria.",
         "date": "2025-01-22",
+        "status": "Publicado",
         "tags": [
             "Inteligência Artificial",
             "Educação",
@@ -56,6 +60,7 @@
         "title": "O que Engenharia de Dados tem a ensinar sobre Gestão Acadêmica",
         "excerpt": "Pipelines, schemas e data quality são conceitos de engenharia de dados — mas funcionam perfeitamente como metáforas para pensar a estrutura de um curso bem construído.",
         "date": "2024-12-05",
+        "status": "Publicado",
         "tags": [
             "Engenharia de Dados",
             "Educação",

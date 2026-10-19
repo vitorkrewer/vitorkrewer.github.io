@@ -1,6 +1,7 @@
 ---
 title: O que Engenharia de Dados tem a ensinar sobre Gestão Acadêmica
 date: 2024-12-05
+status: Publicado
 tags: [Engenharia de Dados, Educação, Reflexão]
 readTime: 7 min
 ---

@@ -1,6 +1,7 @@
 ---
 title: IA no Design Instrucional: ferramenta ou substituto?
 date: 2025-01-22
+status: Publicado
 tags: [Inteligência Artificial, Educação, Design Instrucional]
 readTime: 6 min
 ---

@@ -1,132 +1,236 @@
 [
-  {
-    "id": 8,
-    "title": { "pt-br": "YouTube Crawler & IA", "en": "YouTube Crawler & AI", "es": "YouTube Crawler & IA" },
-    "description": {
-        "pt-br": "Crawler Cloud-Native para extração de métricas e análise de sentimentos em tempo real com Gemini Flash 2.5. Arquitetura Database-First com BunnyDB e bypass avançado via Chrome CDP.",
-        "en": "Cloud-Native crawler for real-time metric extraction and sentiment analysis using Gemini Flash 2.5. Database-First architecture with BunnyDB and advanced bypass via Chrome CDP.",
-        "es": "Crawler Cloud-Native para la extracción de métricas y análisis de sentimientos en tiempo real con Gemini Flash 2.5. Arquitectura Database-First con BunnyDB y derivación avanzada a través de Chrome CDP."
+    {
+        "id": 9,
+        "title": {
+            "pt-br": "Magnetares Notes",
+            "en": "Magnetares Notes",
+            "es": "Magnetares Notes"
+        },
+        "description": {
+            "pt-br": "Caderno desktop Local-First de alta performance com SQLite WAL, interface estilo macOS, editor estruturado Tiptap, Monaco Editor com live preview para snippets de código, fórmulas KaTeX, diagramas Mermaid, mural visual de stickers e sincronização em nuvem via Turso.",
+            "en": "High-performance Local-First desktop notebook with SQLite WAL, macOS-inspired UI, Tiptap structured editor, Monaco Editor with live preview for code snippets, KaTeX math, Mermaid diagrams, visual stickers board, and Turso cloud sync.",
+            "es": "Cuaderno de notas de escritorio Local-First de alto rendimiento con SQLite WAL, interfaz estilo macOS, editor estructurado Tiptap, Monaco Editor con vista previa en vivo para código, fórmulas KaTeX, diagramas Mermaid, tablero de stickers y sincronización en la nube con Turso."
+        },
+        "tags": [
+            "Electron",
+            "TypeScript",
+            "SQLite",
+            "Tiptap",
+            "KaTeX",
+            "Mermaid",
+            "Local-First"
+        ],
+        "category": "sistema",
+        "year": "2026",
+        "github": "https://github.com/vitorkrewer/magnetares-notes",
+        "blog": "blog/post.html?slug=correcoes-atualizacoes-melhorias",
+        "series": "Magnetares Notes",
+        "featured": true,
+        "status": "production"
     },
-    "tags": ["Python", "FastAPI", "LibSQL", "Chrome CDP", "Gemini API"],
-    "category": "ferramenta",
-    "year": "2026",
-    "github": null,
-    "privateRepo": true,
-    "blog": "blog/post.html?slug=youtube-crawler-cloud-native-ia",
-    "featured": true,
-    "status": "production"
-  },
-  {
-    "id": 7,
-    "title": { "pt-br": "Crawler Semantic Auditor", "en": "Crawler Semantic Auditor", "es": "Crawler Semantic Auditor" },
-    "description": {
-        "pt-br": "Motor de inteligência competitiva para sites de concursos públicos. Pipeline completa: crawling híbrido (httpx + Playwright), extração semântica, reclassificação com Gemini Flash, grafo de conhecimento em FalkorDB e TUI interativa. Repositório privado.",
-        "en": "Competitive intelligence engine for public service exam websites. Full pipeline: hybrid crawling (httpx + Playwright), semantic extraction, reclassification with Gemini Flash, knowledge graph in FalkorDB, and interactive TUI. Private repository.",
-        "es": "Motor de inteligencia competitiva para sitios de oposiciones. Pipeline completo: crawling híbrido (httpx + Playwright), extracción semántica, reclasificación con Gemini Flash, grafo de conocimiento en FalkorDB y TUI interactiva. Repositorio privado."
+    {
+        "id": 8,
+        "title": {
+            "pt-br": "YouTube Crawler & IA",
+            "en": "YouTube Crawler & AI",
+            "es": "YouTube Crawler & IA"
+        },
+        "description": {
+            "pt-br": "Crawler Cloud-Native para extração de métricas e análise de sentimentos em tempo real com Gemini Flash 2.5. Arquitetura Database-First com BunnyDB e bypass avançado via Chrome CDP.",
+            "en": "Cloud-Native crawler for real-time metric extraction and sentiment analysis using Gemini Flash 2.5. Database-First architecture with BunnyDB and advanced bypass via Chrome CDP.",
+            "es": "Crawler Cloud-Native para la extracción de métricas y análisis de sentimientos en tiempo real con Gemini Flash 2.5. Arquitectura Database-First con BunnyDB y derivación avanzada a través de Chrome CDP."
+        },
+        "tags": [
+            "Python",
+            "FastAPI",
+            "LibSQL",
+            "Chrome CDP",
+            "Gemini API"
+        ],
+        "category": "ferramenta",
+        "year": "2026",
+        "github": null,
+        "privateRepo": true,
+        "blog": "blog/post.html?slug=youtube-crawler-cloud-native-ia",
+        "featured": true,
+        "status": "production"
     },
-    "tags": ["Python", "FalkorDB", "Playwright", "Gemini API", "Textual", "Análise Competitiva"],
-    "category": "ferramenta",
-    "year": "2026",
-    "github": null,
-    "privateRepo": true,
-    "blog": "blog/post.html?slug=siteaudit-pro-inteligencia-competitiva",
-    "featured": true,
-    "status": "production"
-  },
-  {
-    "id": 1,
-    "title": { "pt-br": "FocusConnecta", "en": "FocusConnecta", "es": "FocusConnecta" },
-    "description": {
-        "pt-br": "Plataforma de gestão acadêmica para EAD. Sistema completo com matrículas, controle de alunos, trilhas de aprendizagem, certificados e integração com Moodle. Desenvolvido do zero com Google Apps Script e HTML/CSS/JS.",
-        "en": "Academic management platform for Distance Learning. Complete system with enrollments, student tracking, learning paths, certificates, and Moodle integration. Built from scratch with Google Apps Script and HTML/CSS/JS.",
-        "es": "Plataforma de gestión académica para E-learning. Sistema completo con inscripciones, seguimiento de alumnos, rutas de aprendizaje, certificados e integración con Moodle. Desarrollado desde cero con Google Apps Script y HTML/CSS/JS."
+    {
+        "id": 7,
+        "title": {
+            "pt-br": "Crawler Semantic Auditor",
+            "en": "Crawler Semantic Auditor",
+            "es": "Crawler Semantic Auditor"
+        },
+        "description": {
+            "pt-br": "Motor de inteligência competitiva para sites de concursos públicos. Pipeline completa: crawling híbrido (httpx + Playwright), extração semântica, reclassificação com Gemini Flash, grafo de conhecimento em FalkorDB e TUI interativa. Repositório privado.",
+            "en": "Competitive intelligence engine for public service exam websites. Full pipeline: hybrid crawling (httpx + Playwright), semantic extraction, reclassification with Gemini Flash, knowledge graph in FalkorDB, and interactive TUI. Private repository.",
+            "es": "Motor de inteligencia competitiva para sitios de oposiciones. Pipeline completo: crawling híbrido (httpx + Playwright), extracción semántica, reclasificación con Gemini Flash, grafo de conocimiento en FalkorDB y TUI interactiva. Repositorio privado."
+        },
+        "tags": [
+            "Python",
+            "FalkorDB",
+            "Playwright",
+            "Gemini API",
+            "Textual",
+            "Análise Competitiva"
+        ],
+        "category": "ferramenta",
+        "year": "2026",
+        "github": null,
+        "privateRepo": true,
+        "blog": "blog/post.html?slug=siteaudit-pro-inteligencia-competitiva",
+        "featured": true,
+        "status": "production"
     },
-    "tags": ["Google Apps Script", "JavaScript", "Moodle", "EAD"],
-    "category": "sistema",
-    "year": "2023–2025",
-    "github": null,
-    "blog": "blog/post.html?slug=automacao-educacional-gas",
-    "featured": true,
-    "status": "production"
-  },
-  {
-    "id": 2,
-    "title": { "pt-br": "SEO Analyzer Auto-Fixer", "en": "SEO Analyzer Auto-Fixer", "es": "SEO Analyzer Auto-Fixer" },
-    "description": {
-        "pt-br": "Ferramenta de linha de comando em Python que analisa páginas HTML para problemas de SEO e usa a API Gemini para gerar e aplicar patches automáticos, com re-análise para comparar scores.",
-        "en": "A Python command-line tool that analyzes HTML pages for SEO issues and uses the Gemini API to generate and apply automatic patches, with re-analysis to compare scores.",
-        "es": "Herramienta de línea de comandos en Python que analiza páginas HTML en busca de problemas de SEO y utiliza la API Gemini para generar y aplicar parches automáticos, con un nuevo análisis para comparar puntuaciones."
+    {
+        "id": 1,
+        "title": {
+            "pt-br": "FocusConnecta",
+            "en": "FocusConnecta",
+            "es": "FocusConnecta"
+        },
+        "description": {
+            "pt-br": "Plataforma de gestão acadêmica para EAD. Sistema completo com matrículas, controle de alunos, trilhas de aprendizagem, certificados e integração com Moodle. Desenvolvido do zero com Google Apps Script e HTML/CSS/JS.",
+            "en": "Academic management platform for Distance Learning. Complete system with enrollments, student tracking, learning paths, certificates, and Moodle integration. Built from scratch with Google Apps Script and HTML/CSS/JS.",
+            "es": "Plataforma de gestión académica para E-learning. Sistema completo con inscripciones, seguimiento de alumnos, rutas de aprendizaje, certificados e integración con Moodle. Desarrollado desde cero con Google Apps Script y HTML/CSS/JS."
+        },
+        "tags": [
+            "Google Apps Script",
+            "JavaScript",
+            "Moodle",
+            "EAD"
+        ],
+        "category": "sistema",
+        "year": "2023–2025",
+        "github": null,
+        "blog": "blog/post.html?slug=automacao-educacional-gas",
+        "featured": true,
+        "status": "production"
     },
-    "tags": ["Python", "Gemini API", "SEO", "CLI"],
-    "category": "ferramenta",
-    "year": "2025",
-    "github": "https://github.com/vitorkrewer",
-    "blog": null,
-    "featured": true,
-    "status": "open-source"
-  },
-  {
-    "id": 3,
-    "title": { "pt-br": "Matriz Arquitetura Interativa", "en": "Interactive Architecture Matrix", "es": "Matriz de Arquitectura Interactiva" },
-    "description": {
-        "pt-br": "Visualizador interativo do fluxo de arquitetura de sistemas. Renderiza todos os módulos como nós em um canvas SVG com conexões animadas, pan/zoom, minimap e modal com detalhes de cada módulo.",
-        "en": "Interactive visualizer of system architecture flow. Renders all modules as nodes on an SVG canvas with animated connections, pan/zoom, minimap, and a modal with details for each module.",
-        "es": "Visualizador interactivo del flujo de arquitectura de sistemas. Muestra todos los módulos como nodos en un lienzo SVG con conexiones animadas, desplazamiento/zoom, minimapa y un modal con detalles de cada módulo."
+    {
+        "id": 2,
+        "title": {
+            "pt-br": "SEO Analyzer Auto-Fixer",
+            "en": "SEO Analyzer Auto-Fixer",
+            "es": "SEO Analyzer Auto-Fixer"
+        },
+        "description": {
+            "pt-br": "Ferramenta de linha de comando em Python que analisa páginas HTML para problemas de SEO e usa a API Gemini para gerar e aplicar patches automáticos, com re-análise para comparar scores.",
+            "en": "A Python command-line tool that analyzes HTML pages for SEO issues and uses the Gemini API to generate and apply automatic patches, with re-analysis to compare scores.",
+            "es": "Herramienta de línea de comandos en Python que analiza páginas HTML en busca de problemas de SEO y utiliza la API Gemini para generar y aplicar parches automáticos, con un nuevo análisis para comparar puntuaciones."
+        },
+        "tags": [
+            "Python",
+            "Gemini API",
+            "SEO",
+            "CLI"
+        ],
+        "category": "ferramenta",
+        "year": "2025",
+        "github": "https://github.com/vitorkrewer",
+        "blog": null,
+        "featured": true,
+        "status": "open-source"
     },
-    "tags": ["JavaScript", "SVG", "animate.js", "UX"],
-    "category": "ferramenta",
-    "year": "2024",
-    "github": null,
-    "blog": null,
-    "featured": false,
-    "status": "production"
-  },
-  {
-    "id": 4,
-    "title": { "pt-br": "Implantação e Gestão NEAD", "en": "DE Center Deployment & Management", "es": "Implementación y Gestión NEAD" },
-    "description": {
-        "pt-br": "Coordenação completa do Núcleo de Educação a Distância do Grupo Focus. Modelagem de +200 cursos em Moodle, automação de processos acadêmicos com GAS e liderança de equipe multidisciplinar.",
-        "en": "Complete coordination of the Distance Education Center at Focus Group. Modeling of +200 courses in Moodle, academic process automation with GAS, and multidisciplinary team leadership.",
-        "es": "Coordinación completa del Centro de Educación a Distancia del Grupo Focus. Modelado de +200 cursos en Moodle, automatización de procesos académicos con GAS e liderazgo de equipos multidisciplinares."
+    {
+        "id": 3,
+        "title": {
+            "pt-br": "Matriz Arquitetura Interativa",
+            "en": "Interactive Architecture Matrix",
+            "es": "Matriz de Arquitectura Interactiva"
+        },
+        "description": {
+            "pt-br": "Visualizador interativo do fluxo de arquitetura de sistemas. Renderiza todos os módulos como nós em um canvas SVG com conexões animadas, pan/zoom, minimap e modal com detalhes de cada módulo.",
+            "en": "Interactive visualizer of system architecture flow. Renders all modules as nodes on an SVG canvas with animated connections, pan/zoom, minimap, and a modal with details for each module.",
+            "es": "Visualizador interactivo del flujo de arquitectura de sistemas. Muestra todos los módulos como nodos en un lienzo SVG con conexiones animadas, desplazamiento/zoom, minimapa y un modal con detalles de cada módulo."
+        },
+        "tags": [
+            "JavaScript",
+            "SVG",
+            "animate.js",
+            "UX"
+        ],
+        "category": "ferramenta",
+        "year": "2024",
+        "github": null,
+        "blog": null,
+        "featured": false,
+        "status": "production"
     },
-    "tags": ["Moodle", "Google Apps Script", "Gestão", "EAD"],
-    "category": "educacao",
-    "year": "2019–2025",
-    "github": null,
-    "blog": null,
-    "featured": true,
-    "status": "production"
-  },
-  {
-    "id": 5,
-    "title": { "pt-br": "Gerador de Trilhas de Aprendizagem", "en": "Learning Path Generator", "es": "Generador de Rutas de Aprendizaje" },
-    "description": {
-        "pt-br": "Módulo que gera trilhas de aprendizagem personalizadas com interface moderna, sidebar colapsável e reprodução de vídeo integrada. Utilizado na plataforma FocusConnecta.",
-        "en": "Module that generates personalized learning paths with a modern interface, collapsible sidebar, and integrated video playback. Used in the FocusConnecta platform.",
-        "es": "Módulo que genera rutas de aprendizaje personalizadas con una interfaz moderna, barra lateral plegable y reproducción de video integrada. Utilizado en la plataforma FocusConnecta."
+    {
+        "id": 4,
+        "title": {
+            "pt-br": "Implantação e Gestão NEAD",
+            "en": "DE Center Deployment & Management",
+            "es": "Implementación y Gestión NEAD"
+        },
+        "description": {
+            "pt-br": "Coordenação completa do Núcleo de Educação a Distância do Grupo Focus. Modelagem de +200 cursos em Moodle, automação de processos acadêmicos com GAS e liderança de equipe multidisciplinar.",
+            "en": "Complete coordination of the Distance Education Center at Focus Group. Modeling of +200 courses in Moodle, academic process automation with GAS, and multidisciplinary team leadership.",
+            "es": "Coordinación completa del Centro de Educación a Distancia del Grupo Focus. Modelado de +200 cursos en Moodle, automatización de procesos académicos con GAS e liderazgo de equipos multidisciplinares."
+        },
+        "tags": [
+            "Moodle",
+            "Google Apps Script",
+            "Gestão",
+            "EAD"
+        ],
+        "category": "educacao",
+        "year": "2019–2025",
+        "github": null,
+        "blog": null,
+        "featured": true,
+        "status": "production"
     },
-    "tags": ["JavaScript", "UX", "EAD", "HTML/CSS"],
-    "category": "educacao",
-    "year": "2025",
-    "github": null,
-    "blog": null,
-    "featured": false,
-    "status": "production"
-  },
-  {
-    "id": 6,
-    "title": { "pt-br": "Conversor XML → Moodle XML", "en": "XML → Moodle XML Converter", "es": "Conversor XML → Moodle XML" },
-    "description": {
-        "pt-br": "Script para converter questões de exames em formato XML proprietário para o formato Moodle XML, com marcação automática de alternativas corretas e fração de pontuação.",
-        "en": "Script to convert exam questions from a proprietary XML format to Moodle XML format, with automatic marking of correct alternatives and fractional scoring.",
-        "es": "Script para convertir preguntas de exámenes de formato XML propietario al formato XML de Moodle, con marcado automático de alternativas correctas y puntuación fraccionada."
+    {
+        "id": 5,
+        "title": {
+            "pt-br": "Gerador de Trilhas de Aprendizagem",
+            "en": "Learning Path Generator",
+            "es": "Generador de Rutas de Aprendizaje"
+        },
+        "description": {
+            "pt-br": "Módulo que gera trilhas de aprendizagem personalizadas com interface moderna, sidebar colapsável e reprodução de vídeo integrada. Utilizado na plataforma FocusConnecta.",
+            "en": "Module that generates personalized learning paths with a modern interface, collapsible sidebar, and integrated video playback. Used in the FocusConnecta platform.",
+            "es": "Módulo que genera rutas de aprendizaje personalizadas con una interfaz moderna, barra lateral plegable y reproducción de video integrada. Utilizado en la plataforma FocusConnecta."
+        },
+        "tags": [
+            "JavaScript",
+            "UX",
+            "EAD",
+            "HTML/CSS"
+        ],
+        "category": "educacao",
+        "year": "2025",
+        "github": null,
+        "blog": null,
+        "featured": false,
+        "status": "production"
     },
-    "tags": ["Python", "XML", "Moodle", "Automação"],
-    "category": "ferramenta",
-    "year": "2025",
-    "github": null,
-    "blog": null,
-    "featured": false,
-    "status": "utility"
-  }
+    {
+        "id": 6,
+        "title": {
+            "pt-br": "Conversor XML → Moodle XML",
+            "en": "XML → Moodle XML Converter",
+            "es": "Conversor XML → Moodle XML"
+        },
+        "description": {
+            "pt-br": "Script para converter questões de exames em formato XML proprietário para o formato Moodle XML, com marcação automática de alternativas corretas e fração de pontuação.",
+            "en": "Script to convert exam questions from a proprietary XML format to Moodle XML format, with automatic marking of correct alternatives and fractional scoring.",
+            "es": "Script para convertir preguntas de exámenes de formato XML propietario al formato XML de Moodle, con marcado automático de alternativas correctas y puntuación fraccionada."
+        },
+        "tags": [
+            "Python",
+            "XML",
+            "Moodle",
+            "Automação"
+        ],
+        "category": "ferramenta",
+        "year": "2025",
+        "github": null,
+        "blog": null,
+        "featured": false,
+        "status": "utility"
+    }
 ]

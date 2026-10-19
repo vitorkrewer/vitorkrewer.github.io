@@ -16,6 +16,12 @@ const translations = {
         'nav_publications': '~/publications',
         'nav_projects': '~/projects',
         'nav_blog': '~/blog',
+        'nav_tags': '~/tópicos',
+        'sidebar_nav_tags': '~/tópicos',
+        'tags_page_title': 'Tópicos & Tags',
+        'tags_page_subtitle': 'Navegue pelas tecnologias, ferramentas e conceitos abordados nas publicações do blog.',
+        'search_tags_placeholder': 'Buscar por tópico ou tecnologia...',
+        'btn_more_tags': '+ Ver todos',
         'nav_contact': './contato',
         
         // Hero
@@ -166,6 +172,12 @@ const translations = {
         'nav_publications': '~/publications',
         'nav_projects': '~/projects',
         'nav_blog': '~/blog',
+        'nav_tags': '~/topics',
+        'sidebar_nav_tags': '~/topics',
+        'tags_page_title': 'Topics & Tags',
+        'tags_page_subtitle': 'Browse technologies, tools, and concepts covered across blog publications.',
+        'search_tags_placeholder': 'Search topic or technology...',
+        'btn_more_tags': '+ View all',
         'nav_contact': './contact',
         
         // Hero
@@ -316,6 +328,12 @@ const translations = {
         'nav_publications': '~/publications',
         'nav_projects': '~/projects',
         'nav_blog': '~/blog',
+        'nav_tags': '~/temas',
+        'sidebar_nav_tags': '~/temas',
+        'tags_page_title': 'Temas & Etiquetas',
+        'tags_page_subtitle': 'Explora las tecnologías, herramientas y conceptos tratados en las publicaciones del blog.',
+        'search_tags_placeholder': 'Buscar por tema o tecnología...',
+        'btn_more_tags': '+ Ver todos',
         'nav_contact': './contacto',
         
         // Hero

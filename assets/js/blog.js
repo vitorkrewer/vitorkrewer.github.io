@@ -127,6 +127,14 @@ async function loadPostList() {
                     const slug = proj.blog.split('slug=')[1].split('&')[0];
                     postToProject[slug] = proj;
                 }
+                // Mapeia posts por ID de projeto ou por Série compartilhada
+                allPosts.forEach(post => {
+                    if (proj.id && post.project === proj.id) {
+                        postToProject[post.slug] = proj;
+                    } else if (proj.series && post.series && proj.series.toLowerCase() === post.series.toLowerCase()) {
+                        postToProject[post.slug] = proj;
+                    }
+                });
             });
         }
     } catch (err) {
@@ -134,30 +142,51 @@ async function loadPostList() {
         return;
     }
 
-    // Gerar lista de tags únicas
-    const allTags = new Set();
-    allPosts.forEach(p => (p.tags || []).forEach(tag => allTags.add(tag)));
+    // Contagem de frequência de tags
+    const tagCounts = {};
+    allPosts.forEach(p => (p.tags || []).forEach(tag => {
+        tagCounts[tag] = (tagCounts[tag] || 0) + 1;
+    }));
+
+    // Ordena por popularidade decrescente e seleciona as 10 principais
+    const sortedTags = Object.keys(tagCounts).sort((a, b) => tagCounts[b] - tagCounts[a]);
+    const top10Tags = sortedTags.slice(0, 10);
 
     let selectedTag = null;
+    const urlTag = new URLSearchParams(window.location.search).get('tag');
+    if (urlTag) {
+        selectedTag = decodeURIComponent(urlTag);
+    }
+
     let searchQuery = '';
     let currentPage = 1;
 
-    // Renderizar tags para filtro
+    // Renderizar tags para filtro (Top 10 mais utilizadas)
     function renderTagFilters() {
         if (!tagFilterContainer) return;
-        const tags = Array.from(allTags);
+
+        // Se uma tag vinda da URL ou selecionada não estiver no Top 10, inclui para permitir o filtro ativo
+        const tagsToShow = [...top10Tags];
+        if (selectedTag && !tagsToShow.includes(selectedTag)) {
+            tagsToShow.push(selectedTag);
+        }
+
         tagFilterContainer.innerHTML = `
             <button class="tag-filter-btn ${!selectedTag ? 'active' : ''}" data-tag="">
-                ${t('filter_all_tags') || 'Todos'}
+                ${t('filter_all_tags') || 'Todos'} <span style="opacity:0.65;font-size:0.75em">(${allPosts.length})</span>
             </button>
-            ${tags.map(tag => `
+            ${tagsToShow.map(tag => `
                 <button class="tag-filter-btn ${selectedTag === tag ? 'active' : ''}" data-tag="${tag}">
-                    #${tag}
+                    #${tag} <span style="opacity:0.65;font-size:0.75em">(${tagCounts[tag] || 1})</span>
                 </button>
             `).join('')}
+            <a href="tags.html" class="tag-filter-btn tag-more-btn" style="text-decoration:none;color:var(--accent-blue);border-color:rgba(88,166,255,0.3);background:rgba(88,166,255,0.06);display:inline-flex;align-items:center;gap:4px;" title="Ver nuvem com todos os tópicos">
+                <span>${t('btn_more_tags') || '+ Ver todos'}</span>
+                <span style="opacity:0.65;font-size:0.75em">(${sortedTags.length})</span> →
+            </a>
         `;
 
-        tagFilterContainer.querySelectorAll('.tag-filter-btn').forEach(btn => {
+        tagFilterContainer.querySelectorAll('.tag-filter-btn[data-tag]').forEach(btn => {
             btn.addEventListener('click', () => {
                 const tag = btn.dataset.tag;
                 selectedTag = tag === selectedTag ? null : (tag || null);
@@ -179,6 +208,7 @@ async function loadPostList() {
             filtered = filtered.filter(p =>
                 p.title.toLowerCase().includes(searchQuery) ||
                 p.excerpt.toLowerCase().includes(searchQuery) ||
+                (p.series && p.series.toLowerCase().includes(searchQuery)) ||
                 p.tags.some(t => t.toLowerCase().includes(searchQuery))
             );
         }
@@ -210,6 +240,7 @@ async function loadPostList() {
                 <div style="flex:1">
                   <div class="post-card-meta">
                     <span class="post-date">${formatDate(post.date)}</span>
+                    ${post.series ? `<span class="post-series-badge">📖 ${post.series}${post.seriesOrder ? ` #${post.seriesOrder}` : ''}</span>` : ''}
                     ${(post.tags || []).slice(0, 3).map(tg => `<span class="post-tag">#${tg}</span>`).join('')}
                     <span class="post-read-time">⏱ ${post.readTime}</span>
                   </div>
@@ -283,16 +314,21 @@ async function loadPost() {
 
     let postMeta = null;
     let linkedProject = null;
+    let allPosts = [];
     try {
         const [postsRes, projRes] = await Promise.all([
             fetch('../content/posts/index.json'),
             fetch('../content/projects.json').catch(() => null)
         ]);
-        const posts = await postsRes.json();
-        postMeta = posts.find(p => p.slug === slug);
+        allPosts = await postsRes.json();
+        postMeta = allPosts.find(p => p.slug === slug);
         if (projRes && projRes.ok) {
             const projects = await projRes.json();
-            linkedProject = projects.find(p => p.blog && p.blog.includes(slug));
+            linkedProject = projects.find(p => 
+                (p.blog && p.blog.includes(slug)) ||
+                (postMeta && postMeta.project && p.id === postMeta.project) ||
+                (postMeta && postMeta.series && p.series && p.series.toLowerCase() === postMeta.series.toLowerCase())
+            );
         }
     } catch { /* sem meta */ }
 
@@ -308,6 +344,26 @@ async function loadPost() {
         }
 
         document.title = `${postMeta.title} · Vitor Krewer`;
+
+        // Verifica se pertence a uma série de artigos sequenciais
+        let seriesPosts = [];
+        let seriesIndex = -1;
+        let prevPost = null;
+        let nextPost = null;
+
+        if (postMeta.series) {
+            seriesPosts = allPosts.filter(p => 
+                p.series && p.series.toLowerCase() === postMeta.series.toLowerCase() &&
+                p.status && p.status.toLowerCase() === 'publicado'
+            );
+            seriesPosts.sort((a, b) => (a.seriesOrder || 0) - (b.seriesOrder || 0) || a.date.localeCompare(b.date));
+            seriesIndex = seriesPosts.findIndex(p => p.slug === postMeta.slug);
+            if (seriesIndex !== -1) {
+                prevPost = seriesIndex > 0 ? seriesPosts[seriesIndex - 1] : null;
+                nextPost = seriesIndex < seriesPosts.length - 1 ? seriesPosts[seriesIndex + 1] : null;
+            }
+        }
+
         if (metaContainer) {
             const lang = localStorage.getItem('vk-lang') || 'pt-br';
             const projectTitle = linkedProject ? (
@@ -317,6 +373,11 @@ async function loadPost() {
             metaContainer.innerHTML = `
         <div class="post-card-meta" style="margin-bottom:1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;">
           <span class="post-date">${formatDate(postMeta.date)}</span>
+          ${postMeta.series ? `
+            <span class="post-series-badge">
+              📖 Série: <strong>${postMeta.series}</strong> (${seriesIndex + 1} de ${seriesPosts.length})
+            </span>
+          ` : ''}
           ${postMeta.tags.map(t => `<span class="post-tag">${t}</span>`).join('')}
           <span class="post-read-time">⏱ ${postMeta.readTime}</span>
           ${linkedProject ? `
@@ -332,39 +393,130 @@ async function loadPost() {
         }
         const titleEl = document.getElementById('post-title');
         if (titleEl) titleEl.textContent = postMeta.title;
-    }
 
-    container.innerHTML = `<div class="loading-state"><div class="spinner"></div></div>`;
-    try {
-        const res = await fetch(`../content/posts/${slug}.md`);
-        if (!res.ok) throw new Error('not found');
-        let rawMd = await res.text();
-        
-        // Bloqueia caso o frontmatter do markdown defina como rascunho
-        const statusMatch = rawMd.match(/^---[\s\S]*?status:\s*([^\n\r]+)[\s\S]*?---/i);
-        if (statusMatch && statusMatch[1].trim().toLowerCase() === 'rascunho') {
+        // Renderiza o corpo do markdown
+        container.innerHTML = `<div class="loading-state"><div class="spinner"></div></div>`;
+        try {
+            const res = await fetch(`../content/posts/${slug}.md`);
+            if (!res.ok) throw new Error('not found');
+            let rawMd = await res.text();
+            
+            // Bloqueia caso o frontmatter do markdown defina como rascunho
+            const statusMatch = rawMd.match(/^---[\s\S]*?status:\s*([^\n\r]+)[\s\S]*?---/i);
+            if (statusMatch && statusMatch[1].trim().toLowerCase() === 'rascunho') {
+                container.innerHTML = `
+                  <div class="empty-state">
+                    Este artigo ainda é um rascunho em desenvolvimento.<br>
+                    <a href="../index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
+                  </div>`;
+                return;
+            }
+
+            let md = rawMd.replace(/^---[\s\S]*?---\n?/, '').trim();
+
+            let proseHtml = '';
+            if (typeof marked !== 'undefined') {
+                const renderer = new marked.Renderer();
+                renderer.image = function (hrefOrObj, title, text) {
+                    let href = hrefOrObj;
+                    let tit = title;
+                    let alt = text;
+                    if (typeof hrefOrObj === 'object' && hrefOrObj !== null) {
+                        href = hrefOrObj.href;
+                        tit = hrefOrObj.title;
+                        alt = hrefOrObj.text;
+                    }
+                    const altAttr = alt ? `alt="${String(alt).replace(/"/g, '&quot;')}"` : '';
+                    const titleAttr = tit ? `title="${String(tit).replace(/"/g, '&quot;')}"` : '';
+                    const caption = alt ? `<figcaption class="post-figcaption">${alt}</figcaption>` : '';
+                    return `
+                      <figure class="post-figure">
+                        <img src="${href}" ${altAttr} ${titleAttr} loading="lazy" />
+                        ${caption}
+                      </figure>
+                    `;
+                };
+
+                marked.setOptions({ breaks: true, gfm: true, renderer });
+                proseHtml = `<div class="prose">${marked.parse(md)}</div>`;
+            } else {
+                proseHtml = `<div class="prose"><pre style="white-space:pre-wrap">${md}</pre></div>`;
+            }
+
+            // Bloco de Continuidade / Navegação Sequencial de Série
+            let seriesNavHtml = '';
+            if (seriesPosts.length > 1) {
+                seriesNavHtml = `
+                  <section class="series-nav-box" aria-label="Navegação da série">
+                    <div class="series-nav-header">
+                      <div class="series-title-row">
+                        <span class="series-pill">Série</span>
+                        <h3>${postMeta.series}</h3>
+                      </div>
+                      <span class="series-counter">Parte ${seriesIndex + 1} de ${seriesPosts.length}</span>
+                    </div>
+
+                    <div class="series-nav-buttons">
+                      ${prevPost ? `
+                        <a href="post.html?slug=${prevPost.slug}" class="series-btn series-btn-prev">
+                          <span class="series-btn-sub">← Artigo anterior</span>
+                          <span class="series-btn-title">${prevPost.title}</span>
+                        </a>
+                      ` : `
+                        <div class="series-btn series-btn-disabled">
+                          <span class="series-btn-sub">Início da série</span>
+                          <span class="series-btn-title">Este é o primeiro artigo</span>
+                        </div>
+                      `}
+
+                      ${nextPost ? `
+                        <a href="post.html?slug=${nextPost.slug}" class="series-btn series-btn-next">
+                          <span class="series-btn-sub">Próximo artigo →</span>
+                          <span class="series-btn-title">${nextPost.title}</span>
+                        </a>
+                      ` : `
+                        <div class="series-btn series-btn-disabled">
+                          <span class="series-btn-sub">Fim da série</span>
+                          <span class="series-btn-title">Você leu o artigo mais recente 🎉</span>
+                        </div>
+                      `}
+                    </div>
+
+                    <details class="series-dropdown">
+                      <summary class="series-dropdown-toggle">
+                        <span>Índice: ver todos os ${seriesPosts.length} artigos da série</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                      </summary>
+                      <ol class="series-posts-list">
+                        ${seriesPosts.map((sp, idx) => `
+                          <li class="${sp.slug === postMeta.slug ? 'current' : ''}">
+                            <a href="post.html?slug=${sp.slug}">
+                              <span class="series-item-num">#${idx + 1}</span>
+                              <span class="series-item-title">${sp.title}</span>
+                              <span class="series-item-date">${formatDate(sp.date)}</span>
+                            </a>
+                          </li>
+                        `).join('')}
+                      </ol>
+                    </details>
+                  </section>
+                `;
+            }
+
+            container.innerHTML = proseHtml + seriesNavHtml;
+        } catch {
             container.innerHTML = `
               <div class="empty-state">
-                Este artigo ainda é um rascunho em desenvolvimento.<br>
-                <a href="../index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
+                Post não encontrado.<br>
+                <a href="index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
               </div>`;
-            return;
         }
-
-        let md = rawMd.replace(/^---[\s\S]*?---\n?/, '').trim();
-
-        if (typeof marked !== 'undefined') {
-            marked.setOptions({ breaks: true, gfm: true });
-            container.innerHTML = `<div class="prose">${marked.parse(md)}</div>`;
-        } else {
-            container.innerHTML = `<div class="prose"><pre style="white-space:pre-wrap">${md}</pre></div>`;
-        }
-    } catch {
+    } else {
         container.innerHTML = `
-      <div class="empty-state">
-        Post não encontrado.<br>
-        <a href="index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
-      </div>`;
+          <div class="empty-state">
+            Post não encontrado.<br>
+            <a href="index.html" style="color:var(--accent-blue);margin-top:1rem;display:inline-block">← Voltar ao blog</a>
+          </div>`;
     }
 }
 

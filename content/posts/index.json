@@ -1,5 +1,226 @@
 [
     {
+        "slug": "correcoes-atualizacoes-melhorias",
+        "title": "Dia para Correções, Atualizações e Melhorias",
+        "excerpt": "Um dia dedicado ao refinamento e à excelência: novo Guia de Uso com 11 capítulos, impressão em PDF reprojetada com rodapé institucional e fundo branco puro, revisão de tecnologias, expansão da FAQ e unificação completa da navegação em todo o portal.",
+        "date": "2026-10-16",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 13,
+        "project": 9,
+        "tags": [
+            "Magnetares Notes",
+            "Engenharia de Software",
+            "Qualidade",
+            "UX"
+        ],
+        "readTime": "7 min"
+    },
+    {
+        "slug": "ciencias-exatas-biologicas-abnt",
+        "title": "Fórmulas KaTeX, Diagramas Mermaid, Active Recall e Exportação ABNT",
+        "excerpt": "Um mergulho aprofundado nas ferramentas acadêmicas da v1.9.0: equações matemáticas offline, reações químicas com mhchem, teclado de engenharia, diagramas biológicos com Mermaid.js, toggles para auto-teste e exportação de artigos no padrão ABNT (.docx).",
+        "date": "2026-10-14",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 12,
+        "project": 9,
+        "tags": [
+            "KaTeX",
+            "Mermaid.js",
+            "ABNT",
+            "Active Recall",
+            "Magnetares Notes"
+        ],
+        "readTime": "8 min"
+    },
+    {
+        "slug": "pendrive-multiverse-markdown",
+        "title": "Portabilidade total e Markdown com vida",
+        "excerpt": "Um relato sobre como o uso diário de diferentes computadores e anotações antigas inspirou a versão Portable Multiverse para pendrives, o compilador rico de Markdown e melhorias que chegam na v1.9.0.",
+        "date": "2026-10-13",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 11,
+        "project": 9,
+        "tags": [
+            "Markdown",
+            "Portable",
+            "SQLite",
+            "Magnetares Notes"
+        ],
+        "readTime": "7 min"
+    },
+    {
+        "slug": "v1-8-0",
+        "title": "Magnetares Notes v1.8.0: Novo Módulo de Listas & Tarefas, Prioridades Semânticas e Modais Nativos!",
+        "excerpt": "A versão v1.8.0 inaugura um módulo completo de produtividade pessoal: hierarquia em 4 níveis (Listas, Tarefas, Subtarefas e Múltiplas Notas), prioridades visuais semânticas, arquivamento inteligente de listas com modo consulta, modais nativos centralizados e sincronização em tempo real na nuvem Turso.",
+        "date": "2026-10-12",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 10,
+        "project": 9,
+        "tags": [
+            "Listas & Tarefas",
+            "Release",
+            "Turso",
+            "Magnetares Notes"
+        ],
+        "readTime": "5 min"
+    },
+    {
+        "slug": "modo-foco-identidade",
+        "title": "Aulas da faculdade, foco e o caminho para a v1.9.0",
+        "excerpt": "Um relato pessoal sobre como a necessidade de assistir a aulas e fazer anotações de estudo inspirou o desenvolvimento do Modo Foco em janela independente (Picture-in-Picture) e o que esperar da futura versão 1.9.0.",
+        "date": "2026-10-12",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 9,
+        "project": 9,
+        "tags": [
+            "Modo Foco",
+            "Picture-in-Picture",
+            "Produtividade",
+            "Magnetares Notes"
+        ],
+        "readTime": "5 min"
+    },
+    {
+        "slug": "v1-7-0",
+        "title": "Magnetares Notes v1.7.0: Backup, Live Preview e Sincronização Unificada!",
+        "excerpt": "O aguardado modo de backup e restauração local chegou. Além disso, incluímos um novo painel de sincronização, suporte a renderização rica de Markdown e um Live Preview poderoso para protótipos de desenvolvimento.",
+        "date": "2026-10-08",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 8,
+        "project": 9,
+        "tags": [
+            "Backup",
+            "Live Preview",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-6-0",
+        "title": "Magnetares Notes v1.6.0: Formatação Avançada, Portable Mode Nativo e Cores",
+        "excerpt": "A versão v1.6.0 eleva a edição rich text com suporte completo a cores e alinhamento de texto. Apresentamos também o novo Portable Mode e sugestões de tags super dinâmicas.",
+        "date": "2026-10-08",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 7,
+        "project": 9,
+        "tags": [
+            "Rich Text",
+            "Portable Mode",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-5-0",
+        "title": "Magnetares Notes v1.5.0: Code Snippets de Primeira Classe",
+        "excerpt": "Transformamos o Magnetares em um repositório poderoso para desenvolvedores. Notas de código nativas impulsionadas pelo Monaco Editor com syntax highlighting para dezenas de linguagens.",
+        "date": "2026-10-07",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 6,
+        "project": 9,
+        "tags": [
+            "Monaco Editor",
+            "Code Snippets",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-4-0",
+        "title": "Magnetares Notes v1.4.0: Mural de Stickers e Quadros Dinâmicos",
+        "excerpt": "Novo mural em tela cheia para gerenciar dezenas de notas adesivas (Stickers) coloridas com Drag & Drop e suporte nativo a múltiplos quadros (Boards).",
+        "date": "2026-10-06",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 5,
+        "project": 9,
+        "tags": [
+            "Mural de Stickers",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-3-0",
+        "title": "Magnetares Notes v1.3.0: Novo AppImage e Site Atualizado",
+        "excerpt": "Trazendo a experiência Magnetares nativamente para distribuições Linux (Debian/Ubuntu via .deb e AppImage universal). Melhorias severas de sincronização de estado.",
+        "date": "2026-10-06",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 4,
+        "project": 9,
+        "tags": [
+            "Linux",
+            "AppImage",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-2-0",
+        "title": "Magnetares Notes v1.2.0: Editor Ampliado e Sincronização Automática",
+        "excerpt": "Editor Tiptap super carregado com hiperlinks, formatação de código inline e criação rica de tabelas. Sincronização em nuvem agora rodando em background perfeitamente.",
+        "date": "2026-09-28",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 3,
+        "project": 9,
+        "tags": [
+            "Tiptap",
+            "Sincronização",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-1-0",
+        "title": "Magnetares Notes v1.1.0: Pastas Personalizadas, Cores, Ícones e Integridade Local",
+        "excerpt": "Personalização expressiva de pastas com 8 cores e 8 ícones, ferramenta de auditoria e autorreparo local do banco de dados SQLite, e diálogo de exclusão transparente com lixeira.",
+        "date": "2026-09-25",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 2,
+        "project": 9,
+        "tags": [
+            "SQLite",
+            "Pastas Inteligentes",
+            "Release",
+            "Magnetares Notes"
+        ],
+        "readTime": "3 min"
+    },
+    {
+        "slug": "v1-0-0",
+        "title": "Bem-vindo ao Magnetares Notes: Onde Pensamentos Ganham Gravidade Própria",
+        "excerpt": "Lançamento inaugural da v1.0.0! Conheça o caderno desktop Local-First com SQLite WAL, interface estilo macOS, editor rich text dinâmico, pastas inteligentes e privacidade absoluta sem telemetria.",
+        "date": "2026-09-24",
+        "status": "Publicado",
+        "series": "Magnetares Notes",
+        "seriesOrder": 1,
+        "project": 9,
+        "tags": [
+            "Local-First",
+            "Lançamento",
+            "SQLite",
+            "Magnetares Notes"
+        ],
+        "readTime": "4 min"
+    },
+    {
         "slug": "youtube-crawler-cloud-native-ia",
         "title": "YouTube Crawler & IA: arquitetura Cloud-Native e análise de sentimentos em tempo real",
         "excerpt": "Como reconstruí uma ferramenta frágil de extração de dados do YouTube em um motor de inteligência competitivo escalável, combinando FastAPI, LibSQL, web crawling cirúrgico (Chrome CDP) e IA (Gemini Flash).",

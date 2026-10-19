@@ -195,8 +195,17 @@ function typeProjectLines(p) {
         lines.push({ label: l.repo, value: '🔒 privado · existe, mas não é público', color: '#f78166' });
     }
     
+    if (p.series) {
+        const seriesLabel = lang === 'en' ? 'series' : (lang === 'es' ? 'serie' : 'série');
+        lines.push({ label: seriesLabel, value: `Série no Blog: "${p.series}"`, color: '#3fb950' });
+    }
+
     if (p.blog) {
-        lines.push({ label: l.blog, value: `${l.read_blog} ${pTitle}`, color: '#d2a8ff', link: p.blog });
+        const blogLabel = p.series ? (lang === 'en' ? 'latest post' : (lang === 'es' ? 'último post' : 'último post')) : l.blog;
+        const blogText = p.series
+            ? (lang === 'en' ? `Read latest article of ${pTitle}` : (lang === 'es' ? `Leer última publicación de ${pTitle}` : `Ler último artigo de ${pTitle}`))
+            : `${l.read_blog} ${pTitle}`;
+        lines.push({ label: blogLabel, value: blogText, color: '#d2a8ff', link: p.blog });
     }
 
     let delay = 0;

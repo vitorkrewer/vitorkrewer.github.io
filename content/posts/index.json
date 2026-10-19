@@ -320,5 +320,20 @@
             "Startups"
         ],
         "readTime": "9 min"
+    },
+    {
+        "slug": "livros-livrarias-ebooks",
+        "title": "Livros, livrarias e e-books: a história que não te contaram",
+        "excerpt": "A crise das livrarias físicas não foi causada pelo Kindle ou pela Netflix. Uma análise em primeira pessoa sobre a cadeia logística editorial, a desintermediação e o valor insubstituível da serendipidade fora da bolha dos algoritmos.",
+        "date": "2019-06-04",
+        "status": "Publicado",
+        "tags": [
+            "Livros",
+            "Mercado Editorial",
+            "E-books",
+            "Cultura",
+            "Negócios"
+        ],
+        "readTime": "7 min"
     }
 ]

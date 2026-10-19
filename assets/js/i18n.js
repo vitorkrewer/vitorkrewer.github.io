@@ -20,9 +20,11 @@ const translations = {
         'sidebar_nav_tags': '~/tópicos',
         'nav_readings': '~/leituras',
         'sidebar_nav_readings': '~/leituras',
+        'readings_tagline': '// reading notes & essays',
         'readings_title': 'Leituras',
         'readings_subtitle': 'Resenhas, notas e ensaios pessoais sobre livros e leituras marcantes.',
         'search_readings_placeholder': 'Buscar por título, autor ou tema...',
+        'tags_tagline': '// taxonomy & topics',
         'tags_page_title': 'Tópicos & Tags',
         'tags_page_subtitle': 'Navegue pelas tecnologias, ferramentas e conceitos abordados nas publicações do blog.',
         'search_tags_placeholder': 'Buscar por tópico ou tecnologia...',
@@ -68,6 +70,7 @@ const translations = {
         'ui_empty': 'Nenhum item encontrado.',
 
         // Projects Page
+        'projects_tagline': '// engineering & builds',
         'projects_page_title': 'Projetos',
         'projects_page_subtitle': 'Sistemas, ferramentas e soluções desenvolvidas em Tecnologia Educacional.',
         'filter_all': 'Todos',
@@ -182,9 +185,11 @@ const translations = {
         'sidebar_nav_tags': '~/topics',
         'nav_readings': '~/readings',
         'sidebar_nav_readings': '~/readings',
+        'readings_tagline': '// reading notes & essays',
         'readings_title': 'Readings',
         'readings_subtitle': 'Reviews, notes, and personal essays on books and remarkable readings.',
         'search_readings_placeholder': 'Search by title, author, or topic...',
+        'tags_tagline': '// taxonomy & topics',
         'tags_page_title': 'Topics & Tags',
         'tags_page_subtitle': 'Browse technologies, tools, and concepts covered across blog publications.',
         'search_tags_placeholder': 'Search topic or technology...',
@@ -230,6 +235,7 @@ const translations = {
         'ui_empty': 'No items found.',
 
         // Projects Page
+        'projects_tagline': '// engineering & builds',
         'projects_page_title': 'Projects',
         'projects_page_subtitle': 'Systems, tools, and solutions developed in Educational Technology.',
         'filter_all': 'All',
@@ -344,9 +350,11 @@ const translations = {
         'sidebar_nav_tags': '~/temas',
         'nav_readings': '~/lecturas',
         'sidebar_nav_readings': '~/lecturas',
+        'readings_tagline': '// reading notes & essays',
         'readings_title': 'Lecturas',
         'readings_subtitle': 'Reseñas, notas y ensayos personales sobre libros y lecturas destacadas.',
         'search_readings_placeholder': 'Buscar por título, autor o tema...',
+        'tags_tagline': '// taxonomy & topics',
         'tags_page_title': 'Temas & Etiquetas',
         'tags_page_subtitle': 'Explora las tecnologías, herramientas y conceptos tratados en las publicaciones del blog.',
         'search_tags_placeholder': 'Buscar por tema o tecnología...',
@@ -392,6 +400,7 @@ const translations = {
         'ui_empty': 'No se encontraron artículos.',
 
         // Projects Page
+        'projects_tagline': '// engineering & builds',
         'projects_page_title': 'Proyectos',
         'projects_page_subtitle': 'Sistemas, herramientas y soluciones desarrolladas en Tecnología Educativa.',
         'filter_all': 'Todos',

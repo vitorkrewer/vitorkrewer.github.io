@@ -1964,11 +1964,13 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.feed-tagline {
+.feed-tagline,
+.mono-label {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--accent-green);
   margin-bottom: 0.35rem;
+  display: block;
 }
 
 .feed-title {

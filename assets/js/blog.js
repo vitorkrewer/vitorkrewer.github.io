@@ -89,27 +89,100 @@ function animateCards(selector = '.observe') {
     });
 }
 
-// ── LISTA DE POSTS (blog/index.html) ────────────────────────
+// ── LISTA DE POSTS (raiz index.html ou blog/index.html) ────────────────────────
 async function loadPostList() {
     const listContainer = document.getElementById('post-list');
     const paginationContainer = document.getElementById('blog-pagination');
     const searchInput = document.getElementById('blog-search');
+    const tagFilterContainer = document.getElementById('tag-filters');
     if (!listContainer) return;
 
     const t = (window.i18n && window.i18n.t) || ((k) => k);
+    const getLang = () => (window.i18n && window.i18n.currentLanguage()) || localStorage.getItem('vk-lang') || 'pt-br';
     listContainer.innerHTML = `<div class="loading-state"><div class="spinner"></div><span>${t('loading_posts')}</span></div>`;
 
+    const isSubdir = window.location.pathname.includes('/blog/');
+    const postsJsonPath = isSubdir ? '../content/posts/index.json' : 'content/posts/index.json';
+    const projectsJsonPath = isSubdir ? '../content/projects.json' : 'content/projects.json';
+    const postUrlPrefix = isSubdir ? 'post.html?slug=' : 'blog/post.html?slug=';
+    const projectUrl = isSubdir ? '../projects.html' : 'projects.html';
+
     let allPosts = [];
+    let postToProject = {};
+
     try {
-        const res = await fetch('../content/posts/index.json');
-        allPosts = await res.json();
-    } catch {
-        listContainer.innerHTML = `<div class="empty-state">Erro ao carregar artigos.</div>`;
+        const [postsRes, projRes] = await Promise.all([
+            fetch(postsJsonPath),
+            fetch(projectsJsonPath).catch(() => null)
+        ]);
+
+        allPosts = await postsRes.json();
+
+        if (projRes && projRes.ok) {
+            const projects = await projRes.json();
+            projects.forEach(proj => {
+                if (proj.blog && proj.blog.includes('slug=')) {
+                    const slug = proj.blog.split('slug=')[1].split('&')[0];
+                    postToProject[slug] = proj;
+                }
+            });
+        }
+    } catch (err) {
+        listContainer.innerHTML = `<div class="empty-state">${t('ui_error') || 'Erro ao carregar artigos.'}</div>`;
         return;
     }
 
-    let filteredPosts = [...allPosts];
+    // Gerar lista de tags únicas
+    const allTags = new Set();
+    allPosts.forEach(p => (p.tags || []).forEach(tag => allTags.add(tag)));
+
+    let selectedTag = null;
+    let searchQuery = '';
     let currentPage = 1;
+
+    // Renderizar tags para filtro
+    function renderTagFilters() {
+        if (!tagFilterContainer) return;
+        const tags = Array.from(allTags);
+        tagFilterContainer.innerHTML = `
+            <button class="tag-filter-btn ${!selectedTag ? 'active' : ''}" data-tag="">
+                ${t('filter_all_tags') || 'Todos'}
+            </button>
+            ${tags.map(tag => `
+                <button class="tag-filter-btn ${selectedTag === tag ? 'active' : ''}" data-tag="${tag}">
+                    #${tag}
+                </button>
+            `).join('')}
+        `;
+
+        tagFilterContainer.querySelectorAll('.tag-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tag = btn.dataset.tag;
+                selectedTag = tag === selectedTag ? null : (tag || null);
+                currentPage = 1;
+                filterAndRender();
+                renderTagFilters();
+            });
+        });
+    }
+
+    function filterAndRender() {
+        let filtered = [...allPosts];
+
+        if (selectedTag) {
+            filtered = filtered.filter(p => p.tags && p.tags.includes(selectedTag));
+        }
+
+        if (searchQuery) {
+            filtered = filtered.filter(p =>
+                p.title.toLowerCase().includes(searchQuery) ||
+                p.excerpt.toLowerCase().includes(searchQuery) ||
+                p.tags.some(t => t.toLowerCase().includes(searchQuery))
+            );
+        }
+
+        renderPage(filtered, currentPage);
+    }
 
     function renderPage(posts, page) {
         const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
@@ -117,64 +190,83 @@ async function loadPostList() {
         const slice = posts.slice(start, start + POSTS_PER_PAGE);
 
         if (!slice.length) {
-            listContainer.innerHTML = `<div class="empty-state">Nenhum artigo encontrado.</div>`;
+            listContainer.innerHTML = `<div class="empty-state">${t('no_posts_found') || 'Nenhum artigo encontrado.'}</div>`;
             if (paginationContainer) paginationContainer.innerHTML = '';
             return;
         }
 
-        listContainer.innerHTML = slice.map(post => `
-      <a href="post.html?slug=${post.slug}" class="post-card observe">
-        <div style="flex:1">
-          <div class="post-card-meta">
-            <span class="post-date">${formatDate(post.date)}</span>
-            ${post.tags.slice(0, 2).map(t => `<span class="post-tag">${t}</span>`).join('')}
-            <span class="post-read-time">⏱ ${post.readTime}</span>
-          </div>
-          <div class="post-title">${post.title}</div>
-          <div class="post-excerpt">${post.excerpt}</div>
-        </div>
-      </a>
-    `).join('');
+        const lang = getLang();
+
+        listContainer.innerHTML = slice.map(post => {
+            const linkedProject = postToProject[post.slug];
+            const projectTitle = linkedProject ? (
+                (typeof linkedProject.title === 'object' ? (linkedProject.title[lang] || linkedProject.title['pt-br']) : linkedProject.title)
+            ) : null;
+
+            return `
+              <article class="post-card observe">
+                <div style="flex:1">
+                  <div class="post-card-meta">
+                    <span class="post-date">${formatDate(post.date)}</span>
+                    ${(post.tags || []).slice(0, 3).map(tg => `<span class="post-tag">#${tg}</span>`).join('')}
+                    <span class="post-read-time">⏱ ${post.readTime}</span>
+                  </div>
+                  
+                  <h2 class="post-title">
+                    <a href="${postUrlPrefix}${post.slug}">${post.title}</a>
+                  </h2>
+
+                  <p class="post-excerpt">${post.excerpt}</p>
+                  
+                  <div class="post-card-footer">
+                    <a href="${postUrlPrefix}${post.slug}" class="read-more-link">
+                      ${t('btn_read_more') || 'Ler artigo'} →
+                    </a>
+
+                    ${linkedProject ? `
+                      <a href="${projectUrl}?highlight=${linkedProject.id}" class="post-project-badge" title="${t('related_project')}">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <span>${t('related_project')}: <strong>${projectTitle}</strong></span>
+                      </a>
+                    ` : ''}
+                  </div>
+                </div>
+              </article>
+            `;
+        }).join('');
 
         animateCards('.post-card.observe');
 
         if (paginationContainer) {
             buildPagination(paginationContainer, page, totalPages, (newPage) => {
                 currentPage = newPage;
-                renderPage(filteredPosts, currentPage);
+                filterAndRender();
                 listContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         }
     }
 
-    // Pesquisa
+    // Pesquisa com debounce
     if (searchInput) {
+        searchInput.placeholder = t('search_posts_placeholder');
         searchInput.addEventListener('input', () => {
-            const q = searchInput.value.toLowerCase().trim();
-            filteredPosts = q
-                ? allPosts.filter(p =>
-                    p.title.toLowerCase().includes(q) ||
-                    p.excerpt.toLowerCase().includes(q) ||
-                    p.tags.some(t => t.toLowerCase().includes(q))
-                )
-                : [...allPosts];
+            searchQuery = searchInput.value.toLowerCase().trim();
             currentPage = 1;
-            renderPage(filteredPosts, currentPage);
+            filterAndRender();
         });
     }
 
-    renderPage(filteredPosts, currentPage);
+    renderTagFilters();
+    filterAndRender();
 
     // Re-render when language changes
     document.addEventListener('languageChanged', () => {
-        if (searchInput) {
-            searchInput.placeholder = t('search_posts_placeholder');
-        }
-        renderPage(filteredPosts, currentPage);
+        if (searchInput) searchInput.placeholder = t('search_posts_placeholder');
+        renderTagFilters();
+        filterAndRender();
     });
-    
-    // Initial placeholder
-    if (searchInput) searchInput.placeholder = t('search_posts_placeholder');
 }
 
 // ── LEITOR DE POST (blog/post.html) ─────────────────────────

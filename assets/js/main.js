@@ -103,22 +103,81 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --- NAV: Hamburger menu ---
-  const hamburger = document.getElementById('nav-hamburger');
-  const navLinks = document.getElementById('nav-links');
+  // --- AUTHOR SIDEBAR CONTROLS ---
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+  // 1. Language Pill Switcher
+  const updateLangPills = () => {
+    const currentLang = (window.i18n && window.i18n.currentLanguage()) || localStorage.getItem('vk-lang') || 'pt-br';
+    document.querySelectorAll('.lang-pill-btn').forEach(btn => {
+      const btnLang = btn.getAttribute('data-lang');
+      btn.classList.toggle('active', btnLang === currentLang);
     });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+  };
+  updateLangPills();
+
+  document.querySelectorAll('.lang-pill-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetLang = btn.getAttribute('data-lang');
+      if (targetLang && window.i18n && typeof window.i18n.setLanguage === 'function') {
+        window.i18n.setLanguage(targetLang);
+        updateLangPills();
+      }
+    });
+  });
+
+  window.addEventListener('languageChanged', updateLangPills);
+
+  // 2. Sidebar Theme Toggle Button
+  document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  });
+
+  // 3. Mobile Sidebar Drawer & Backdrop
+  const mobileMenuBtn = document.getElementById('mobile-menu-trigger');
+  const sidebar = document.querySelector('.sidebar');
+  const backdrop = document.getElementById('sidebar-backdrop');
+
+  const closeSidebarDrawer = () => {
+    if (sidebar) sidebar.classList.remove('open');
+    if (backdrop) backdrop.classList.remove('active');
+  };
+
+  const openSidebarDrawer = () => {
+    if (sidebar) sidebar.classList.add('open');
+    if (backdrop) backdrop.classList.add('active');
+  };
+
+  if (mobileMenuBtn && sidebar) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (sidebar.classList.contains('open')) {
+        closeSidebarDrawer();
+      } else {
+        openSidebarDrawer();
+      }
+    });
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener('click', closeSidebarDrawer);
+  }
+
+  if (sidebar) {
+    sidebar.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 992) {
+          closeSidebarDrawer();
+        }
+      });
     });
   }
 
   // --- NAV: highlight active link ---
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(a => {
+  document.querySelectorAll('.nav-links a, .sidebar-nav-link').forEach(a => {
     const href = a.getAttribute('href') || '';
     const linkPage = href.split('/').pop();
     a.classList.toggle('active', linkPage === currentPath ||
@@ -143,8 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
-  // --- YEAR in footer ---
+  // --- YEAR in footer & sidebar ---
   document.querySelectorAll('.js-year').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
 });
+

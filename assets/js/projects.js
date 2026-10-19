@@ -274,8 +274,8 @@ function projectCardHTML(p) {
             ${p.github
                 ? `<a href="${p.github}" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size:0.75rem;padding:0.35rem 0.75rem">${githubSVG} ${l.btn_repo}</a>`
                 : ''}
-            ${(!p.github && p.blog)
-                ? `<a href="${p.blog}" class="btn btn-secondary" style="font-size:0.75rem;padding:0.35rem 0.75rem;color:var(--accent-blue)">${articleSVG} ${l.btn_article}</a>`
+            ${p.blog
+                ? `<a href="${p.blog}" class="btn btn-secondary" style="font-size:0.75rem;padding:0.35rem 0.75rem;color:var(--accent-blue)">${articleSVG} ${l.btn_article || 'Ler artigo'}</a>`
                 : ''}
         </div>
       </div>

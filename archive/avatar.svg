@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58a6ff" />
+      <stop offset="100%" stop-color="#8250df" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3fb950" />
+      <stop offset="100%" stop-color="#58a6ff" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <rect width="160" height="160" rx="80" fill="url(#bgGrad)" />
+  
+  <!-- Subtle Grid Pattern in Background -->
+  <circle cx="80" cy="80" r="76" fill="none" stroke="#30363d" stroke-width="1.5" stroke-dasharray="3 3" />
+  
+  <!-- Stylized Person Avatar / Developer Tech Silhouette -->
+  <!-- Head -->
+  <circle cx="80" cy="58" r="28" fill="#30363d" />
+  <circle cx="80" cy="58" r="25" fill="#e6edf3" opacity="0.9" />
+  
+  <!-- Tech Glasses / Headset Accent -->
+  <path d="M 64 56 Q 72 52 80 56 Q 88 52 96 56" fill="none" stroke="#0d1117" stroke-width="3" stroke-linecap="round" />
+  <rect x="65" y="53" width="12" height="7" rx="2" fill="#58a6ff" opacity="0.3" stroke="#0d1117" stroke-width="1.5" />
+  <rect x="83" y="53" width="12" height="7" rx="2" fill="#58a6ff" opacity="0.3" stroke="#0d1117" stroke-width="1.5" />
+  
+  <!-- Body / Shoulders -->
+  <path d="M 36 138 C 36 104, 52 94, 80 94 C 108 94, 124 104, 124 138 Z" fill="url(#primaryGrad)" />
+  
+  <!-- Inner Collar / Shirt -->
+  <path d="M 70 94 L 80 110 L 90 94 Z" fill="#e6edf3" />
+  
+  <!-- Monogram VK Badge -->
+  <rect x="62" y="124" width="36" height="18" rx="4" fill="#0d1117" opacity="0.85" />
+  <text x="80" y="137" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#58a6ff">VK_</text>
+</svg>

@@ -141,7 +141,23 @@ const translations = {
         'search_posts_placeholder': 'Pesquisar artigos...',
         'no_posts_found': 'Nenhum artigo encontrado.',
         'blog_page_title': 'Blog',
-        'blog_page_subtitle': 'Tecnologia educacional, automação e reflexões sobre ensino e desenvolvimento.'
+        'blog_page_subtitle': 'Tecnologia educacional, automação e reflexões sobre ensino e desenvolvimento.',
+
+        // Sidebar & Author Layout
+        'sidebar_role': 'Dev & Educação · Eng. de Software',
+        'sidebar_bio': 'Desenvolvedor de Soluções para Educação Digital | Especialista em Tecnologia, Gestão de Conteúdo e Inovação Educacional | Experiência em Plataformas EaD, Automação e Escrita Técnica',
+        'sidebar_status': 'disponível para projetos',
+        'sidebar_location': 'Cascavel, PR · Brasil',
+        'sidebar_nav_blog': '~/blog',
+        'sidebar_nav_projects': '~/projetos',
+        'sidebar_nav_all_projects': 'Ver todos os projetos →',
+        'sidebar_featured_projects': '// Projetos em Destaque',
+        'sidebar_connect': '// Conexões',
+        'feed_title': 'Artigos & Engenharia',
+        'feed_subtitle': 'Tecnologia educacional, automação, IA e desenvolvimento de sistemas.',
+        'filter_all_tags': 'Todos',
+        'related_project': 'Projeto Vinculado',
+        'btn_read_more': 'Ler artigo'
     },
     'en': {
         // Nav
@@ -275,7 +291,23 @@ const translations = {
         'search_posts_placeholder': 'Search articles...',
         'no_posts_found': 'No articles found.',
         'blog_page_title': 'Blog',
-        'blog_page_subtitle': 'Educational technology, automation, and reflections on teaching and development.'
+        'blog_page_subtitle': 'Educational technology, automation, and reflections on teaching and development.',
+
+        // Sidebar & Author Layout
+        'sidebar_role': 'Dev & Education · Software Eng.',
+        'sidebar_bio': 'Digital Education Solutions Developer | Specialist in Technology, Content Management, and Educational Innovation | Experience in Distance Learning Platforms, Automation, and Technical Writing',
+        'sidebar_status': 'available for projects',
+        'sidebar_location': 'Cascavel, PR · Brazil',
+        'sidebar_nav_blog': '~/blog',
+        'sidebar_nav_projects': '~/projects',
+        'sidebar_nav_all_projects': 'View all projects →',
+        'sidebar_featured_projects': '// Featured Projects',
+        'sidebar_connect': '// Connect',
+        'feed_title': 'Articles & Engineering',
+        'feed_subtitle': 'Educational technology, automation, AI, and systems development.',
+        'filter_all_tags': 'All',
+        'related_project': 'Linked Project',
+        'btn_read_more': 'Read article'
     },
     'es': {
         // Nav
@@ -409,7 +441,23 @@ const translations = {
         'search_posts_placeholder': 'Buscar artículos...',
         'no_posts_found': 'No se encontraron artículos.',
         'blog_page_title': 'Blog',
-        'blog_page_subtitle': 'Tecnología educativa, automatización y reflexiones sobre enseñanza y desarrollo.'
+        'blog_page_subtitle': 'Tecnología educativa, automatización y reflexiones sobre enseñanza y desarrollo.',
+
+        // Sidebar & Author Layout
+        'sidebar_role': 'Dev y Educación · Ing. de Software',
+        'sidebar_bio': 'Desarrollador de Soluciones para la Educación Digital | Especialista en Tecnología, Gestión de Contenido e Innovación Educativa | Experiencia en Plataformas EaD, Automatización y Escritura Técnica',
+        'sidebar_status': 'disponible para proyectos',
+        'sidebar_location': 'Cascavel, PR · Brasil',
+        'sidebar_nav_blog': '~/blog',
+        'sidebar_nav_projects': '~/proyectos',
+        'sidebar_nav_all_projects': 'Ver todos los proyectos →',
+        'sidebar_featured_projects': '// Proyectos Destacados',
+        'sidebar_connect': '// Conectar',
+        'feed_title': 'Artículos e Ingeniería',
+        'feed_subtitle': 'Tecnología educativa, automatización, IA y desarrollo de sistemas.',
+        'filter_all_tags': 'Todos',
+        'related_project': 'Proyecto Vinculado',
+        'btn_read_more': 'Leer artículo'
     }
 };
 

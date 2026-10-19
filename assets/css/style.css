@@ -1973,11 +1973,15 @@ body {
   margin-bottom: 2.25rem;
 }
 
-.search-container {
+.search-container,
+.search-box-wrapper {
   position: relative;
+  width: 100%;
 }
 
-.search-container input {
+.search-container input,
+.search-box-wrapper input,
+.search-input {
   width: 100%;
   padding: 0.8rem 1rem 0.8rem 2.6rem;
   background: var(--bg-secondary);
@@ -1990,12 +1994,15 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.search-container input:focus {
+.search-container input:focus,
+.search-box-wrapper input:focus,
+.search-input:focus {
   border-color: var(--accent-blue);
   box-shadow: 0 0 0 3px var(--glow-blue);
 }
 
-.search-icon-svg {
+.search-icon-svg,
+.search-icon {
   position: absolute;
   left: 0.85rem;
   top: 50%;
@@ -2065,12 +2072,36 @@ body {
 }
 
 .post-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   background: rgba(88, 166, 255, 0.1);
   color: var(--accent-blue);
   border: 1px solid rgba(88, 166, 255, 0.25);
   border-radius: 4px;
-  padding: 0.15rem 0.5rem;
+  padding: 0.2rem 0.55rem;
   font-size: 0.72rem;
+  font-family: var(--font-mono);
+  line-height: 1.2;
+  transition: all 0.2s ease;
+}
+
+.post-tag + .post-tag {
+  margin-left: 0.35rem;
+}
+
+.post-tag:hover {
+  background: rgba(88, 166, 255, 0.18);
+  border-color: var(--accent-blue);
+}
+
+.reading-card-tags,
+.reading-tags-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.5rem 0 1.25rem 0;
 }
 
 .post-title {
@@ -2582,6 +2613,118 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+/* --- READINGS & ESSAYS --- */
+.reading-author-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #d2a8ff;
+  background: rgba(210, 168, 255, 0.1);
+  border: 1px solid rgba(210, 168, 255, 0.28);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius);
+}
+
+.reading-card {
+  border-left: 3px solid rgba(210, 168, 255, 0.4);
+  transition: all 0.25s ease;
+}
+
+.reading-card:hover {
+  border-left-color: #d2a8ff;
+  transform: translateY(-2px);
+}
+
+/* --- BOOK INFO CARD (FICHA DA OBRA) --- */
+.book-info-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-purple);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0 2.25rem 0;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-info-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(210, 168, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.book-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.book-info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-purple);
+  background: rgba(210, 168, 255, 0.1);
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+
+.book-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem 1.25rem;
+}
+
+.book-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.book-info-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.book-info-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.book-info-value.book-info-highlight {
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.book-meta-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-secondary);
 }
 
 /* --- MOBILE RESPONSIVE DRAWER --- */

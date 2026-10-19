@@ -251,6 +251,22 @@
         "readTime": "14 min"
     },
     {
+        "slug": "pdfs-estaticos-terminal-navegador-labs-virtual",
+        "title": "De PDFs Estáticos a um Terminal no Navegador: A Criação de um Laboratório Virtual de Cibersegurança",
+        "excerpt": "Como transformei a frustração de alunos iniciantes em uma experiência imersiva de segurança defensiva e ofensiva direto no navegador — arquitetura Zero-Build, engine VirtualOS, emulação com Xterm.js e aceleração de desenvolvimento com IA.",
+        "date": "2026-02-24",
+        "status": "Publicado",
+        "tags": [
+            "Cibersegurança",
+            "Educação",
+            "Linux",
+            "Design Instrucional",
+            "Automação",
+            "JavaScript"
+        ],
+        "readTime": "8 min"
+    },
+    {
         "slug": "automacao-educacional-gas",
         "title": "Automatizando o Ensino Superior com Google Apps Script",
         "excerpt": "Como substituí planilhas manuais, e-mails avulsos e processos lentos por um sistema automatizado que roda direto no Google Workspace — sem servidores, sem frameworks complexos.",

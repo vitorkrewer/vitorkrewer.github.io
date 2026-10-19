@@ -11,5 +11,18 @@
     "excerpt": "Um thriller sofisticado cheio de conspirações com direito a fugas, perseguições pela Europa e livros raros. O mercenário da bibliografia Lucas Corso é contratado para autenticar um manuscrito de Os Três Mosqueteiros e o lendário As Nove Portas do Reino das Sombras.",
     "tags": ["Ficção", "Literatura", "Livros Raros", "Mistério", "Umberto Eco"],
     "readTime": "6 min"
+  },
+  {
+    "slug": "na-natureza-selvagem-jon-krakauer",
+    "title": "Na Natureza Selvagem",
+    "author": "Jon Krakauer",
+    "publisher": "Companhia das Letras",
+    "year": 1998,
+    "originalYear": 1996,
+    "date": "2016-09-12",
+    "status": "Publicado",
+    "excerpt": "A odisseia real de Chris McCandless (Alexander Supertramp) que abandonou o conforto burguês rumo à imensidão do Alasca. Uma análise do livro investigativo de Jon Krakauer e sua profunda sinergia com o filme de Sean Penn e a trilha de Eddie Vedder.",
+    "tags": ["Não Ficção", "Filosofia", "Biografia", "Aventura", "Transcendentalismo", "Cinema"],
+    "readTime": "7 min"
   }
 ]

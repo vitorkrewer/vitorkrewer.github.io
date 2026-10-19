@@ -254,7 +254,7 @@ function projectCardHTML(p) {
         : '';
 
     return `
-    <article class="project-card observe">
+    <article class="project-card observe" id="project-${p.id}" data-id="${p.id}">
       <div class="project-card-header">
         <span class="project-category ${catClass}">${pCat}</span>
         ${statusDot}
@@ -360,6 +360,45 @@ async function loadProjects() {
     document.addEventListener('languageChanged', () => {
         renderPage(filteredProjects, currentPage);
     });
+
+    // Verifica se há projeto específico solicitado via URL (ex: ?highlight=8 ou ?project=8)
+    const urlParams = new URLSearchParams(window.location.search);
+    const highlightId = parseInt(urlParams.get('highlight') || urlParams.get('project') || urlParams.get('id'));
+
+    if (!isNaN(highlightId)) {
+        const targetProject = allProjects.find(p => p.id === highlightId);
+        if (targetProject) {
+            // Se o projeto pertencer a outra categoria que não a atual, garante 'all'
+            if (!filteredProjects.some(p => p.id === highlightId)) {
+                tabs.forEach(t => t.classList.toggle('active', t.dataset.filter === 'all'));
+                filteredProjects = [...allProjects];
+            }
+
+            // Descobre em qual página o projeto está localizado
+            const projectIndex = filteredProjects.findIndex(p => p.id === highlightId);
+            if (projectIndex !== -1) {
+                currentPage = Math.floor(projectIndex / PROJECTS_PER_PAGE) + 1;
+            }
+
+            renderPage(filteredProjects, currentPage);
+
+            // Destaca o card com brilho e abre os detalhes do projeto imediatamente
+            setTimeout(() => {
+                const card = document.getElementById(`project-${highlightId}`);
+                if (card) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.style.outline = '2px solid var(--accent-blue)';
+                    card.style.boxShadow = '0 0 24px rgba(88, 166, 255, 0.45)';
+                    setTimeout(() => {
+                        card.style.outline = '';
+                        card.style.boxShadow = '';
+                    }, 3500);
+                }
+                openProjectTerminal(targetProject);
+            }, 150);
+            return;
+        }
+    }
 
     renderPage(filteredProjects, currentPage);
 }

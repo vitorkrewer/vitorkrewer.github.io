@@ -45,7 +45,7 @@
     "category": "sistema",
     "year": "2023–2025",
     "github": null,
-    "blog": "blog/post.html",
+    "blog": "blog/post.html?slug=automacao-educacional-gas",
     "featured": true,
     "status": "production"
   },
@@ -77,7 +77,7 @@
     "category": "ferramenta",
     "year": "2024",
     "github": null,
-    "blog": "blog/post.html",
+    "blog": null,
     "featured": false,
     "status": "production"
   },
@@ -87,7 +87,7 @@
     "description": {
         "pt-br": "Coordenação completa do Núcleo de Educação a Distância do Grupo Focus. Modelagem de +200 cursos em Moodle, automação de processos acadêmicos com GAS e liderança de equipe multidisciplinar.",
         "en": "Complete coordination of the Distance Education Center at Focus Group. Modeling of +200 courses in Moodle, academic process automation with GAS, and multidisciplinary team leadership.",
-        "es": "Coordinación completa del Centro de Educación a Distancia del Grupo Focus. Modelado de +200 cursos en Moodle, automatización de procesos académicos con GAS y liderazgo de equipos multidisciplinares."
+        "es": "Coordinación completa del Centro de Educación a Distancia del Grupo Focus. Modelado de +200 cursos en Moodle, automatización de procesos académicos con GAS e liderazgo de equipos multidisciplinares."
     },
     "tags": ["Moodle", "Google Apps Script", "Gestão", "EAD"],
     "category": "educacao",
@@ -109,7 +109,7 @@
     "category": "educacao",
     "year": "2025",
     "github": null,
-    "blog": "blog/post.html",
+    "blog": null,
     "featured": false,
     "status": "production"
   },

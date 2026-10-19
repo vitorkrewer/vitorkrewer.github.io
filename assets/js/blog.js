@@ -282,10 +282,18 @@ async function loadPost() {
     }
 
     let postMeta = null;
+    let linkedProject = null;
     try {
-        const res = await fetch('../content/posts/index.json');
-        const posts = await res.json();
+        const [postsRes, projRes] = await Promise.all([
+            fetch('../content/posts/index.json'),
+            fetch('../content/projects.json').catch(() => null)
+        ]);
+        const posts = await postsRes.json();
         postMeta = posts.find(p => p.slug === slug);
+        if (projRes && projRes.ok) {
+            const projects = await projRes.json();
+            linkedProject = projects.find(p => p.blog && p.blog.includes(slug));
+        }
     } catch { /* sem meta */ }
 
     if (postMeta) {
@@ -301,11 +309,24 @@ async function loadPost() {
 
         document.title = `${postMeta.title} · Vitor Krewer`;
         if (metaContainer) {
+            const lang = localStorage.getItem('vk-lang') || 'pt-br';
+            const projectTitle = linkedProject ? (
+                (typeof linkedProject.title === 'object' ? (linkedProject.title[lang] || linkedProject.title['pt-br']) : linkedProject.title)
+            ) : '';
+
             metaContainer.innerHTML = `
-        <div class="post-card-meta" style="margin-bottom:1rem">
+        <div class="post-card-meta" style="margin-bottom:1.25rem;display:flex;flex-wrap:wrap;align-items:center;gap:0.75rem;">
           <span class="post-date">${formatDate(postMeta.date)}</span>
           ${postMeta.tags.map(t => `<span class="post-tag">${t}</span>`).join('')}
           <span class="post-read-time">⏱ ${postMeta.readTime}</span>
+          ${linkedProject ? `
+            <a href="../projects.html?highlight=${linkedProject.id}" class="post-project-badge" title="${t('related_project')}" style="margin:0;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>${t('related_project')}: <strong>${projectTitle}</strong></span>
+            </a>
+          ` : ''}
         </div>
       `;
         }

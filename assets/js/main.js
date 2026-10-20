@@ -5,15 +5,29 @@
 // ── THEME TOGGLE ─────────────────────────────────────────────
 const THEME_KEY = 'vk-theme';
 
-function applyTheme(theme) {
+// Migração segura: limpar tema salvo automaticamente no passado (que gravava 'dark' compulsoriamente)
+try {
+  if (!localStorage.getItem('vk-theme-initialized')) {
+    localStorage.removeItem(THEME_KEY);
+    localStorage.setItem('vk-theme-initialized', 'true');
+  }
+} catch (e) {}
+
+function applyTheme(theme, save = true) {
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem(THEME_KEY, theme);
+  if (save) {
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (e) {}
+  }
 }
 
 function getPreferredTheme() {
-  const saved = localStorage.getItem(THEME_KEY);
-  if (saved) return saved;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  try {
+    const saved = localStorage.getItem(THEME_KEY);
+    if (saved) return saved;
+  } catch (e) {}
+  return 'light';
 }
 
 // Aplica o tema ANTES do render para evitar flash
@@ -24,7 +38,7 @@ function getPreferredTheme() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const theme = getPreferredTheme();
-  applyTheme(theme);
+  applyTheme(theme, false);
 
   // Injeta botão de toggle em todas as navs
   const navInners = document.querySelectorAll('.nav-inner');
@@ -56,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'light' ? 'dark' : 'light');
     });
 
     // Insere o botão antes do hamburger (ou no final do nav-inner)
@@ -130,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Sidebar Theme Toggle Button
   document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
-      applyTheme(current === 'dark' ? 'light' : 'dark');
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      applyTheme(current === 'light' ? 'dark' : 'light');
     });
   });
 

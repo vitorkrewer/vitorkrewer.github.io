@@ -6,32 +6,8 @@
 /* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* --- CSS Variables (dark — default) --- */
-:root {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --bg-tertiary: #21262d;
-  --bg-nav: rgba(13, 17, 23, 0.85);
-  --border: #30363d;
-  --text-primary: #e6edf3;
-  --text-secondary: #8b949e;
-  --text-muted: #6e7681;
-  --accent-blue: #58a6ff;
-  --accent-blue-dim: #1f6feb;
-  --accent-green: #3fb950;
-  --accent-orange: #f78166;
-  --accent-purple: #d2a8ff;
-  --glow-blue: rgba(88, 166, 255, 0.15);
-  --glow-green: rgba(63, 185, 80, 0.15);
-  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.3);
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-body: 'Inter', sans-serif;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --transition: 0.2s ease;
-}
-
-/* --- CSS Variables (light) --- */
+/* --- CSS Variables (light — default) --- */
+:root,
 [data-theme="light"] {
   --bg-primary: #ffffff;
   --bg-secondary: #f6f8fa;
@@ -49,6 +25,31 @@
   --glow-blue: rgba(9, 105, 218, 0.1);
   --glow-green: rgba(26, 127, 55, 0.1);
   --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --transition: 0.2s ease;
+}
+
+/* --- CSS Variables (dark) --- */
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --bg-nav: rgba(13, 17, 23, 0.85);
+  --border: #30363d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  --accent-blue: #58a6ff;
+  --accent-blue-dim: #1f6feb;
+  --accent-green: #3fb950;
+  --accent-orange: #f78166;
+  --accent-purple: #d2a8ff;
+  --glow-blue: rgba(88, 166, 255, 0.15);
+  --glow-green: rgba(63, 185, 80, 0.15);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 /* --- Reset & Base --- */
@@ -218,8 +219,17 @@ body {
   border-color: var(--text-secondary);
 }
 
-.theme-toggle svg {
+.theme-toggle svg,
+.theme-toggle-btn svg {
   transition: transform 0.4s ease, opacity 0.2s ease;
+}
+
+.icon-moon {
+  display: none;
+}
+
+.icon-sun {
+  display: block;
 }
 
 [data-theme="light"] .icon-moon {
@@ -235,10 +245,6 @@ body {
 }
 
 [data-theme="dark"] .icon-sun {
-  display: none;
-}
-
-.icon-sun {
   display: none;
 }
 
@@ -1145,9 +1151,16 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+:root .prose img,
+:root .post-figure img,
 [data-theme="light"] .prose img,
 [data-theme="light"] .post-figure img {
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .prose img,
+[data-theme="dark"] .post-figure img {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
 .prose img:hover,
@@ -1530,27 +1543,49 @@ body {
 /* ============================================================
    LIGHT THEME SPECIFIC OVERRIDES
    ============================================================ */
+:root .hero::before,
 [data-theme="light"] .hero::before {
   background: radial-gradient(circle, rgba(9, 105, 218, 0.05) 0%, transparent 70%);
 }
 
+:root .hero::after,
 [data-theme="light"] .hero::after {
   background: radial-gradient(circle, rgba(26, 127, 55, 0.04) 0%, transparent 70%);
 }
 
+[data-theme="dark"] .hero::before {
+  background: radial-gradient(circle, rgba(88, 166, 255, 0.06) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .hero::after {
+  background: radial-gradient(circle, rgba(63, 185, 80, 0.05) 0%, transparent 70%);
+}
+
+:root .card:hover,
 [data-theme="light"] .card:hover {
   box-shadow: var(--shadow-card);
 }
 
+:root .project-card:hover,
 [data-theme="light"] .project-card:hover {
   box-shadow: var(--shadow-card);
 }
 
+:root .terminal-wrapper,
 [data-theme="light"] .terminal-wrapper {
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="light"] body {
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .project-card:hover {
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .terminal-wrapper {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

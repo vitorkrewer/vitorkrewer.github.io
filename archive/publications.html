@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script>!function () { var t = localStorage.getItem('vk-theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); document.documentElement.setAttribute('data-theme', t) }();</script>
+    <script>!function () { try { if (!localStorage.getItem('vk-theme-initialized')) { localStorage.removeItem('vk-theme'); localStorage.setItem('vk-theme-initialized', 'true'); } } catch(e){} var t = localStorage.getItem('vk-theme') || 'light'; document.documentElement.setAttribute('data-theme', t) }();</script>
 </head>
 
 <body>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,11 +36,13 @@
     <!-- Anti-flash: aplica o tema antes do render -->
     <script>
       !(function () {
-        var t =
-          localStorage.getItem("vk-theme") ||
-          (window.matchMedia("(prefers-color-scheme: light)").matches
-            ? "light"
-            : "dark");
+        try {
+          if (!localStorage.getItem("vk-theme-initialized")) {
+            localStorage.removeItem("vk-theme");
+            localStorage.setItem("vk-theme-initialized", "true");
+          }
+        } catch (e) {}
+        var t = localStorage.getItem("vk-theme") || "light";
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>

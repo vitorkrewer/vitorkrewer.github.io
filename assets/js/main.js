@@ -13,7 +13,7 @@ function applyTheme(theme) {
 function getPreferredTheme() {
   const saved = localStorage.getItem(THEME_KEY);
   if (saved) return saved;
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 // Aplica o tema ANTES do render para evitar flash

@@ -1,5 +1,34 @@
 [
     {
+        "id": 11,
+        "title": {
+            "pt-br": "Pulsares Research",
+            "en": "Pulsares Research",
+            "es": "Pulsares Research"
+        },
+        "description": {
+            "pt-br": "Ambiente desktop local-first para ler, anotar, citar e escrever trabalhos acadêmicos. Leitor de PDF, anotações ancoradas, citações ABNT, grafo de conexões, coleções, fichamentos e uma IDE para teses, dissertações e artigos, com IA opcional e dados sempre no seu computador.",
+            "en": "Local-first desktop environment to read, annotate, cite and write academic work. PDF reader, anchored annotations, ABNT citations, connection graph, collections, reading sheets and an IDE for theses, dissertations and papers, with optional AI and data always on your computer.",
+            "es": "Entorno de escritorio local-first para leer, anotar, citar y escribir trabajos académicos. Lector de PDF, anotaciones ancladas, citas ABNT, grafo de conexiones, colecciones, fichas de lectura y un IDE para tesis, disertaciones y artículos, con IA opcional y datos siempre en su equipo."
+        },
+        "tags": [
+            "Go",
+            "Wails",
+            "React",
+            "TypeScript",
+            "SQLite",
+            "Tiptap",
+            "Local-First"
+        ],
+        "category": "sistema",
+        "year": "2026",
+        "github": null,
+        "blog": "blog/post.html?slug=pulsares-por-que-comecei",
+        "series": "Pulsares Research",
+        "featured": true,
+        "status": "production"
+    },
+    {
         "id": 10,
         "title": {
             "pt-br": "Kali Linux Labs Beginner",

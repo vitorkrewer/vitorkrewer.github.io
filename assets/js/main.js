@@ -30,10 +30,30 @@ function getPreferredTheme() {
   return 'light';
 }
 
-// Aplica o tema ANTES do render para evitar flash
+// Aplica o tema e o estado da sidebar ANTES do render para evitar flash
+const SIDEBAR_COLLAPSED_KEY = 'vk-sidebar-collapsed';
+
+function applySidebarCollapsed(collapsed, save = true) {
+  if (collapsed) {
+    document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
+  } else {
+    document.documentElement.removeAttribute('data-sidebar-collapsed');
+  }
+  if (save) {
+    try {
+      localStorage.setItem(SIDEBAR_COLLAPSED_KEY, collapsed ? 'true' : 'false');
+    } catch (e) {}
+  }
+}
+
 (function () {
   const theme = getPreferredTheme();
   document.documentElement.setAttribute('data-theme', theme);
+  try {
+    if (localStorage.getItem(SIDEBAR_COLLAPSED_KEY) === 'true') {
+      document.documentElement.setAttribute('data-sidebar-collapsed', 'true');
+    }
+  } catch (e) {}
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -186,6 +206,59 @@ document.addEventListener('DOMContentLoaded', () => {
           closeSidebarDrawer();
         }
       });
+    });
+
+    // 4. Minimalist Desktop Sidebar Collapse / Expand Toggle
+    const appLayout = document.querySelector('.app-layout');
+    if (!sidebar.querySelector('.sidebar-collapse-btn')) {
+      const collapseBtn = document.createElement('button');
+      collapseBtn.type = 'button';
+      collapseBtn.className = 'sidebar-collapse-btn';
+      collapseBtn.setAttribute('aria-label', 'Recolher barra lateral (modo leitura)');
+      collapseBtn.setAttribute('title', 'Recolher barra lateral [');
+      collapseBtn.innerHTML = `
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M9 3v18"></path>
+          <path d="m16 15-3-3 3-3"></path>
+        </svg>
+      `;
+      collapseBtn.addEventListener('click', () => {
+        applySidebarCollapsed(true);
+      });
+      sidebar.insertBefore(collapseBtn, sidebar.firstChild);
+    }
+
+    if (appLayout && !document.querySelector('.sidebar-expand-btn')) {
+      const expandBtn = document.createElement('button');
+      expandBtn.type = 'button';
+      expandBtn.className = 'sidebar-expand-btn';
+      expandBtn.setAttribute('aria-label', 'Mostrar barra lateral');
+      expandBtn.setAttribute('title', 'Mostrar barra lateral [');
+      expandBtn.innerHTML = `
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M9 3v18"></path>
+          <path d="m14 9 3 3-3 3"></path>
+        </svg>
+        <span>menu</span>
+        <kbd class="expand-kbd">[</kbd>
+      `;
+      expandBtn.addEventListener('click', () => {
+        applySidebarCollapsed(false);
+      });
+      appLayout.insertBefore(expandBtn, appLayout.firstChild);
+    }
+
+    // Atalho discreto de teclado '[' para alternar modo leitura em desktop
+    document.addEventListener('keydown', (e) => {
+      if (window.innerWidth <= 992) return;
+      const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+      if (tag === 'input' || tag === 'textarea' || (e.target && e.target.isContentEditable)) return;
+      if (e.key === '[' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        const isCollapsed = document.documentElement.getAttribute('data-sidebar-collapsed') === 'true';
+        applySidebarCollapsed(!isCollapsed);
+      }
     });
   }
 

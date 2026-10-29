@@ -35,9 +35,9 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
     <!-- Site Styles -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20261029d" />
 
-    <!-- Anti-flash: aplica o tema antes do render da DOM -->
+    <!-- Anti-flash: aplica o tema e o estado do sidebar antes do render da DOM -->
     <script>
       !(function () {
         try {
@@ -46,8 +46,47 @@
             localStorage.setItem("vk-theme-initialized", "true");
           }
         } catch (e) {}
-        var t = localStorage.getItem("vk-theme") || "light";
+        var t = "light";
+        try {
+          t = localStorage.getItem("vk-theme") || "light";
+        } catch (e) {}
         document.documentElement.setAttribute("data-theme", t);
+        try {
+          var collapsed = false;
+          if (
+            typeof window.name === "string" &&
+            window.name.indexOf("vk-sidebar-collapsed=true") !== -1
+          ) {
+            collapsed = true;
+          } else if (
+            typeof window.name === "string" &&
+            window.name.indexOf("vk-sidebar-collapsed=false") !== -1
+          ) {
+            collapsed = false;
+          } else if (
+            (typeof sessionStorage !== "undefined" &&
+              sessionStorage.getItem("vk-sidebar-collapsed") === "true") ||
+            (typeof localStorage !== "undefined" &&
+              localStorage.getItem("vk-sidebar-collapsed") === "true")
+          ) {
+            collapsed = true;
+          }
+          if (collapsed) {
+            document.documentElement.setAttribute(
+              "data-sidebar-collapsed",
+              "true",
+            );
+            window.name = "vk-sidebar-collapsed=true";
+            try {
+              sessionStorage.setItem("vk-sidebar-collapsed", "true");
+            } catch (e) {}
+            try {
+              localStorage.setItem("vk-sidebar-collapsed", "true");
+            } catch (e) {}
+          } else {
+            document.documentElement.removeAttribute("data-sidebar-collapsed");
+          }
+        } catch (e) {}
       })();
     </script>
   </head>
@@ -97,8 +136,57 @@
     <!-- APP LAYOUT (Sidebar Fixo + Feed Principal)                   -->
     <!-- ============================================================ -->
     <div class="app-layout">
+      <!-- Botão flutuante para reabrir sidebar quando recolhida -->
+      <button
+        type="button"
+        class="sidebar-expand-btn"
+        aria-label="Mostrar barra lateral"
+        title="Mostrar barra lateral ["
+        onclick="document.documentElement.removeAttribute('data-sidebar-collapsed');window.name='vk-sidebar-collapsed=false';try{sessionStorage.setItem('vk-sidebar-collapsed','false')}catch(e){};try{localStorage.setItem('vk-sidebar-collapsed','false')}catch(e){}"
+      >
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M9 3v18"></path>
+          <path d="m14 9 3 3-3 3"></path>
+        </svg>
+        <span>menu</span>
+        <kbd class="expand-kbd">[</kbd>
+      </button>
+
       <!-- SIDEBAR DO AUTOR -->
       <aside class="sidebar" id="author-sidebar">
+        <button
+          type="button"
+          class="sidebar-collapse-btn"
+          aria-label="Recolher barra lateral (modo leitura)"
+          title="Recolher barra lateral ["
+          onclick="document.documentElement.setAttribute('data-sidebar-collapsed','true');window.name='vk-sidebar-collapsed=true';try{sessionStorage.setItem('vk-sidebar-collapsed','true')}catch(e){};try{localStorage.setItem('vk-sidebar-collapsed','true')}catch(e){}"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+            <path d="M9 3v18"></path>
+            <path d="m16 15-3-3 3-3"></path>
+          </svg>
+        </button>
+
         <!-- Topo: Perfil & Bio -->
         <div class="author-profile">
           <div class="author-avatar-wrapper">
@@ -118,9 +206,9 @@
           </p>
 
           <p class="author-bio" data-i18n="sidebar_bio">
-            Desenvolvedor de Soluções para Educação Digital | Especialista em
-            Tecnologia, Gestão de Conteúdo e Inovação Educacional | Experiência
-            em Plataformas EaD, Automação e Escrita Técnica
+            Minha mente vaga por aí; penso em coisas diferentes dia e noite.
+            Como um autor de ficção científica, ponho-me a pensar: E se as
+            coisas fossem assim?
           </p>
 
           <!-- Navegação Principal -->
@@ -145,6 +233,23 @@
                 <polyline points="10 9 9 9 8 9"></polyline>
               </svg>
               <span data-i18n="sidebar_nav_blog">~/blog</span>
+            </a>
+
+            <a href="profile.html" class="sidebar-nav-link">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span data-i18n="sidebar_nav_profile">~/perfil</span>
             </a>
 
             <a href="projects.html" class="sidebar-nav-link">
@@ -396,9 +501,9 @@
     </div>
 
     <!-- Scripts Core -->
-    <script src="assets/js/i18n.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/i18n.js?v=20261029c"></script>
+    <script src="assets/js/main.js?v=20261029b"></script>
+    <script src="assets/js/blog.js?v=20261029b"></script>
 
     <script>
       if (typeof lucide !== "undefined") {

@@ -1,0 +1,1488 @@
+<!doctype html>
+<html lang="pt-br" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Perfil, história, formação acadêmica, trajetória profissional e produção intelectual de Vitor Matheus Krewer."
+    />
+    <title>Perfil & Trajetória | Vitor Krewer</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon.png"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Site Styles -->
+    <link rel="stylesheet" href="assets/css/style.css?v=20261029d" />
+
+    <!-- Anti-flash: aplica o tema e o estado do sidebar antes do render da DOM -->
+    <script>
+      !(function () {
+        try {
+          if (!localStorage.getItem("vk-theme-initialized")) {
+            localStorage.removeItem("vk-theme");
+            localStorage.setItem("vk-theme-initialized", "true");
+          }
+        } catch (e) {}
+        var t = "light";
+        try {
+          t = localStorage.getItem("vk-theme") || "light";
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", t);
+        try {
+          var collapsed = false;
+          if (
+            typeof window.name === "string" &&
+            window.name.indexOf("vk-sidebar-collapsed=true") !== -1
+          ) {
+            collapsed = true;
+          } else if (
+            typeof window.name === "string" &&
+            window.name.indexOf("vk-sidebar-collapsed=false") !== -1
+          ) {
+            collapsed = false;
+          } else if (
+            (typeof sessionStorage !== "undefined" &&
+              sessionStorage.getItem("vk-sidebar-collapsed") === "true") ||
+            (typeof localStorage !== "undefined" &&
+              localStorage.getItem("vk-sidebar-collapsed") === "true")
+          ) {
+            collapsed = true;
+          }
+          if (collapsed) {
+            document.documentElement.setAttribute(
+              "data-sidebar-collapsed",
+              "true",
+            );
+            window.name = "vk-sidebar-collapsed=true";
+            try {
+              sessionStorage.setItem("vk-sidebar-collapsed", "true");
+            } catch (e) {}
+            try {
+              localStorage.setItem("vk-sidebar-collapsed", "true");
+            } catch (e) {}
+          } else {
+            document.documentElement.removeAttribute("data-sidebar-collapsed");
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- ============================================================ -->
+    <!-- MOBILE HEADER (Exibido apenas em telas < 992px)              -->
+    <!-- ============================================================ -->
+    <header class="mobile-header-bar">
+      <a href="index.html" class="mobile-brand">
+        <img
+          src="assets/img/vitor.jpg"
+          alt="Vitor Krewer"
+          class="mobile-brand-avatar"
+        />
+        <span class="mobile-brand-text">VK_</span>
+      </a>
+      <div class="mobile-header-actions">
+        <button
+          class="mobile-menu-btn"
+          id="mobile-menu-trigger"
+          aria-label="Abrir Menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Backdrop escuro para o drawer no mobile -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <!-- ============================================================ -->
+    <!-- APP LAYOUT (Sidebar Fixo + Perfil Completo)                  -->
+    <!-- ============================================================ -->
+    <div class="app-layout">
+      <!-- Botão flutuante para reabrir sidebar quando recolhida -->
+      <button
+        type="button"
+        class="sidebar-expand-btn"
+        aria-label="Mostrar barra lateral"
+        title="Mostrar barra lateral ["
+        onclick="document.documentElement.removeAttribute('data-sidebar-collapsed');window.name='vk-sidebar-collapsed=false';try{sessionStorage.setItem('vk-sidebar-collapsed','false')}catch(e){};try{localStorage.setItem('vk-sidebar-collapsed','false')}catch(e){}"
+      >
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+          <path d="M9 3v18"></path>
+          <path d="m14 9 3 3-3 3"></path>
+        </svg>
+        <span>menu</span>
+        <kbd class="expand-kbd">[</kbd>
+      </button>
+
+      <!-- SIDEBAR DO AUTOR -->
+      <aside class="sidebar" id="author-sidebar">
+        <button
+          type="button"
+          class="sidebar-collapse-btn"
+          aria-label="Recolher barra lateral (modo leitura)"
+          title="Recolher barra lateral ["
+          onclick="document.documentElement.setAttribute('data-sidebar-collapsed','true');window.name='vk-sidebar-collapsed=true';try{sessionStorage.setItem('vk-sidebar-collapsed','true')}catch(e){};try{localStorage.setItem('vk-sidebar-collapsed','true')}catch(e){}"
+        >
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+            <path d="M9 3v18"></path>
+            <path d="m16 15-3-3 3-3"></path>
+          </svg>
+        </button>
+
+        <!-- Topo: Perfil & Bio -->
+        <div class="author-profile">
+          <div class="author-avatar-wrapper">
+            <div class="author-avatar-frame">
+              <img
+                src="assets/img/vitor.jpg"
+                alt="Vitor Krewer"
+                class="author-avatar-img"
+              />
+            </div>
+          </div>
+          <h1 class="author-name">Vitor Krewer</h1>
+          <p class="author-role" data-i18n="sidebar_role">
+            Dev & Educação · Eng. de Software
+          </p>
+
+          <p class="author-bio" data-i18n="sidebar_bio">
+            Minha mente vaga por aí; penso em coisas diferentes dia e noite.
+            Como um autor de ficção científica, ponho-me a pensar: E se as
+            coisas fossem assim?
+          </p>
+
+          <!-- Navegação Principal -->
+          <nav class="sidebar-nav">
+            <a href="index.html" class="sidebar-nav-link">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span data-i18n="sidebar_nav_blog">~/blog</span>
+            </a>
+
+            <a href="profile.html" class="sidebar-nav-link active">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <span data-i18n="sidebar_nav_profile">~/perfil</span>
+            </a>
+
+            <a href="projects.html" class="sidebar-nav-link">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                ></polygon>
+              </svg>
+              <span data-i18n="sidebar_nav_projects">~/projetos</span>
+            </a>
+
+            <a href="tags.html" class="sidebar-nav-link">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              <span data-i18n="sidebar_nav_tags">~/tópicos</span>
+            </a>
+
+            <a href="readings.html" class="sidebar-nav-link">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                <path d="M22 3h-6a4 4 0 0 1-4 4v14a3 3 0 0 1 3-3h7z"></path>
+              </svg>
+              <span data-i18n="sidebar_nav_readings">~/leituras</span>
+            </a>
+          </nav>
+        </div>
+
+        <!-- Base do Sidebar: Idiomas, Tema, Conexões e Direitos -->
+        <div class="sidebar-footer">
+          <div class="sidebar-controls">
+            <div class="lang-pill-group" role="group" aria-label="Idiomas">
+              <button class="lang-pill-btn active" data-lang="pt-br">PT</button>
+              <button class="lang-pill-btn" data-lang="en">EN</button>
+              <button class="lang-pill-btn" data-lang="es">ES</button>
+            </div>
+
+            <button class="theme-toggle-btn" aria-label="Alternar tema">
+              <svg
+                class="icon-moon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg
+                class="icon-sun"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="sidebar-socials">
+            <a
+              href="https://linkedin.com/in/vitorkrewer"
+              target="_blank"
+              rel="noopener"
+              class="sidebar-social-btn"
+              title="LinkedIn"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/vitorkrewer"
+              target="_blank"
+              rel="noopener"
+              class="sidebar-social-btn"
+              title="GitHub"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="http://lattes.cnpq.br/4432603310392389"
+              target="_blank"
+              rel="noopener"
+              class="sidebar-social-btn"
+              title="Currículo Lattes"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://magnetaresnotes.com.br/"
+              target="_blank"
+              rel="noopener"
+              class="sidebar-social-btn sidebar-social-btn--full"
+              title="Magnetares Notes"
+              aria-label="Magnetares Notes"
+            >
+              <img
+                src="assets/img/magnetares-notes-icon.png"
+                alt="Magnetares Notes"
+                width="36"
+                height="36"
+              />
+            </a>
+          </div>
+
+          <div class="sidebar-copyright">
+            <span>© <span class="js-year"></span> Vitor Krewer</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ============================================================ -->
+      <!-- ÁREA PRINCIPAL: PERFIL, HISTÓRIA & CURRÍCULO                 -->
+      <!-- ============================================================ -->
+      <main class="main-content">
+        <!-- Cabeçalho -->
+        <section class="feed-header fade-in">
+          <p class="feed-tagline">// whoami · profile &amp; trajectory</p>
+          <p class="feed-subtitle">
+            Mais de duas décadas conectando bibliotecas universitárias, produção
+            editorial, docência no ensino superior e engenharia de software
+            educacional.
+          </p>
+        </section>
+
+        <!-- HERO DO PERFIL COM FOTO -->
+        <section class="profile-hero-card fade-in">
+          <div class="profile-hero-grid">
+            <div class="profile-photo-column">
+              <div class="profile-photo-ring">
+                <img
+                  src="assets/img/vitor.jpg"
+                  alt="Vitor Matheus Krewer"
+                  class="profile-photo-img"
+                />
+              </div>
+              <span class="profile-location-pill">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Cascavel, PR · Brasil
+              </span>
+            </div>
+
+            <div class="profile-hero-body">
+              <div class="profile-hero-meta-top">
+                <span class="profile-status-badge">
+                  <span class="dot"></span>
+                  Em campo: Educação Digital, IA &amp; Software Local-First
+                </span>
+                <span class="profile-citation-badge">
+                  Citação: KREWER, V. M.
+                </span>
+              </div>
+
+              <h1 class="profile-hero-name">Vitor Matheus Krewer</h1>
+              <p class="profile-hero-headline">
+                Desenvolvedor de Soluções para Educação Digital · Professor,
+                Editor &amp; Especialista em Engenharia do Conhecimento e IA
+              </p>
+
+              <p class="profile-hero-lead">
+                Trabalho na interseção entre o ensino superior e os sistemas que
+                o sustentam. Já coordenei núcleos de Educação a Distância
+                (NEAD), liderei equipes editoriais na publicação de dezenas de
+                obras acadêmicas e técnicas, automatizei fluxos educacionais
+                inteiros com Google Apps Script e Python, e desenvolvo
+                ferramentas de gestão do conhecimento e pesquisa científica como
+                o <strong>Magnetares Notes</strong>, o
+                <strong>Pulsares Research</strong> e <strong>LearningFly</strong> .
+              </p>
+
+              <div class="profile-id-links">
+                <a
+                  href="http://lattes.cnpq.br/4432603310392389"
+                  target="_blank"
+                  rel="noopener"
+                  class="profile-id-chip profile-id-chip--primary"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
+                  </svg>
+                  Lattes CNPq
+                </a>
+                <a
+                  href="https://scholar.google.com.br/citations?user=AzQeAXIAAAAJ&hl=pt-BR"
+                  target="_blank"
+                  rel="noopener"
+                  class="profile-id-chip"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                  Google Scholar
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/vitorkrewer"
+                  target="_blank"
+                  rel="noopener"
+                  class="profile-id-chip"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/vitorkrewer"
+                  target="_blank"
+                  rel="noopener"
+                  class="profile-id-chip"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+                    />
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BARRA DE INDICADORES REAIS DO CURRÍCULO -->
+        <section class="profile-metrics-grid fade-in">
+          <div class="profile-metric-card">
+            <span class="profile-metric-number">20+ anos</span>
+            <span class="profile-metric-label">Jornada na Educação</span>
+            <span class="profile-metric-sub">
+              De bibliotecas (2003) à engenharia de EaD
+            </span>
+          </div>
+          <div class="profile-metric-card">
+            <span class="profile-metric-number">9 Pós / MBAs</span>
+            <span class="profile-metric-label">Especializações Lato Sensu</span>
+            <span class="profile-metric-sub">
+              IA, BI, Sistemas, Conhecimento, Direito &amp; Ensino
+            </span>
+          </div>
+          <div class="profile-metric-card">
+            <span class="profile-metric-number">7 Graduações</span>
+            <span class="profile-metric-label">Formação Multidisciplinar</span>
+            <span class="profile-metric-sub">
+              Computação, Dados, Engenharias, TI &amp; Gestão
+            </span>
+          </div>
+          <div class="profile-metric-card">
+            <span class="profile-metric-number">18+ Livros</span>
+            <span class="profile-metric-label">Obras &amp; Manuais</span>
+            <span class="profile-metric-sub">
+              Autoria, coautoria e organização editorial
+            </span>
+          </div>
+          <div class="profile-metric-card">
+            <span class="profile-metric-number">17 TCCs</span>
+            <span class="profile-metric-label">Monografias Orientadas</span>
+            <span class="profile-metric-sub">
+              Pós-graduação em Computação, IA, Segurança e Gestão
+            </span>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SEÇÃO 1: STORYTELLING — A MINHA HISTÓRIA                     -->
+        <!-- ============================================================ -->
+        <section class="profile-section fade-in">
+          <div class="profile-section-header">
+            <div>
+              <span class="mono-label">// story &amp; manifesto</span>
+              <h3 class="profile-section-title">
+                Um Olhar Sistêmico entre os Livros, a Sala de Aula e o Código
+              </h3>
+            </div>
+          </div>
+
+          <div class="story-quote-banner">
+            “Eu nunca fui de seguir um único caminho — talvez por isso tenha
+            construído uma jornada que atravessa a educação, a tecnologia e a
+            criação de soluções com propósito. Não me interesso apenas por
+            ensinar, mas por repensar como se ensina. Gosto de desenhar
+            experiências de aprendizagem que façam sentido, que resolvam, que
+            fluam. Me fascina a ideia de que podemos transformar processos
+            inteiros com poucas linhas de código e muita escuta.”
+          </div>
+
+          <div class="story-chapters-grid">
+            <article class="story-chapter-card">
+              <span class="story-chapter-tag">
+                Ato I · 2003 — 2012 · Onde Tudo Começou
+              </span>
+              <h4 class="story-chapter-title">
+                O silêncio das bibliotecas universitárias e a arquitetura do
+                conhecimento
+              </h4>
+              <p class="story-chapter-text">
+                Muito antes de programar sistemas acadêmicos ou desenhar
+                leitores digitais, minha vida profissional começou entre
+                estantes de livros. Em 2003, como estagiário e auxiliar de
+                biblioteca na
+                <strong>UNIGRAN</strong> (Dourados/MS) e, depois, na biblioteca
+                da <strong>UNIPAR</strong> (Cascavel/PR), aprendi na prática
+                como o conhecimento humano é catalogado, indexado e recuperado.
+              </p>
+              <p class="story-chapter-text">
+                Na própria UNIPAR, dei o salto para a coordenação de projetos
+                institucionais e extensão universitária, articulando campanhas e
+                ações com coordenadores de curso. Foi ali, somado à graduação em
+                <strong>Processos Gerenciais</strong> na UniCesumar e à gerência
+                administrativa na Central de Estágios Cascavel, que desenvolvi a
+                visão de processos que carrego até hoje.
+              </p>
+            </article>
+
+            <article class="story-chapter-card">
+              <span class="story-chapter-tag">
+                Ato II · 2012 — 2020 · TI, Docência &amp; Mercado Editorial
+              </span>
+              <h4 class="story-chapter-title">
+                Do suporte técnico à liderança editorial de grandes publicações
+              </h4>
+              <p class="story-chapter-text">
+                No Grupo Focus, vivi a instituição por dentro em praticamente
+                todas as suas camadas: comecei como Assistente Pedagógico e
+                Gestor de TI (cuidando da infraestrutura, redes e suporte remoto
+                a milhares de alunos), graduei-me em
+                <strong>Gestão da Tecnologia da Informação</strong> e assumi a
+                coordenação de operações da <strong>Editora Focus</strong> e a
+                sociedade na <strong>Grimorium Publishers</strong>.
+              </p>
+              <p class="story-chapter-text">
+                Como Editor Executivo, professor de Informática e Direito e
+                curador de Gestão do Conhecimento, coordenei equipes de autores
+                e escrevi/organizei mais de 18 livros e manuais preparatórios
+                (incluindo compêndios de mais de 1.700 páginas). Essa vivência
+                me mostrou onde os fluxos editoriais travam — e despertou a
+                obsessão por livros digitais interativos e UX, tema do meu
+                primeiro MBA na Universidade Positivo.
+              </p>
+            </article>
+
+            <article class="story-chapter-card">
+              <span class="story-chapter-tag">
+                Ato III · 2020 — Presente · Engenharia, EaD &amp; IA
+              </span>
+              <h4 class="story-chapter-title">
+                Automatizando o invisível e criando ferramentas para quem estuda
+              </h4>
+              <p class="story-chapter-text">
+                Nos últimos anos, à frente do <strong>NEAD</strong> (Núcleo de
+                Educação a Distância) e da coordenação de pós-graduação na
+                <strong>Faculdade Focus</strong>, <strong>CENES</strong> e
+                <strong>FACUPAR</strong>, passei a unir docência, design
+                instrucional e engenharia de software. Automatizei operações
+                acadêmicas inteiras com <strong>Google Apps Script</strong>,
+                <strong>Python</strong> e pipelines de Business Intelligence.
+              </p>
+              <p class="story-chapter-text">
+                Com pós-graduação em
+                <strong>Engenharia e Gestão do Conhecimento</strong>,
+                <strong>Arquitetura de Sistemas</strong> e
+                <strong>Inteligência Artificial &amp; Machine Learning</strong>,
+                decidi transformar duas décadas de dores reais de leitores,
+                professores e pesquisadores em software autoral: assim nasceram
+                o <strong>Magnetares Notes</strong> e o
+                <strong>Pulsares Research</strong>.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SEÇÃO 2: PILARES DE ATUAÇÃO & STACK                          -->
+        <!-- ============================================================ -->
+        <section class="profile-section fade-in">
+          <div class="profile-section-header">
+            <div>
+              <span class="mono-label">// core competencies &amp; stack</span>
+              <h3 class="profile-section-title">
+                Especialidades &amp; Ecossistema Técnico
+              </h3>
+            </div>
+          </div>
+
+          <div class="cards-grid">
+            <div class="card">
+              <div class="card-icon blue">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4 class="card-title">Engenharia de Software &amp; Automação</h4>
+              <p class="card-text">
+                Desenvolvimento de aplicações desktop local-first (Go, Wails,
+                React, TypeScript, SQLite) e automação avançada de ecossistemas
+                educacionais com Google Apps Script, Python e APIs REST.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon green">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <h4 class="card-title">
+                Plataformas EaD &amp; Design Instrucional
+              </h4>
+              <p class="card-text">
+                Modelagem de cursos superiores e pós-graduação em Moodle,
+                TOOLZZ, Hotmart e DRM. Curadoria de acervos (IESDE, Telesapiens,
+                Delinea) e arquitetura de metodologias ativas.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon purple">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"
+                  ></path>
+                  <path
+                    d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"
+                  ></path>
+                </svg>
+              </div>
+              <h4 class="card-title">IA Aplicada &amp; Ciência de Dados</h4>
+              <p class="card-text">
+                Integração de LLMs e IA generativa em fluxos editoriais e de
+                pesquisa, engenharia de dados, Business Intelligence e
+                dashboards para monitoramento acadêmico.
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon orange">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                  <path d="M22 3h-6a4 4 0 0 1-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+              </div>
+              <h4 class="card-title">
+                Produção Editorial &amp; Gestão do Conhecimento
+              </h4>
+              <p class="card-text">
+                Escrita técnica e científica, editoração de periódicos e livros,
+                normalização ABNT, sistemas PKM (Obsidian, Logseq, Magnetares) e
+                orientação de pesquisa acadêmica.
+              </p>
+            </div>
+          </div>
+
+          <div class="stack-list" style="margin-top: 1.25rem">
+            <span class="stack-badge">Python</span>
+            <span class="stack-badge">Go (Golang)</span>
+            <span class="stack-badge">TypeScript / JavaScript</span>
+            <span class="stack-badge">React &amp; Vite</span>
+            <span class="stack-badge">Wails Desktop</span>
+            <span class="stack-badge">SQLite</span>
+            <span class="stack-badge">Google Apps Script (GAS)</span>
+            <span class="stack-badge">Tiptap / ProseMirror</span>
+            <span class="stack-badge">HTML5 / CSS3</span>
+            <span class="stack-badge">Moodle / LMS</span>
+            <span class="stack-badge">Business Intelligence</span>
+            <span class="stack-badge"
+              >IA Generativa &amp; Machine Learning</span
+            >
+            <span class="stack-badge">Design Thinking &amp; UX</span>
+            <span class="stack-badge">Gestão do Conhecimento</span>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SEÇÃO 3: FORMAÇÃO ACADÊMICA & TITULAÇÃO                      -->
+        <!-- ============================================================ -->
+        <section class="profile-section fade-in">
+          <div class="profile-section-header">
+            <div>
+              <span class="mono-label">// academic background</span>
+              <h3 class="profile-section-title">
+                Formação Acadêmica &amp; Titulação
+              </h3>
+            </div>
+          </div>
+
+          <h4 class="edu-category-subtitle">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+            Ensino Superior · Graduações
+          </h4>
+
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2026 — Em andamento</span>
+                <span class="edu-type-badge edu-type-pos">Cursando</span>
+              </div>
+              <div class="edu-course-title">
+                Bacharelado em Engenharia Mecatrônica
+              </div>
+              <div class="edu-institution">
+                UniCesumar — Centro Universitário de Maringá
+              </div>
+              <div class="edu-thesis">
+                Automação industrial, sistemas embarcados, robótica, controle e
+                integração entre sistemas mecânicos, eletrônicos e computacionais.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2025 — Em andamento</span>
+                <span class="edu-type-badge edu-type-pos">Cursando</span>
+              </div>
+              <div class="edu-course-title">
+                Bacharelado em Engenharia Ambiental
+              </div>
+              <div class="edu-institution">Faculdade Focus / UniBTA</div>
+              <div class="edu-thesis">
+                Sustentabilidade, gestão e monitoramento de recursos naturais,
+                avaliação de impactos ambientais e tecnologias aplicadas ao meio
+                ambiente.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2025 — Em andamento</span>
+                <span class="edu-type-badge edu-type-pos">Cursando</span>
+              </div>
+              <div class="edu-course-title">
+                Tecnologia em Banco de Dados
+              </div>
+              <div class="edu-institution">Faculdade Focus / UniBTA</div>
+              <div class="edu-thesis">
+                Modelagem relacional e não-relacional, administração de SGBDs,
+                engenharia, segurança, governança e arquitetura de dados em
+                escala.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2024 — 2026</span>
+                <span class="edu-type-badge edu-type-grad">Graduação</span>
+              </div>
+              <div class="edu-course-title">
+                Tecnologia em Análise e Desenvolvimento de Sistemas
+              </div>
+              <div class="edu-institution">Faculdade Focus (FC)</div>
+              <div class="edu-thesis">
+                Desenvolvimento de software, arquitetura de aplicações, bancos
+                de dados e engenharia de sistemas computacionais.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2023 — 2025</span>
+                <span class="edu-type-badge edu-type-grad">Computação</span>
+              </div>
+              <div class="edu-course-title">
+                Ciência da Computação &amp; Engenharia de Software
+              </div>
+              <div class="edu-institution">
+                Faculdade Focus / Centro Universitário Leonardo da Vinci
+                (UNIASSELVI)
+              </div>
+              <div class="edu-thesis">
+                Estudos superiores em algoritmos, estruturas de dados, ciclo de
+                vida de software e arquitetura computacional.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2015 — 2017</span>
+                <span class="edu-type-badge edu-type-grad">Graduação</span>
+              </div>
+              <div class="edu-course-title">
+                Tecnologia em Gestão da Tecnologia da Informação
+              </div>
+              <div class="edu-institution">
+                UniCesumar — Centro Universitário de Maringá
+              </div>
+              <div class="edu-thesis">
+                Governança de TI, infraestrutura, sistemas de informação e
+                alinhamento estratégico de tecnologia nas organizações.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2008 — 2012</span>
+                <span class="edu-type-badge edu-type-grad">Graduação</span>
+              </div>
+              <div class="edu-course-title">
+                Tecnologia em Processos Gerenciais
+              </div>
+              <div class="edu-institution">
+                UniCesumar — Centro Universitário de Maringá
+              </div>
+              <div class="edu-thesis">
+                Administração de empresas, modelagem de processos
+                organizacionais, estratégia e indicadores de desempenho.
+              </div>
+            </div>
+          </div>
+
+          <h4 class="edu-category-subtitle" style="margin-top: 2.25rem">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+              />
+            </svg>
+            Pós-Graduações Lato Sensu &amp; MBAs (9 Especializações)
+          </h4>
+
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2024 — 2025 · 360h</span>
+                <span class="edu-type-badge edu-type-pos">Especialização</span>
+              </div>
+              <div class="edu-course-title">
+                Inteligência Artificial e Machine Learning
+              </div>
+              <div class="edu-institution">
+                UNICV — Centro Universitário Cidade Verde
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2024 · 360h</span>
+                <span class="edu-type-badge edu-type-pos">Especialização</span>
+              </div>
+              <div class="edu-course-title">
+                Tecnologias para Aprendizagem Ativa
+              </div>
+              <div class="edu-institution">
+                IMES — Instituto Mineiro de Educação Superior
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2021 — 2022 · 600h</span>
+                <span class="edu-type-badge edu-type-pos">Especialização</span>
+              </div>
+              <div class="edu-course-title">
+                Engenharia e Gestão do Conhecimento
+              </div>
+              <div class="edu-institution">Faculdade Focus (FC)</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2021 · 360h</span>
+                <span class="edu-type-badge edu-type-pos">Especialização</span>
+              </div>
+              <div class="edu-course-title">
+                Arquitetura de Sistemas da Informação
+              </div>
+              <div class="edu-institution">Faculdade Focus (FC)</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2018 — 2019 · 360h</span>
+                <span class="edu-type-badge edu-type-mba">MBA</span>
+              </div>
+              <div class="edu-course-title">MBA em Business Intelligence</div>
+              <div class="edu-institution">Universidade Positivo</div>
+              <div class="edu-thesis">
+                <strong>Monografia:</strong> Análise de dados e elaboração de
+                Dashboards para monitoramento e controle dentro de uma
+                instituição de ensino.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2018</span>
+                <span class="edu-type-badge edu-type-mba">MBA</span>
+              </div>
+              <div class="edu-course-title">MBA em Negócios Digitais</div>
+              <div class="edu-institution">Universidade Positivo</div>
+              <div class="edu-thesis">
+                <strong>Monografia:</strong> O Mercado dos Livros Digitais e os
+                Requisitos de UX Design e UI para Construção de Arquivos
+                Interativos.
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2020 — 2021 · 500h</span>
+                <span class="edu-type-badge edu-type-pos">Especialização</span>
+              </div>
+              <div class="edu-course-title">Direito Constitucional</div>
+              <div class="edu-institution">Faculdade Única</div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2024 · 500h</span>
+                <span class="edu-type-badge edu-type-pos">Humanidades</span>
+              </div>
+              <div class="edu-course-title">Teologia e Ensino Religioso</div>
+              <div class="edu-institution">
+                IMES — Instituto Mineiro de Educação Superior
+              </div>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-card-top">
+                <span class="edu-period">2023 · 420h</span>
+                <span class="edu-type-badge edu-type-pos">Humanidades</span>
+              </div>
+              <div class="edu-course-title">Ciência da Religião</div>
+              <div class="edu-institution">Faculdade Focus (FC)</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SEÇÃO 4: LINHA DO TEMPO PROFISSIONAL                         -->
+        <!-- ============================================================ -->
+        <section class="profile-section fade-in">
+          <div class="profile-section-header">
+            <div>
+              <span class="mono-label">// career timeline (2003 — 2026)</span>
+              <h3 class="profile-section-title">Experiência Profissional</h3>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Fev 2021 — Presente</div>
+              <div class="timeline-role">
+                Professor Conteudista, Mentor &amp; Coordenador do Núcleo de
+                Produção de Conteúdo
+              </div>
+              <div class="timeline-company">Faculdade Focus · Cascavel, PR</div>
+              <p class="timeline-desc">
+                Docência e tutoria em cursos de graduação e pós-graduação
+                (ministrando disciplinas como Estratégia e Estrutura
+                Organizacional, Estratégias e Métricas de Marketing e
+                Comportamento do Consumidor). Coordenação do núcleo de produção
+                de conteúdo acadêmico, orientação de monografias de
+                especialização e membro do corpo editorial da
+                <em>Revista Multidisciplinar de Ciências Gerais In Focus</em>
+                (2024 – Atual).
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">
+                Abr 2019 — Jun 2025 (6 anos 3 meses)
+              </div>
+              <div class="timeline-role">
+                Coordenador NEAD — Núcleo de Educação a Distância
+              </div>
+              <div class="timeline-company">
+                Faculdade Focus / Grupo Focus de Educação · Cascavel, PR
+              </div>
+              <p class="timeline-desc">
+                Modelagem e arquitetura de cursos a distância em plataformas
+                Moodle, TOOLZZ, Hotmart e DRM. Design educacional, integração de
+                acervos (IESDE Brasil, Telesapiens e Delinea) e desenvolvimento
+                de automações acadêmicas em Google Apps Script e Python para
+                gestão de turmas, avaliação e secretaria acadêmica.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot past"></div>
+              <div class="timeline-date">
+                Jan 2021 — Jun 2025 (4 anos 6 meses)
+              </div>
+              <div class="timeline-role">Coordenador de Pós-Graduação EaD</div>
+              <div class="timeline-company">
+                CENES Pós-Graduação &amp; FACUPAR (Ago 2022 – Jul 2024) ·
+                Cascavel, PR
+              </div>
+              <p class="timeline-desc">
+                Coordenação pedagógica e operacional de programas de
+                pós-graduação lato sensu a distância, estruturação de matrizes
+                curriculares e acompanhamento de indicadores acadêmicos.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot past"></div>
+              <div class="timeline-date">
+                Jun 2017 — Ago 2022 (5 anos 3 meses)
+              </div>
+              <div class="timeline-role">
+                Escritor, Curador de Gestão do Conhecimento &amp; Professor
+                Conteudista
+              </div>
+              <div class="timeline-company">Focus Concursos · Cascavel, PR</div>
+              <p class="timeline-desc">
+                Liderança da equipe responsável pela elaboração de materiais
+                didáticos, ebooks exclusivos direcionados por carreira e
+                produção teórica, didática e científica multidisciplinar.
+                Elaboração de aulas e materiais para concursos públicos,
+                graduação e pós-graduação.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot past"></div>
+              <div class="timeline-date">Jan 2016 — Fev 2019</div>
+              <div class="timeline-role">
+                Coordenador de Operações Editoriais &amp; Editor Executivo
+              </div>
+              <div class="timeline-company">
+                Editora Focus &amp; Grimorium Publishers (2016 – 2024) ·
+                Cascavel, PR
+              </div>
+              <p class="timeline-desc">
+                Gerenciamento integral de operações editoriais, análise e
+                editoração de obras técnicas e preparatórias, negociação com
+                autores, gestão de ERP, marketplace, suprimentos e estoques.
+                Autoria e organização de apostilas e livros nas áreas de
+                Informática e Direito.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot past"></div>
+              <div class="timeline-date">
+                Mai 2012 — Dez 2015 (3 anos 8 meses)
+              </div>
+              <div class="timeline-role">
+                Manager IT (Gestor de TI), IT Helpdesk Analyst &amp; Assistente
+                Pedagógico
+              </div>
+              <div class="timeline-company">Focus Concursos · Cascavel, PR</div>
+              <p class="timeline-desc">
+                Gestão de infraestrutura tecnológica, aquisição de equipamentos,
+                alocação de recursos e suporte remoto (SAC) a alunos e
+                professores. Gerenciamento de quadro de horários de turmas
+                presenciais e produção de simulados.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot past"></div>
+              <div class="timeline-date">
+                Jan 2009 — Mai 2012 (3 anos 5 meses)
+              </div>
+              <div class="timeline-role">Gerente Administrativo</div>
+              <div class="timeline-company">
+                Central de Estágios Cascavel · Cascavel, PR
+              </div>
+              <p class="timeline-desc">
+                Gestão comercial e administrativa, recrutamento e seleção,
+                contratos de estágio e administração das plataformas digitais de
+                cadastro de currículos e comunicação institucional.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot past"></div>
+              <div class="timeline-date">
+                Fev 2003 — Set 2008 (5 anos 7 meses)
+              </div>
+              <div class="timeline-role">
+                Project Manager (Extensão Universitária) &amp; Auxiliar de
+                Biblioteca
+              </div>
+              <div class="timeline-company">
+                UNIPAR (Cascavel, PR) &amp; UNIGRAN (Dourados, MS)
+              </div>
+              <p class="timeline-desc">
+                Início da jornada acadêmica como bolsista e auxiliar de
+                biblioteca na UNIGRAN (2003–2005) e na UNIPAR (2005–2007),
+                assumindo em seguida a Coordenação de Projetos Institucionais e
+                Extensão Universitária da UNIPAR (2007–2008) em parceria com os
+                coordenadores de curso.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- SEÇÃO 5: PRODUÇÃO INTELECTUAL, LIVROS & ORIENTAÇÕES          -->
+        <!-- ============================================================ -->
+        <section class="profile-section fade-in">
+          <div class="profile-section-header">
+            <div>
+              <span class="mono-label">// intellectual production</span>
+              <h3 class="profile-section-title">
+                Livros, Artigos, Capítulos &amp; Orientações
+              </h3>
+            </div>
+          </div>
+
+          <h4 class="edu-category-subtitle">
+            Obras Publicadas e Organizadas (Seleção do Lattes &amp; LinkedIn)
+          </h4>
+
+          <div class="prod-highlight-grid">
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>LIVRO · 2025</span>
+                <span>232 p. · Editora Focus</span>
+              </div>
+              <div class="prod-item-title">
+                Engenharia de Dados: a arte de construir sistemas de dados
+                modernos
+              </div>
+              <div class="prod-item-sub">
+                Autoria: Vitor Matheus Krewer. Arquitetura de pipelines,
+                modelagem e ecossistemas modernos de dados.
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>LIVRO · 2025</span>
+                <span>192 p. · Editora Focus</span>
+              </div>
+              <div class="prod-item-title">
+                Big Data e Ciência de Dados: fundamentos, arquiteturas
+                computacionais e práticas analíticas
+              </div>
+              <div class="prod-item-sub">
+                Coautoria e organização sobre fundações analíticas na era dos
+                dados.
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>LIVRO · 2025</span>
+                <span>244 p. · Editora Focus</span>
+              </div>
+              <div class="prod-item-title">
+                Engenharia de Software: princípios, modelos e boas práticas para
+                o ciclo de vida do software
+              </div>
+              <div class="prod-item-sub">
+                Organização e autoria voltada ao ensino superior de computação.
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>LIVRO · 2024</span>
+                <span>117 p. · Editora Focus</span>
+              </div>
+              <div class="prod-item-title">
+                Educação e Tecnologias: fundamentos, metodologias ativas e o
+                futuro da aprendizagem
+              </div>
+              <div class="prod-item-sub">
+                Síntese teórica e prática sobre inovação pedagógica e ambientes
+                digitais.
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>LIVROS · 2025 — 2026</span>
+                <span>Editora Focus</span>
+              </div>
+              <div class="prod-item-title">
+                Educação, Cognição &amp; Humanidades
+              </div>
+              <div class="prod-item-sub">
+                Organizador de
+                <em
+                  >Transtornos de Aprendizagem: práticas baseadas em
+                  evidências</em
+                >
+                (2026), <em>Antropologia da Religião</em> (2026),
+                <em>A Linguagem Escrita nos Anos Iniciais</em> (2025) e
+                <em>Educação Inclusiva</em> (2024).
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>MANUAIS &amp; COMPÊNDIOS · 2017 — 2020</span>
+                <span>Editora Focus / Juspodivm</span>
+              </div>
+              <div class="prod-item-title">
+                Obras Preparatórias &amp; Informática para Concursos
+              </div>
+              <div class="prod-item-sub">
+                Autor de <em>Código de Carreiras Policiais</em> (4ª ed., 1.726
+                p.), <em>Método Focus de Aprovação</em>,
+                <em>Tópicos Essenciais de Informática</em>, capítulo na Editora
+                Juspodivm e manuais para INSS, MPU, PRF, DPU, PC-PR e PC-PA.
+              </div>
+            </div>
+          </div>
+
+          <h4 class="edu-category-subtitle" style="margin-top: 2rem">
+            Periódicos, Capítulos Científicos &amp; Orientações Acadêmicas
+          </h4>
+
+          <div class="prod-highlight-grid">
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>ARTIGO EM PERIÓDICO · 2024</span>
+                <span>Rev. In Focus, v. 1, p. 42–54</span>
+              </div>
+              <div class="prod-item-title">
+                A Integração de Tecnologias Emergentes em Ambientes Virtuais de
+                Aprendizagem na Era da Educação a Distância
+              </div>
+              <div class="prod-item-sub">
+                Tendências e perspectivas futuras para o ensino superior e AVAs.
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>CAPÍTULOS DE LIVROS · 2024 — 2025</span>
+                <span>Editora Focus</span>
+              </div>
+              <div class="prod-item-title">
+                Design Thinking &amp; Aprendizagem Baseada em Projetos no EaD
+              </div>
+              <div class="prod-item-sub">
+                Autor dos capítulos
+                <em
+                  >Design Thinking e a Inovação da Mentalidade: da imersão à
+                  prototipação</em
+                >
+                (2025) e
+                <em
+                  >Projetos: ferramenta de trabalho cooperativo no ensino
+                  superior à distância</em
+                >
+                (2024).
+              </div>
+            </div>
+
+            <div class="prod-item-card">
+              <div class="prod-item-meta">
+                <span>ORIENTAÇÕES CONCLUÍDAS · 2021 — 2022</span>
+                <span>17 Monografias de Pós-Graduação</span>
+              </div>
+              <div class="prod-item-title">
+                Orientação Científica em Computação, Cibersegurança &amp; Gestão
+              </div>
+              <div class="prod-item-sub">
+                Orientador de 17 trabalhos de conclusão em temas como IA no
+                diagnóstico de câncer de mama, regulação jurídica da
+                criptografia, prevenção a ransomware, perícia forense digital,
+                segurança no PIX, People Analytics, sistemas Kanban e tecnologia
+                assistiva.
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Scripts Core -->
+    <script src="assets/js/i18n.js?v=20261029c"></script>
+    <script src="assets/js/main.js?v=20261029b"></script>
+
+    <script>
+      if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+      }
+    </script>
+  </body>
+</html>

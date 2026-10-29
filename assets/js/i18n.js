@@ -159,10 +159,11 @@ const translations = {
 
         // Sidebar & Author Layout
         'sidebar_role': 'Dev & Educação · Eng. de Software',
-        'sidebar_bio': 'Desenvolvedor de Soluções para Educação Digital | Especialista em Tecnologia, Gestão de Conteúdo e Inovação Educacional | Experiência em Plataformas EaD, Automação e Escrita Técnica',
+        'sidebar_bio': 'Minha mente vaga por aí; penso em coisas diferentes dia e noite. Como um autor de ficção científica, ponho-me a pensar: E se as coisas fossem assim?',
         'sidebar_status': 'disponível para projetos',
         'sidebar_location': 'Cascavel, PR · Brasil',
         'sidebar_nav_blog': '~/blog',
+        'sidebar_nav_profile': '~/perfil',
         'sidebar_nav_projects': '~/projetos',
         'sidebar_nav_all_projects': 'Ver todos os projetos →',
         'sidebar_featured_projects': '// Projetos em Destaque',
@@ -324,10 +325,11 @@ const translations = {
 
         // Sidebar & Author Layout
         'sidebar_role': 'Dev & Education · Software Eng.',
-        'sidebar_bio': 'Digital Education Solutions Developer | Specialist in Technology, Content Management, and Educational Innovation | Experience in Distance Learning Platforms, Automation, and Technical Writing',
+        'sidebar_bio': 'My mind wanders; I think about different things day and night. Like a science fiction author, I find myself wondering: What if things were like this?',
         'sidebar_status': 'available for projects',
         'sidebar_location': 'Cascavel, PR · Brazil',
         'sidebar_nav_blog': '~/blog',
+        'sidebar_nav_profile': '~/profile',
         'sidebar_nav_projects': '~/projects',
         'sidebar_nav_all_projects': 'View all projects →',
         'sidebar_featured_projects': '// Featured Projects',
@@ -489,10 +491,11 @@ const translations = {
 
         // Sidebar & Author Layout
         'sidebar_role': 'Dev y Educación · Ing. de Software',
-        'sidebar_bio': 'Desarrollador de Soluciones para la Educación Digital | Especialista en Tecnología, Gestión de Contenido e Innovación Educativa | Experiencia en Plataformas EaD, Automatización y Escritura Técnica',
+        'sidebar_bio': 'Mi mente divaga por ahí; pienso en cosas diferentes día y noche. Como un autor de ciencia ficción, me pongo a pensar: ¿Y si las cosas fueran así?',
         'sidebar_status': 'disponible para proyectos',
         'sidebar_location': 'Cascavel, PR · Brasil',
         'sidebar_nav_blog': '~/blog',
+        'sidebar_nav_profile': '~/perfil',
         'sidebar_nav_projects': '~/proyectos',
         'sidebar_nav_all_projects': 'Ver todos los proyectos →',
         'sidebar_featured_projects': '// Proyectos Destacados',

@@ -426,6 +426,9 @@ async function loadPost() {
                         tit = hrefOrObj.title;
                         alt = hrefOrObj.text;
                     }
+                    if (href && /^(?:\.\/)?images\//i.test(href)) {
+                        href = '../content/posts/' + href.replace(/^\.\//, '');
+                    }
                     const altAttr = alt ? `alt="${String(alt).replace(/"/g, '&quot;')}"` : '';
                     const titleAttr = tit ? `title="${String(tit).replace(/"/g, '&quot;')}"` : '';
                     const caption = alt ? `<figcaption class="post-figcaption">${alt}</figcaption>` : '';

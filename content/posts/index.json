@@ -1,5 +1,65 @@
 [
     {
+        "slug": "pulsares-explorer-janelas-autonomas-erd-live-preview",
+        "title": "Pulsares Explorer, parte 5: janelas independentes, Mapa ER de bancos de dados, prévia web viva e o terminal que caminha junto",
+        "excerpt": "O que aconteceu quando abri um banco real de 52 mil linhas e a pasta de um projeto web no Pulsares: a separação do Studio Editor e do DB Studio em janelas próprias com ícones distintos na barra de tarefas, o Mapa de Entidade-Relacionamento, o Criador SQLite, a prévia HTML conectada ao CSS/JS e o botão Follow-up no terminal.",
+        "date": "2026-11-10",
+        "status": "Publicado",
+        "series": "Pulsares Explorer",
+        "seriesOrder": 5,
+        "project": 12,
+        "tags": ["Pulsares Explorer", "SQLite", "Modelagem de Dados", "Editor", "Terminal", "Go", "Wails", "Engenharia de Software"],
+        "readTime": "9 min"
+    },
+    {
+        "slug": "pulsares-explorer-sftp-tofu-multimidia-studio",
+        "title": "Pulsares Explorer, parte 4: servidores SSH sem programas extras, vídeos gigantes sem engasgo e o nascimento dos estúdios",
+        "excerpt": "Depois da versão 1.0, observei as três situações que ainda me faziam abrir programas separados: servidores remotos SSH/SFTP, vídeos grandes e slides de aula, e a edição rápida de código e bancos SQLite. Assim nasceram o cliente SFTP com segurança TOFU, o streaming HTTP 206, o Studio Editor e o DB Studio.",
+        "date": "2026-11-08",
+        "status": "Publicado",
+        "series": "Pulsares Explorer",
+        "seriesOrder": 4,
+        "project": 12,
+        "tags": ["Pulsares Explorer", "SFTP", "SSH", "Cibersegurança", "SQLite", "Go", "Wails", "Engenharia de Software"],
+        "readTime": "8 min"
+    },
+    {
+        "slug": "pulsares-explorer-produtividade-arquivos-v1",
+        "title": "Pulsares Explorer, parte 3: do laboratório privado à versão 1.0, aposentando utilitários soltos pelo caminho",
+        "excerpt": "A liberdade de construir da versão 0.1.0 à 0.10.0 em repositório fechado e apenas para uso próprio: como aposentei o renomeador em lote, o comparador de pastas e o descompactador de .zip antes de abrir a primeira versão pública já madura e testada na rotina real.",
+        "date": "2026-11-06",
+        "status": "Publicado",
+        "series": "Pulsares Explorer",
+        "seriesOrder": 3,
+        "project": 12,
+        "tags": ["Pulsares Explorer", "Produtividade", "Regex", "Segurança", "Go", "SQLite", "Release"],
+        "readTime": "7 min"
+    },
+    {
+        "slug": "pulsares-explorer-terminal-previas-busca",
+        "title": "Pulsares Explorer, parte 2: o terminal morando embaixo da pasta, quatro jeitos de enxergar arquivos e busca sem espera",
+        "excerpt": "Para acabar com o hábito de copiar caminho no explorador e dar Alt+Tab para o terminal, coloquei um pseudoterminal nativo no andar debaixo da janela, quatro modos de visão (incluindo Colunas Miller e miniaturas em cache), prévia rápida na tecla Espaço e busca profunda sem travar a tela.",
+        "date": "2026-11-05",
+        "status": "Publicado",
+        "series": "Pulsares Explorer",
+        "seriesOrder": 2,
+        "project": 12,
+        "tags": ["Pulsares Explorer", "Terminal", "ConPTY", "Xterm.js", "Busca", "Go", "Wails", "Engenharia de Software"],
+        "readTime": "7 min"
+    },
+    {
+        "slug": "pulsares-explorer-por-que-construi",
+        "title": "Por que comecei o Pulsares Explorer: seis programas abertos, muitos rascunhos e um plano antes do código",
+        "excerpt": "Olhei para a barra de tarefas e contei seis janelas abertas para fazer uma única coisa. Como os rascunhos e conversas com Gemini, ChatGPT e Claude deram origem primeiro ao AGENTS.md, à documentação e ao roadmap — e como construí da v0.1.0 à v0.4.0 em repositório privado.",
+        "date": "2026-11-04",
+        "status": "Publicado",
+        "series": "Pulsares Explorer",
+        "seriesOrder": 1,
+        "project": 12,
+        "tags": ["Pulsares Explorer", "Go", "Wails", "React", "TypeScript", "SQLite", "Local-First", "Engenharia de Software"],
+        "readTime": "7 min"
+    },
+    {
         "slug": "v1-9-0",
         "title": "Magnetares Notes v1.9.0: Lançamento Oficial, Exportação Nativa em PDF e o Maior Salto da Nossa Jornada",
         "excerpt": "O lançamento oficial da v1.9.0 chegou! Compartilho os ajustes finais de hoje na impressão sem bordas ou rodapés técnicos do WebView, a criação da exportação nativa em Documento PDF (.pdf) e a chegada oficial do Modo Foco Picture-in-Picture, exportação ABNT (.docx), suíte científica offline (KaTeX, mhchem, Mermaid.js) e edição Portable Multiverse.",

@@ -1,5 +1,34 @@
 [
     {
+        "id": 12,
+        "title": {
+            "pt-br": "Pulsares Explorer",
+            "en": "Pulsares Explorer",
+            "es": "Pulsares Explorer"
+        },
+        "description": {
+            "pt-br": "Explorador de arquivos desktop local-first e suíte para desenvolvedores em Go + Wails v2 + React + TypeScript. Múltiplas abas, painel duplo Commander, cliente nativo SSH/SFTP v3 com segurança TOFU, terminal multi-shell com Follow-up, Pulsares Studio Editor com Prévia Web conectada em tempo real e Pulsares DB Studio com Mapa ER interativo e Criador SQLite a partir de CSV/JSON.",
+            "en": "Local-first desktop file explorer and developer suite built with Go + Wails v2 + React + TypeScript. Multi-tab navigation, dual-pane Commander, native SSH/SFTP v3 client with TOFU security, multi-shell terminal with Follow-up sync, Pulsares Studio Editor with connected real-time Web Preview, and Pulsares DB Studio with interactive ER Diagram and SQLite Creator from CSV/JSON.",
+            "es": "Explorador de archivos de escritorio local-first y suite para desarrolladores en Go + Wails v2 + React + TypeScript. Múltiples pestañas, doble panel Commander, cliente nativo SSH/SFTP v3 con seguridad TOFU, terminal multi-shell con sincronización Follow-up, Pulsares Studio Editor con vista previa web conectada en tiempo real y Pulsares DB Studio con Mapa ER interactivo y Creador SQLite desde CSV/JSON."
+        },
+        "tags": [
+            "Go",
+            "Wails",
+            "React",
+            "TypeScript",
+            "SQLite",
+            "SFTP",
+            "Local-First"
+        ],
+        "category": "sistema",
+        "year": "2026",
+        "github": "https://github.com/vitorkrewer/pulsares-file-explorer",
+        "blog": "blog/post.html?slug=pulsares-explorer-janelas-autonomas-erd-live-preview",
+        "series": "Pulsares Explorer",
+        "featured": true,
+        "status": "open-source"
+    },
+    {
         "id": 11,
         "title": {
             "pt-br": "Pulsares Research",

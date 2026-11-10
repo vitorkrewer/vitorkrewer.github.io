@@ -54,6 +54,12 @@ A maior novidade da `1.1.0`, porém, foi dar ao Pulsares duas ferramentas irmãs
 - **Pulsares Studio Editor (`Ctrl+E`):** um editor de código e texto leve, com abas, numeração de linhas, minimapa, comparação de arquivos lado a lado (*Diff*), biblioteca de *snippets* e formatação automática para linguagens como `Go`, `TypeScript`, `JavaScript`, `JSON`, `SQL`, `HTML` e `Markdown`.
 - **Pulsares DB Studio:** ao clicar em qualquer banco de dados **SQLite** (`.db`, `.sqlite`) ou **DuckDB**, em vez de ver uma tela dizendo que o arquivo é binário, o Pulsares abre um estúdio completo mostrando todas as tabelas, filtros de busca, estrutura `DDL`, console para rodar consultas SQL e exportação para CSV ou JSON.
 
+![Menu de contexto de uma pasta de projeto com atalho direto para abrir no Pulsares Studio Editor ou no Terminal Integrado](../content/posts/images/shot-6-context-folder.jpg)
+
+![Pulsares Studio Editor aberto com a árvore de arquivos do projeto na lateral, barra de ferramentas de código e minimapa](../content/posts/images/shot-7-studio.jpg)
+
+![Pulsares DB Studio inspecionando um banco SQLite real com 46 tabelas, contagem de registros e paginação instantânea](../content/posts/images/shot-4-dbstudio.jpg)
+
 Também ampliamos as traduções da interface para **7 idiomas** e criamos ícones próprios para dezenas de linguagens e ferramentas (`.git`, `node_modules`, Docker, bancos de dados) para deixar a leitura visual das pastas de código imediata.
 
 A `1.1.0` parecia fechar tudo. Mas bastou eu abrir um banco de dados real com mais de `52 mil` linhas e a pasta de um projeto web completo na manhã seguinte para perceber um erro de arquitetura que precisava ser corrigido imediatamente. É o que conto na quinta e última parte.

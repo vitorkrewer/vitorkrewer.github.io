@@ -60,6 +60,8 @@ Com o plano traçado e a stack escolhida — **Go** no núcleo, **Wails v2** na 
 - **Fila de cópia segura e `Ctrl+Z` (`0.3.0`):** copiar e mover viraram trabalhos em segundo plano, com barra de progresso, velocidade em tempo real, botão de pausar e uma janela clara para resolver conflitos quando o arquivo já existe no destino.
 - **Painel Duplo Commander e arrastar e soltar (`0.4.0`):** dividi a tela em dois painéis independentes. Seleciono na esquerda, aperto `F5` e ele copia para a pasta da direita; `F6` move. E, ao arrastar arquivos com o mouse, coloquei uma trava simples que evita aquela dor de cabeça clássica de soltar uma pasta dentro dela mesma sem perceber.
 
+![Pulsares Explorer no tema claro exibindo a árvore de pastas, barra de endereços e a própria estrutura do projeto com o AGENTS.md e o CHANGELOG.md](../content/posts/images/shot-1-explorer-light.png)
+
 O gerenciador básico já funcionava melhor do que o padrão do sistema. Mas eu ainda estava com o terminal e os outros programas abertos ao lado. Era hora de começar a trazê-los para dentro.
 
 ---

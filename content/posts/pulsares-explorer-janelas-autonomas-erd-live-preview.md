@@ -42,6 +42,8 @@ Quando você pega um banco de dados com várias tabelas que se relacionam por ch
 
 Adicionei o botão **Mapa ER** na barra superior. Ele lê as relações do banco e monta um diagrama interativo no estilo *React Flow*: cada tabela vira um cartão que posso arrastar pela tela, com as chaves primárias marcadas em dourado, as estrangeiras em azul e linhas curvas ligando uma tabela à outra (`1 ──< N`). Se clico numa tabela, ele ilumina todas as conexões dela; se preciso colocar o diagrama num trabalho ou documentação, um clique exporta o desenho inteiro em `.svg` vetorial.
 
+![Mapa de Entidade-Relacionamento (Mapa ER) no Pulsares DB Studio exibindo 46 tabelas, relações PK/FK, minimapa e botão de exportação SVG](../content/posts/images/shot-5-ermap.jpg)
+
 ### O Criador de Banco SQLite (de CSV e JSON para `.db`)
 Sabe quando você tem uma planilha `.csv` grande ou um arquivo `.json` e queria poder fazer consultas SQL nele sem precisar criar banco e tabela na mão? Criei um assistente que lê o arquivo, descobre sozinho o separador e o tipo de cada coluna (número inteiro, decimal, data, texto) e gera o banco `.db` pronto em segundos — com um **Modo Simples** de um clique e um **Modo Desenvolvedor** para quem quiser ajustar chaves primárias, índices e ver o comando `CREATE TABLE` ao vivo.
 
@@ -59,6 +61,8 @@ Corrigi os dois pela raiz:
 - **Abrir pasta abre a pasta, ponto final:** agora o Studio reconhece quando o caminho recebido é um diretório, carrega todos os arquivos na coluna **`ARQUIVOS DO PROJETO`**, limpa qualquer aba fantasma e já deixa o `index.html` ou `README.md` pronto na tela.
 - **Prévia Web Conectada em Tempo Real:** criei uma ponte local (`/ __project /`) que serve o CSS, o JavaScript e as imagens da pasta junto com o HTML. E fui além: se eu estiver editando o `style.css` em uma aba e voltar para o `index.html`, a prévia já mostra o estilo novo na hora, mesmo antes de salvar o arquivo.
 - **Menu de contexto completo nos arquivos do projeto:** cliquei com o botão direito na lista de arquivos da lateral do Studio e senti falta do básico. Agora posso criar arquivos novos (com botões rápidos para `.html`, `.css`, `.js`, `.ts`, `.go`, `.py`, `.sql`, `.md`), criar pastas, duplicar, renomear com `F2` (atualizando as abas abertas sozinho), mover para outra pasta ou excluir direto por ali.
+
+![Pulsares Studio Editor em janela independente com a árvore de arquivos do projeto à esquerda, o código no centro e a Prévia em Tempo Real renderizando o HTML com CSS e JS conectados](../content/posts/images/shot-8-studio-preview.jpg)
 
 ---
 

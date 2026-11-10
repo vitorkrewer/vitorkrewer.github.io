@@ -46,6 +46,8 @@ Junto com elas entrou o recurso que mais me poupa cliques no dia a dia: selecion
 
 Uma janela limpa se abre na hora mostrando a imagem com zoom, o PDF, o texto em Markdown já formatado ou o código-fonte colorido — sem precisar esperar um programa externo pesado carregar só para eu descobrir que abri o arquivo errado.
 
+![Pulsares Explorer no tema escuro: ícones especializados por linguagem e estrutura limpa para longas sessões de código](../content/posts/images/shot-2-explorer-dark.png)
+
 ---
 
 ## Achar uma agulha sem congelar o palheiro (`0.7.0` e `0.8.0`)

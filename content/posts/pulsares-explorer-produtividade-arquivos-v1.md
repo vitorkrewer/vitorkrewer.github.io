@@ -30,6 +30,8 @@ Na mesma leva entraram mais três ferramentas que eu vivia procurando fora:
 - **Comparador de Pastas:** coloco duas pastas lado a lado e vejo na hora o que só existe de um lado, o que mudou e o que está igual.
 - **Calculadora de Hashes (`MD5`, `SHA-1` e `SHA-256`):** lê o arquivo uma única vez e já entrega os três códigos de integridade, com um espaço para colar o hash oficial de um download e confirmar se bateu.
 
+![Menu de contexto reunindo prévia rápida, abertura no terminal integrado, compactação/extração, cálculo de hashes MD5/SHA-256 e acesso direto aos estúdios](../content/posts/images/shot-3-context-db.png)
+
 ---
 
 ## Entrar num `.zip` sem espalhar pasta pela área de trabalho (`0.10.0`)

@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leituras & Ensaios | Vitor Krewer</title>
+    <title>Leituras & Cinema | Vitor Krewer</title>
     <meta
       name="description"
-      content="Resenhas, notas de leitura e ensaios pessoais sobre livros, clássicos e obras marcantes."
+      content="Resenhas, notas e ensaios pessoais sobre livros, filmes, clássicos e obras marcantes."
     />
 
     <!-- Favicon -->
@@ -441,14 +441,20 @@
         <section id="readings-list-section">
           <header class="feed-header fade-in">
             <p class="feed-tagline" data-i18n="readings_tagline">
-              // reading notes & essays
+              // reading & cinema essays
             </p>
-            <h2 class="feed-title" data-i18n="readings_title">Leituras</h2>
+            <h2 class="feed-title" data-i18n="readings_title">Leituras & Cinema</h2>
             <p class="feed-subtitle" data-i18n="readings_subtitle">
-              Resenhas, notas e ensaios pessoais sobre livros, clássicos e
-              leituras marcantes.
+              Resenhas, notas e ensaios pessoais sobre livros, filmes e obras marcantes.
             </p>
           </header>
+
+          <!-- Filtro por Tipo (Todos / Livros / Filmes) -->
+          <div class="filter-tabs" id="readings-type-tabs" style="margin-bottom: 1.25rem">
+            <button type="button" class="filter-tab active" data-type="all">Todos</button>
+            <button type="button" class="filter-tab" data-type="book">Livros</button>
+            <button type="button" class="filter-tab" data-type="movie">Filmes</button>
+          </div>
 
           <!-- Campo de Pesquisa -->
           <div class="search-container" style="margin-bottom: 2rem">
@@ -469,7 +475,7 @@
             <input
               type="text"
               id="readings-search"
-              placeholder="Buscar por título, autor, editora ou tema..."
+              placeholder="Buscar por título, autor, diretor, editora ou tema..."
               autocomplete="off"
             />
           </div>

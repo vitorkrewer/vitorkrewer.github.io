@@ -1,5 +1,20 @@
 [
     {
+        "slug":  "vicios-escrita-ia-sicofantia-engenharia-texto",
+        "title":  "O que aprendi depurando os vícios de escrita de LLMs em um motor de textos longos",
+        "excerpt":  "Quando construí um pipeline em Python para ler artigos científicos completos e planos de ensino em Markdown, o problema deixou de ser o limite de tokens e passou a ser o estilo do modelo. Da equipe fantasma de post-its à sicofantia e aos títulos com dois-pontos, veja como corrigi os vícios mais comuns de textos gerados por IA.",
+        "date":  "2026-11-17",
+        "status":  "Publicado",
+        "tags":  [
+                     "Inteligência Artificial",
+                     "Engenharia de Prompt",
+                     "Escrita Científica",
+                     "LLMs",
+                     "Engenharia de Software"
+                 ],
+        "readTime":  "9 min"
+    },
+    {
         "slug":  "v2-0-0",
         "title":  "Magnetares Notes v2.0.0: O Novo Fluxo de Ideias",
         "excerpt":  "Apresento a versão 2.0.0 e o novo módulo Fluxo de Ideias: mapas mentais e diagramas conectados diretamente às suas notas, tarefas e stickers, com exportação em PNG e diversas melhorias de conforto no uso diário.",

@@ -1,0 +1,7 @@
+# Ferramentas e scripts locais de conversão/automação
+tools/
+/tools/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

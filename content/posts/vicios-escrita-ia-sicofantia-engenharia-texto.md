@@ -2,7 +2,10 @@
 title: "O que aprendi depurando os vícios de escrita de LLMs em um motor de textos longos"
 date: 2026-11-17
 status: Publicado
-tags: [Inteligência Artificial, Engenharia de Prompt, Escrita Científica, LLMs, Engenharia de Software]
+series: Magnetares Knowledge
+seriesOrder: 11
+project: 13
+tags: [Magnetares Knowledge, Inteligência Artificial, Engenharia de Prompt, Escrita Científica, LLMs, Engenharia de Software]
 readTime: 9 min
 excerpt: "Quando construí um pipeline em Python para ler artigos científicos completos e planos de ensino em Markdown, o problema deixou de ser o limite de tokens e passou a ser o estilo do modelo. Da equipe fantasma de post-its à sicofantia e aos títulos com dois-pontos, veja como corrigi os vícios mais comuns de textos gerados por IA."
 ---

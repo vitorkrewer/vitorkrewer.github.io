@@ -1,5 +1,38 @@
 [
     {
+        "id": 13,
+        "title": {
+            "pt-br": "Magnetares Knowledge",
+            "en": "Magnetares Knowledge",
+            "es": "Magnetares Knowledge"
+        },
+        "description": {
+            "pt-br": "Plataforma de engenharia acadêmica, acervo vetorial RAG e estúdio editorial assistido por IA (Python, SQLite, Turso Cloud, Bunny CDN, FastAPI, React, TypeScript, Milkdown, Tauri v2 e Docker). Geração de matrizes curriculares, planos de ensino com CHA, trilhas de aprendizagem, cadernos de aulas versionados, apostilas de concursos, leis comentadas, artigos científicos ABNT/OJS e ghostwriter long-form de 1M tokens. Repositório privado.",
+            "en": "Academic engineering platform, RAG vector knowledge base, and AI-assisted editorial studio (Python, SQLite, Turso Cloud, Bunny CDN, FastAPI, React, TypeScript, Milkdown, Tauri v2, and Docker). Curriculum matrix generation, teaching plans with CHA competencies, learning paths, versioned lesson notebooks, civil service exam textbooks, annotated laws, ABNT/OJS scientific papers, and 1M-token long-form ghostwriter. Private repository.",
+            "es": "Plataforma de ingeniería académica, base de conhecimento vectorial RAG y estudio editorial asistido por IA (Python, SQLite, Turso Cloud, Bunny CDN, FastAPI, React, TypeScript, Milkdown, Tauri v2 y Docker). Generación de matrices curriculares, planes de estudio con competencias CHA, rutas de aprendizaje, cuadernos de clases versionados, materiales para oposiciones, leyes comentadas, artículos científicos ABNT/OJS y ghostwriter long-form de 1M tokens. Repositorio privado."
+        },
+        "tags": [
+            "Python",
+            "SQLite",
+            "Gemini API",
+            "RAG",
+            "Tauri",
+            "React",
+            "TypeScript",
+            "Milkdown",
+            "Textual",
+            "Docker"
+        ],
+        "category": "sistema",
+        "year": "2026",
+        "github": null,
+        "privateRepo": true,
+        "blog": "blog/post.html?slug=vicios-escrita-ia-sicofantia-engenharia-texto",
+        "series": "Magnetares Knowledge",
+        "featured": true,
+        "status": "production"
+    },
+    {
         "id": 12,
         "title": {
             "pt-br": "Pulsares Explorer",

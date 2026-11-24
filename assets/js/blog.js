@@ -440,6 +440,20 @@ async function loadPost() {
                     `;
                 };
 
+                const defaultLinkRenderer = renderer.link.bind(renderer);
+                renderer.link = function (hrefOrObj, title, text) {
+                    if (typeof hrefOrObj === 'object' && hrefOrObj !== null) {
+                        if (hrefOrObj.href && /^(?:\.\/)?pdf\//i.test(hrefOrObj.href)) {
+                            hrefOrObj.href = '../content/posts/' + hrefOrObj.href.replace(/^\.\//, '');
+                        }
+                        return defaultLinkRenderer(hrefOrObj);
+                    }
+                    if (hrefOrObj && /^(?:\.\/)?pdf\//i.test(hrefOrObj)) {
+                        hrefOrObj = '../content/posts/' + hrefOrObj.replace(/^\.\//, '');
+                    }
+                    return defaultLinkRenderer(hrefOrObj, title, text);
+                };
+
                 marked.setOptions({ breaks: true, gfm: true, renderer });
                 proseHtml = `<div class="prose">${marked.parse(md)}</div>`;
             } else {

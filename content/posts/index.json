@@ -1,5 +1,102 @@
 [
     {
+        "slug": "resolucao-cne-cp-1-2026-vedacoes-imediatas-artigo-41-roteiro-adequacao",
+        "title": "A Resolução CNE/CP nº 1/2026 e o prazo de 12 meses, parte 5 — as proibições imediatas do artigo 41 e um roteiro prático de adequação para instituições",
+        "excerpt": "O que já está proibido desde novembro de 2026 pelo Artigo 41 da Resolução CNE/CP nº 1/2026 sem prazo de carência e um plano de ação trimestral de 12 meses (Art. 46) para adequar PDI, PPCs, contratos e softwares acadêmicos.",
+        "date": "2026-11-28",
+        "status": "Rascunho",
+        "series": "IA na Educação Brasileira (Resolução CNE/CP nº 1/2026)",
+        "seriesOrder": 5,
+        "project": 13,
+        "tags": [
+            "Resolução CNE/CP 1/2026",
+            "Artigo 41",
+            "Compliance Educacional",
+            "Ensino Superior",
+            "Governança de IA",
+            "Magnetares Knowledge Database"
+        ],
+        "readTime": "15 min"
+    },
+    {
+        "slug": "resolucao-cne-cp-1-2026-avaliacao-detectores-ia-formacao-docente",
+        "title": "A Resolução CNE/CP nº 1/2026 na sala de aula, parte 4 — limites na Educação Básica, correção de provas, a falha dos detectores de IA e a formação docente",
+        "excerpt": "O que a Resolução CNE/CP nº 1/2026 determina sobre o uso de IA na correção de provas (Art. 40), por que detectores de IA não podem reprovar alunos sozinhos, os limites por faixa etária e a nova formação docente obrigatória.",
+        "date": "2026-11-27",
+        "status": "Rascunho",
+        "series": "IA na Educação Brasileira (Resolução CNE/CP nº 1/2026)",
+        "seriesOrder": 4,
+        "project": 13,
+        "tags": [
+            "Resolução CNE/CP 1/2026",
+            "Avaliação Acadêmica",
+            "Detectores de IA",
+            "Formação Docente",
+            "Acessibilidade",
+            "Educação Básica"
+        ],
+        "readTime": "14 min"
+    },
+    {
+        "slug": "resolucao-cne-cp-1-2026-pesquisa-autoria-abnt-treinamento-dados",
+        "title": "A Resolução CNE/CP nº 1/2026 na pesquisa acadêmica, parte 3 — autoria, transparência, alucinações e a proibição de treinar modelos com textos de alunos",
+        "excerpt": "Análise profunda dos artigos 10, 15, 21 a 26 e das regras de pesquisa científica do Capítulo V da Resolução CNE/CP nº 1/2026 sobre propriedade intelectual docente e discente, declaração de uso de IA e responsabilidade sobre citações.",
+        "date": "2026-11-26",
+        "status": "Rascunho",
+        "series": "IA na Educação Brasileira (Resolução CNE/CP nº 1/2026)",
+        "seriesOrder": 3,
+        "project": 13,
+        "tags": [
+            "Resolução CNE/CP 1/2026",
+            "Pesquisa Científica",
+            "Propriedade Intelectual",
+            "ABNT",
+            "LGPD",
+            "Magnetares Knowledge Database",
+            "Pulsares Research"
+        ],
+        "readTime": "14 min"
+    },
+    {
+        "slug": "resolucao-cne-cp-1-2026-ensino-superior-ead-tutoria-pdi-ppc",
+        "title": "A Resolução CNE/CP nº 1/2026 no Ensino Superior e na EaD, parte 2 — por que chatbot não conta como tutor e o impacto no PDI e nos PPCs",
+        "excerpt": "O que muda na regulação do Ensino Superior, na Educação a Distância e na Educação Profissional com o Art. 9º, § 2º e o Capítulo V da Resolução CNE/CP nº 1/2026, da proibição de substituir tutores humanos por avatares à revisão obrigatória de PDI e PPCs.",
+        "date": "2026-11-25",
+        "status": "Rascunho",
+        "series": "IA na Educação Brasileira (Resolução CNE/CP nº 1/2026)",
+        "seriesOrder": 2,
+        "project": 13,
+        "tags": [
+            "Resolução CNE/CP 1/2026",
+            "Ensino Superior",
+            "EaD",
+            "PDI",
+            "PPC",
+            "Tutoria",
+            "Magnetares Knowledge Database"
+        ],
+        "readTime": "14 min"
+    },
+    {
+        "slug": "resolucao-cne-cp-1-2026-ia-educacao-principios-contratos-governanca",
+        "title": "A Resolução CNE/CP nº 1/2026 explicada na prática, parte 1 — princípios, contratos de software e o fim da adoção de IA por impulso",
+        "excerpt": "Uma análise artigo por artigo dos Capítulos I, II e III (Arts. 1º a 8º) e dos Anexos I e II da Resolução CNE/CP nº 1/2026 sob a ótica de quem atua no Ensino Superior e constrói ferramentas de IA para engenharia acadêmica.",
+        "date": "2026-11-24",
+        "status": "Publicado",
+        "series": "IA na Educação Brasileira (Resolução CNE/CP nº 1/2026)",
+        "seriesOrder": 1,
+        "project": 13,
+        "tags": [
+            "Resolução CNE/CP 1/2026",
+            "MEC",
+            "Ensino Superior",
+            "Governança de IA",
+            "Legislação Educacional",
+            "Magnetares Knowledge Database"
+        ],
+        "readTime": "13 min"
+    },
+    {
         "slug": "vicios-escrita-ia-sicofantia-engenharia-texto",
         "title": "O que aprendi depurando os vícios de escrita de LLMs em um motor de textos longos",
         "excerpt": "Quando construí um pipeline em Python para ler artigos científicos completos e planos de ensino em Markdown, o problema deixou de ser o limite de tokens e passou a ser o estilo do modelo. Da equipe fantasma de post-its à sicofantia e aos títulos com dois-pontos, veja como corrigi os vícios mais comuns de textos gerados por IA.",
